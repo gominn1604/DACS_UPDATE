@@ -14,6 +14,7 @@ namespace MilkteaShopManager
 {
     public partial class MainForm : Form
     {
+        TableBL tableBL = new TableBL();
         // danh sách toàn cục bảng LoaiNuoc
         List<LoaiNuoc> listLoaiNuoc = new List<LoaiNuoc>();
 
@@ -32,6 +33,7 @@ namespace MilkteaShopManager
             customizeDesign();
             LoadLoaiNuoc();
             LoadNuocDataToListView();
+            LoadTable();
         }
 
         #region Hàm đóng mở form con
@@ -70,6 +72,43 @@ namespace MilkteaShopManager
         {
             tctMain.SelectedIndex = 0;
         }
+
+        private void LoadTable()
+        {
+            List<Table> tableList = new List<Table>();
+
+            flpDSBan.Controls.Clear();
+            string status;
+            tableList = tableBL.GetAll();
+
+            foreach (Table table in tableList)
+            {
+                Button btn = new Button() { Width = 110, Height = 100 };
+                flpDSBan.Controls.Add(btn);
+                if (table.Status == 0)
+                {
+                    status = "Phòng trống";
+                }
+                else
+                {
+                    status = "Có khách";
+                }
+                btn.Text = table.Name + Environment.NewLine + status;
+
+                switch (table.Status)
+                {
+                    case 0:
+                        btn.BackColor = Color.Aquamarine;
+                        break;
+                    case 1:
+                        btn.BackColor = Color.Red;
+                        break;
+                    default:
+                        break;
+                }
+            }
+        }
+
         #endregion
 
         #region Quản lý món
