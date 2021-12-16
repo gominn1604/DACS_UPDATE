@@ -42,6 +42,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Bill.cs" />
+    <Compile Include="BillDA.cs" />
+    <Compile Include="BillInfo.cs" />
+    <Compile Include="BillInfoDA.cs" />
+    <Compile Include="DrinkDetails.cs" />
+    <Compile Include="DrinkDetailsDA.cs" />
     <Compile Include="HoaDon.cs" />
     <Compile Include="LoaiNuocDA.cs" />
     <Compile Include="LoaiNuoc.cs" />

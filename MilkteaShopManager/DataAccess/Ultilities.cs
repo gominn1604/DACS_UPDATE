@@ -19,5 +19,9 @@ namespace DataAccess
         public static string NuocUong_InsertUpdateDelete = "NuocUong_InsertUpdateDelete";
 
         public static string Table_GetAll = "Table_GetAll";
+
+        public static string GetUncheckBillIdByTableId = "GetUncheckBillIdByTableId";
+
+        public static string GetListDrinkDetailsByTableId = "GetListDrinkDetailsByTableId"; 
     }
 }

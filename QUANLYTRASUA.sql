@@ -45,13 +45,12 @@ CREATE TABLE Ban
 CREATE TABLE HoaDon
 (
 	MaHoaDon		INT IDENTITY (1,1) PRIMARY KEY,
-	TenHoaDon		NVARCHAR(200) NOT NULL,
-	MaBan			INT REFERENCES Ban(MaBan),
-	TongTien		INT NOT NULL,
 	GiamGia			FLOAT NOT NULL,
 	Thue			FLOAT NOT NULL,
 	TrangThaiHD		INT NOT NULL,
-	NgayTao			DATETIME NOT NULL,
+	NgayTao			DATETIME,
+	NgayThanhToan	DATETIME,
+	MaBan			INT REFERENCES Ban(MaBan),
 	TaiKhoanTao		NVARCHAR(100) REFERENCES TaiKhoan(TenTaiKhoan)
 )
 
@@ -91,6 +90,7 @@ SET IDENTITY_INSERT [ChucVu] ON
 INSERT [ChucVu]	([MaCV], [TenChucVu], [GhiChu])	VALUES	(1, N'Quản lý',				NULL)
 INSERT [ChucVu]	([MaCV], [TenChucVu], [GhiChu])	VALUES	(2, N'Nhân viên phục vụ',	NULL)
 INSERT [ChucVu]	([MaCV], [TenChucVu], [GhiChu])	VALUES	(3, N'Nhân viên pha chế',	NULL)
+SET IDENTITY_INSERT [ChucVu] OFF
 
 INSERT [NhanVien] ([MaNV], [HoTen], [GioiTinh], [DiaChi], [NgaySinh], [SoDienThoai], [TenTaiKhoan], [TrangThai], [MaCV]) VALUES (1,	N'Nguyễn Việt Duy Danh',	'Nam',	N'Đà Lạt',	'21/12/2001', '0917291154',	'gominn',	1,	2)
 INSERT [NhanVien] ([MaNV], [HoTen], [GioiTinh], [DiaChi], [NgaySinh], [SoDienThoai], [TenTaiKhoan], [TrangThai], [MaCV]) VALUES (2,	N'Nguyễn Trần Quang Bảo',	'Nam',	N'Đà Lạt',	'03/10/2001', '0987654321',	'qngbao',	1,	3)
@@ -98,7 +98,6 @@ INSERT [NhanVien] ([MaNV], [HoTen], [GioiTinh], [DiaChi], [NgaySinh], [SoDienTho
 INSERT [NhanVien] ([MaNV], [HoTen], [GioiTinh], [DiaChi], [NgaySinh], [SoDienThoai], [TenTaiKhoan], [TrangThai], [MaCV]) VALUES (4,	N'Trương Quang Tuấn',		'Nam',	N'Đà Lạt',	'24/02/2001', '0334502288',	'qngtuann',	1,	1)
 INSERT [NhanVien] ([MaNV], [HoTen], [GioiTinh], [DiaChi], [NgaySinh], [SoDienThoai], [TenTaiKhoan], [TrangThai], [MaCV]) VALUES (5,	N'Nguyễn Trần Quang Bảo',	'Nam',	N'Đà Lạt',	'03/10/2001', '0987654321',	'qngbao',	0,	3)
 
-SET IDENTITY_INSERT [ChucVu] OFF
 SET IDENTITY_INSERT [Ban] ON 
 INSERT [Ban] ([MaBan], [TenBan], [TrangThaiBan]) VALUES (1, N'Bàn 1', 0)
 INSERT [Ban] ([MaBan], [TenBan], [TrangThaiBan]) VALUES (2, N'Bàn 2', 0)
@@ -117,12 +116,12 @@ SELECT * FROM Ban
 
 SET DATEFORMAT dmy
 SET IDENTITY_INSERT [HoaDon] ON 
-INSERT [HoaDon] ([MaHoaDon], [TenHoaDon], [MaBan], [TongTien], [GiamGia], [Thue], [TrangThaiHD], [NgayTao], [TaiKhoanTao]) VALUES (1, N'Hóa đơn thanh toán', 1, 150000, 0.05, 0.1, 1, '20/11/2021', 'gominn')
-INSERT [HoaDon] ([MaHoaDon], [TenHoaDon], [MaBan], [TongTien], [GiamGia], [Thue], [TrangThaiHD], [NgayTao], [TaiKhoanTao]) VALUES (2, N'Hóa đơn thanh toán', 1, 300000, 0.05, 0.1, 1, '20/11/2021', 'gominn')
-INSERT [HoaDon] ([MaHoaDon], [TenHoaDon], [MaBan], [TongTien], [GiamGia], [Thue], [TrangThaiHD], [NgayTao], [TaiKhoanTao]) VALUES (3, N'Hóa đơn thanh toán', 4, 700000, 0.05, 0.1, 1, '20/11/2021', 'gominn')
-INSERT [HoaDon] ([MaHoaDon], [TenHoaDon], [MaBan], [TongTien], [GiamGia], [Thue], [TrangThaiHD], [NgayTao], [TaiKhoanTao]) VALUES (4, N'Hóa đơn thanh toán', 5, 250000, 0.05, 0.1, 1, '20/11/2021', 'gominn')
-INSERT [HoaDon] ([MaHoaDon], [TenHoaDon], [MaBan], [TongTien], [GiamGia], [Thue], [TrangThaiHD], [NgayTao], [TaiKhoanTao]) VALUES (5, N'Hóa đơn thanh toán', 3, 75000,	0.05, 0.1, 1, '20/11/2021', 'gominn')
-INSERT [HoaDon] ([MaHoaDon], [TenHoaDon], [MaBan], [TongTien], [GiamGia], [Thue], [TrangThaiHD], [NgayTao], [TaiKhoanTao]) VALUES (6, N'Hóa đơn thanh toán', 2, 500000, 0.05, 0.1, 1, '20/11/2021', 'gominn')
+INSERT [HoaDon] ([MaHoaDon], [GiamGia], [Thue], [TrangThaiHD], [NgayTao], [NgayThanhToan], [MaBan], [TaiKhoanTao]) VALUES (1, 5, 10, 0, '20/11/2021', NULL,			1, 'gominn')
+INSERT [HoaDon] ([MaHoaDon], [GiamGia], [Thue], [TrangThaiHD], [NgayTao], [NgayThanhToan], [MaBan], [TaiKhoanTao]) VALUES (2, 5, 10, 0, '20/11/2021', NULL,			2, 'gominn')
+INSERT [HoaDon] ([MaHoaDon], [GiamGia], [Thue], [TrangThaiHD], [NgayTao], [NgayThanhToan], [MaBan], [TaiKhoanTao]) VALUES (3, 5, 10, 1, '20/11/2021', '20/11/2021', 2, 'gominn')
+INSERT [HoaDon] ([MaHoaDon], [GiamGia], [Thue], [TrangThaiHD], [NgayTao], [NgayThanhToan], [MaBan], [TaiKhoanTao]) VALUES (4, 5, 10, 1, '20/11/2021', '20/11/2021',	5, 'gominn')
+INSERT [HoaDon] ([MaHoaDon], [GiamGia], [Thue], [TrangThaiHD], [NgayTao], [NgayThanhToan], [MaBan], [TaiKhoanTao]) VALUES (5, 5, 10, 0,	'20/11/2021', NULL,			3, 'gominn')
+INSERT [HoaDon] ([MaHoaDon], [GiamGia], [Thue], [TrangThaiHD], [NgayTao], [NgayThanhToan], [MaBan], [TaiKhoanTao]) VALUES (6, 5, 10, 0, '20/11/2021', NULL,			4, 'gominn')
 SET IDENTITY_INSERT [HoaDon] OFF
 
 SET IDENTITY_INSERT [LoaiNuoc] ON 
@@ -241,3 +240,22 @@ As
 	Begin
 		select * from NuocUong where TenNuocUong = '%' + @TenNuocUong + '%'
 	End
+
+-------------------------
+CREATE PROCEDURE [GetUncheckBillIdByTableId]
+	@maBan INT
+AS
+BEGIN
+	SELECT * FROM [HoaDon] WHERE MaBan = @maBan AND TrangThaiHD = 0
+END
+GO
+
+CREATE PROCEDURE [GetListDrinkDetailsByTableId]
+	@maBan INT
+AS
+BEGIN
+	SELECT NU.TenNuocUong, CTHD.SoLuong, NU.DonGia, (CTHD.SoLuong * NU.DonGia) AS ThanhTien
+	FROM HoaDon AS HD, ChiTietHoaDon AS CTHD, NuocUong AS NU
+	WHERE CTHD.MaHoaDon = HD.MaHoaDon AND CTHD.MaNuocUong = Nu.MaNuocUong AND HD.TrangThaiHD = 0 AND HD.MaBan = @maBan
+END
+GO
