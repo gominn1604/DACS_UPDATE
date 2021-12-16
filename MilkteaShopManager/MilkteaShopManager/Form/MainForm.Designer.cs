@@ -77,10 +77,6 @@ namespace MilkteaShopManager
             this.label6 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.button6 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button5 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.panel7 = new System.Windows.Forms.Panel();
             this.btnHuyNhap = new Guna.UI2.WinForms.Guna2Button();
@@ -192,6 +188,7 @@ namespace MilkteaShopManager
             this.txtMaTaiKhoan = new Guna.UI2.WinForms.Guna2TextBox();
             this.label20 = new System.Windows.Forms.Label();
             this.label15 = new System.Windows.Forms.Label();
+            this.flpDSBan = new System.Windows.Forms.FlowLayoutPanel();
             this.panel1.SuspendLayout();
             this.panel3.SuspendLayout();
             this.pnlQuanLy.SuspendLayout();
@@ -808,7 +805,7 @@ namespace MilkteaShopManager
             this.label5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(210)))), ((int)(((byte)(225)))));
             this.label5.Location = new System.Drawing.Point(12, 82);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(124, 20);
+            this.label5.Size = new System.Drawing.Size(128, 21);
             this.label5.TabIndex = 0;
             this.label5.Text = "Tên nước uống:";
             // 
@@ -818,7 +815,7 @@ namespace MilkteaShopManager
             this.label6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(210)))), ((int)(((byte)(225)))));
             this.label6.Location = new System.Drawing.Point(438, 41);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(74, 20);
+            this.label6.Size = new System.Drawing.Size(78, 21);
             this.label6.TabIndex = 0;
             this.label6.Text = "Số lượng";
             // 
@@ -828,17 +825,14 @@ namespace MilkteaShopManager
             this.label7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(210)))), ((int)(((byte)(225)))));
             this.label7.Location = new System.Drawing.Point(13, 46);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(122, 20);
+            this.label7.Size = new System.Drawing.Size(127, 21);
             this.label7.TabIndex = 0;
             this.label7.Text = "Loại thức uống:";
             // 
             // groupBox1
             // 
             this.groupBox1.BackgroundImage = global::MilkteaShopManager.Properties.Resources.background_2;
-            this.groupBox1.Controls.Add(this.button6);
-            this.groupBox1.Controls.Add(this.button3);
-            this.groupBox1.Controls.Add(this.button5);
-            this.groupBox1.Controls.Add(this.button2);
+            this.groupBox1.Controls.Add(this.flpDSBan);
             this.groupBox1.ForeColor = System.Drawing.Color.Black;
             this.groupBox1.Location = new System.Drawing.Point(6, 137);
             this.groupBox1.Name = "groupBox1";
@@ -846,46 +840,6 @@ namespace MilkteaShopManager
             this.groupBox1.TabIndex = 1;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Danh sách bàn";
-            // 
-            // button6
-            // 
-            this.button6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-            this.button6.Location = new System.Drawing.Point(510, 46);
-            this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(162, 112);
-            this.button6.TabIndex = 0;
-            this.button6.Text = "Có khách";
-            this.button6.UseVisualStyleBackColor = false;
-            // 
-            // button3
-            // 
-            this.button3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-            this.button3.Location = new System.Drawing.Point(342, 46);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(162, 112);
-            this.button3.TabIndex = 0;
-            this.button3.Text = "Có khách";
-            this.button3.UseVisualStyleBackColor = false;
-            // 
-            // button5
-            // 
-            this.button5.BackColor = System.Drawing.Color.Aqua;
-            this.button5.Location = new System.Drawing.Point(174, 46);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(162, 112);
-            this.button5.TabIndex = 0;
-            this.button5.Text = "Có khách";
-            this.button5.UseVisualStyleBackColor = false;
-            // 
-            // button2
-            // 
-            this.button2.BackColor = System.Drawing.Color.Aqua;
-            this.button2.Location = new System.Drawing.Point(6, 46);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(162, 112);
-            this.button2.TabIndex = 0;
-            this.button2.Text = "Có khách";
-            this.button2.UseVisualStyleBackColor = false;
             // 
             // tabPage1
             // 
@@ -2373,6 +2327,15 @@ namespace MilkteaShopManager
             this.label15.TabIndex = 43;
             this.label15.Text = "Quản lý mật khẩu";
             // 
+            // flpDSBan
+            // 
+            this.flpDSBan.AutoScroll = true;
+            this.flpDSBan.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(210)))), ((int)(((byte)(225)))));
+            this.flpDSBan.Location = new System.Drawing.Point(7, 28);
+            this.flpDSBan.Name = "flpDSBan";
+            this.flpDSBan.Size = new System.Drawing.Size(675, 442);
+            this.flpDSBan.TabIndex = 0;
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -2579,10 +2542,6 @@ namespace MilkteaShopManager
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.Button button6;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button5;
-        private System.Windows.Forms.Button button2;
         private Guna.UI2.WinForms.Guna2Panel guna2Panel3;
         private Guna.UI2.WinForms.Guna2Panel guna2Panel2;
         private System.Windows.Forms.ListView listView5;
@@ -2602,5 +2561,6 @@ namespace MilkteaShopManager
         private Guna.UI2.WinForms.Guna2Button guna2Button10;
         private System.Windows.Forms.Label label31;
         private Guna.UI2.WinForms.Guna2Button btnCapNhat;
+        private System.Windows.Forms.FlowLayoutPanel flpDSBan;
     }
 }

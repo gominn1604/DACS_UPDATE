@@ -7,3 +7,12 @@ C:\Users\Kin\Downloads\dacs\DACS_UPDATE\MilkteaShopManager\BusinessLogic\bin\Deb
 C:\Users\Kin\Downloads\dacs\DACS_UPDATE\MilkteaShopManager\BusinessLogic\obj\Debug\BusinessLogic.csproj.CopyComplete
 C:\Users\Kin\Downloads\dacs\DACS_UPDATE\MilkteaShopManager\BusinessLogic\obj\Debug\BusinessLogic.dll
 C:\Users\Kin\Downloads\dacs\DACS_UPDATE\MilkteaShopManager\BusinessLogic\obj\Debug\BusinessLogic.pdb
+D:\DACS_UPDATE\MilkteaShopManager\BusinessLogic\bin\Debug\BusinessLogic.dll
+D:\DACS_UPDATE\MilkteaShopManager\BusinessLogic\bin\Debug\BusinessLogic.pdb
+D:\DACS_UPDATE\MilkteaShopManager\BusinessLogic\bin\Debug\DataAccess.dll
+D:\DACS_UPDATE\MilkteaShopManager\BusinessLogic\bin\Debug\DataAccess.pdb
+D:\DACS_UPDATE\MilkteaShopManager\BusinessLogic\obj\Debug\BusinessLogic.csproj.AssemblyReference.cache
+D:\DACS_UPDATE\MilkteaShopManager\BusinessLogic\obj\Debug\BusinessLogic.csproj.CoreCompileInputs.cache
+D:\DACS_UPDATE\MilkteaShopManager\BusinessLogic\obj\Debug\BusinessLogic.csproj.CopyComplete
+D:\DACS_UPDATE\MilkteaShopManager\BusinessLogic\obj\Debug\BusinessLogic.dll
+D:\DACS_UPDATE\MilkteaShopManager\BusinessLogic\obj\Debug\BusinessLogic.pdb
