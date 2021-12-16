@@ -1,4 +1,4 @@
-﻿using BusinessLogic.Properties;
+﻿using BusinessLogic;
 using DataAccess;
 using System;
 using System.Collections.Generic;
