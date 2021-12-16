@@ -15,6 +15,7 @@ namespace MilkteaShopManager
     public partial class MainForm : Form
     {
         TableBL tableBL = new TableBL();
+        DrinkDetailsBL drinkDetailsBL = new DrinkDetailsBL();
         // danh sách toàn cục bảng LoaiNuoc
         List<LoaiNuoc> listLoaiNuoc = new List<LoaiNuoc>();
 
@@ -94,7 +95,6 @@ namespace MilkteaShopManager
                     status = "Có khách";
                 }
                 btn.Text = table.Name + Environment.NewLine + status;
-
                 switch (table.Status)
                 {
                     case 0:
@@ -106,7 +106,34 @@ namespace MilkteaShopManager
                     default:
                         break;
                 }
+
+                btn.Click += Btn_Click;
+                btn.Tag = table;
             }
+        }
+
+        private void ShowBill(int tableId)
+        {
+            List<DrinkDetails> listMenu = drinkDetailsBL.GetListDrinkDetailsByTableId(tableId);
+
+            lvHoaDon.Items.Clear();
+            foreach (DrinkDetails item in listMenu)
+            {
+                ListViewItem lvitem = new ListViewItem(item.Name.ToString());
+                lvitem.SubItems.Add(item.Price.ToString());
+                lvitem.SubItems.Add(item.Count.ToString());
+                lvitem.SubItems.Add(item.TotalAmount.ToString());
+
+                lvHoaDon.Items.Add(lvitem);
+            }
+        }
+
+        private void Btn_Click(object sender, EventArgs e)
+        {
+            lvHoaDon.Items.Clear();
+            int tableId = ((sender as Button).Tag as Table).ID;
+
+            ShowBill(tableId);
         }
 
         #endregion

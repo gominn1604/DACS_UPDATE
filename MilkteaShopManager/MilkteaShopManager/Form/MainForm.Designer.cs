@@ -77,6 +77,7 @@ namespace MilkteaShopManager
             this.label6 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.flpDSBan = new System.Windows.Forms.FlowLayoutPanel();
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.panel7 = new System.Windows.Forms.Panel();
             this.btnHuyNhap = new Guna.UI2.WinForms.Guna2Button();
@@ -188,7 +189,7 @@ namespace MilkteaShopManager
             this.txtMaTaiKhoan = new Guna.UI2.WinForms.Guna2TextBox();
             this.label20 = new System.Windows.Forms.Label();
             this.label15 = new System.Windows.Forms.Label();
-            this.flpDSBan = new System.Windows.Forms.FlowLayoutPanel();
+            this.columnHeader34 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.panel1.SuspendLayout();
             this.panel3.SuspendLayout();
             this.pnlQuanLy.SuspendLayout();
@@ -712,6 +713,7 @@ namespace MilkteaShopManager
             this.lvHoaDon.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(210)))), ((int)(((byte)(225)))));
             this.lvHoaDon.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
             this.columnHeader27,
+            this.columnHeader34,
             this.columnHeader28,
             this.columnHeader29});
             this.lvHoaDon.GridLines = true;
@@ -726,17 +728,18 @@ namespace MilkteaShopManager
             // columnHeader27
             // 
             this.columnHeader27.Text = "Tên thức uống";
-            this.columnHeader27.Width = 224;
+            this.columnHeader27.Width = 130;
             // 
             // columnHeader28
             // 
+            this.columnHeader28.DisplayIndex = 2;
             this.columnHeader28.Text = "Số lượng";
-            this.columnHeader28.Width = 109;
+            this.columnHeader28.Width = 70;
             // 
             // columnHeader29
             // 
             this.columnHeader29.Text = "Thành tiền";
-            this.columnHeader29.Width = 126;
+            this.columnHeader29.Width = 75;
             // 
             // panel15
             // 
@@ -840,6 +843,15 @@ namespace MilkteaShopManager
             this.groupBox1.TabIndex = 1;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Danh sách bàn";
+            // 
+            // flpDSBan
+            // 
+            this.flpDSBan.AutoScroll = true;
+            this.flpDSBan.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(210)))), ((int)(((byte)(225)))));
+            this.flpDSBan.Location = new System.Drawing.Point(7, 28);
+            this.flpDSBan.Name = "flpDSBan";
+            this.flpDSBan.Size = new System.Drawing.Size(675, 442);
+            this.flpDSBan.TabIndex = 0;
             // 
             // tabPage1
             // 
@@ -2327,14 +2339,11 @@ namespace MilkteaShopManager
             this.label15.TabIndex = 43;
             this.label15.Text = "Quản lý mật khẩu";
             // 
-            // flpDSBan
+            // columnHeader34
             // 
-            this.flpDSBan.AutoScroll = true;
-            this.flpDSBan.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(210)))), ((int)(((byte)(225)))));
-            this.flpDSBan.Location = new System.Drawing.Point(7, 28);
-            this.flpDSBan.Name = "flpDSBan";
-            this.flpDSBan.Size = new System.Drawing.Size(675, 442);
-            this.flpDSBan.TabIndex = 0;
+            this.columnHeader34.DisplayIndex = 1;
+            this.columnHeader34.Text = "Đơn giá";
+            this.columnHeader34.Width = 70;
             // 
             // MainForm
             // 
@@ -2562,5 +2571,6 @@ namespace MilkteaShopManager
         private System.Windows.Forms.Label label31;
         private Guna.UI2.WinForms.Guna2Button btnCapNhat;
         private System.Windows.Forms.FlowLayoutPanel flpDSBan;
+        private System.Windows.Forms.ColumnHeader columnHeader34;
     }
 }
