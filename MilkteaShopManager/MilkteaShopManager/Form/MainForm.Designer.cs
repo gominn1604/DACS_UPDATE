@@ -140,8 +140,8 @@ namespace MilkteaShopManager
             this.label23 = new System.Windows.Forms.Label();
             this.label22 = new System.Windows.Forms.Label();
             this.guna2Button13 = new Guna.UI2.WinForms.Guna2Button();
-            this.guna2DateTimePicker2 = new Guna.UI2.WinForms.Guna2DateTimePicker();
-            this.guna2DateTimePicker1 = new Guna.UI2.WinForms.Guna2DateTimePicker();
+            this.dtpLastDate = new Guna.UI2.WinForms.Guna2DateTimePicker();
+            this.dtpFirstDay = new Guna.UI2.WinForms.Guna2DateTimePicker();
             this.label25 = new System.Windows.Forms.Label();
             this.label26 = new System.Windows.Forms.Label();
             this.label27 = new System.Windows.Forms.Label();
@@ -828,7 +828,7 @@ namespace MilkteaShopManager
             this.label5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(210)))), ((int)(((byte)(225)))));
             this.label5.Location = new System.Drawing.Point(12, 82);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(128, 21);
+            this.label5.Size = new System.Drawing.Size(124, 20);
             this.label5.TabIndex = 0;
             this.label5.Text = "Tên nước uống:";
             // 
@@ -838,7 +838,7 @@ namespace MilkteaShopManager
             this.label6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(210)))), ((int)(((byte)(225)))));
             this.label6.Location = new System.Drawing.Point(438, 41);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(78, 21);
+            this.label6.Size = new System.Drawing.Size(74, 20);
             this.label6.TabIndex = 0;
             this.label6.Text = "Số lượng";
             // 
@@ -848,7 +848,7 @@ namespace MilkteaShopManager
             this.label7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(210)))), ((int)(((byte)(225)))));
             this.label7.Location = new System.Drawing.Point(13, 46);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(127, 21);
+            this.label7.Size = new System.Drawing.Size(122, 20);
             this.label7.TabIndex = 0;
             this.label7.Text = "Loại thức uống:";
             // 
@@ -1696,8 +1696,8 @@ namespace MilkteaShopManager
             this.panel13.Controls.Add(this.label23);
             this.panel13.Controls.Add(this.label22);
             this.panel13.Controls.Add(this.guna2Button13);
-            this.panel13.Controls.Add(this.guna2DateTimePicker2);
-            this.panel13.Controls.Add(this.guna2DateTimePicker1);
+            this.panel13.Controls.Add(this.dtpLastDate);
+            this.panel13.Controls.Add(this.dtpFirstDay);
             this.panel13.Controls.Add(this.label25);
             this.panel13.Controls.Add(this.label26);
             this.panel13.Controls.Add(this.label27);
@@ -1749,39 +1749,41 @@ namespace MilkteaShopManager
             this.guna2Button13.TabIndex = 55;
             this.guna2Button13.Text = "Tìm";
             // 
-            // guna2DateTimePicker2
+            // dtpLastDate
             // 
-            this.guna2DateTimePicker2.Checked = true;
-            this.guna2DateTimePicker2.CheckedState.Parent = this.guna2DateTimePicker2;
-            this.guna2DateTimePicker2.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
-            this.guna2DateTimePicker2.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.guna2DateTimePicker2.Format = System.Windows.Forms.DateTimePickerFormat.Long;
-            this.guna2DateTimePicker2.HoverState.Parent = this.guna2DateTimePicker2;
-            this.guna2DateTimePicker2.Location = new System.Drawing.Point(789, 90);
-            this.guna2DateTimePicker2.MaxDate = new System.DateTime(9998, 12, 31, 0, 0, 0, 0);
-            this.guna2DateTimePicker2.MinDate = new System.DateTime(1753, 1, 1, 0, 0, 0, 0);
-            this.guna2DateTimePicker2.Name = "guna2DateTimePicker2";
-            this.guna2DateTimePicker2.ShadowDecoration.Parent = this.guna2DateTimePicker2;
-            this.guna2DateTimePicker2.Size = new System.Drawing.Size(306, 36);
-            this.guna2DateTimePicker2.TabIndex = 54;
-            this.guna2DateTimePicker2.Value = new System.DateTime(2021, 12, 14, 22, 56, 19, 194);
+            this.dtpLastDate.Checked = true;
+            this.dtpLastDate.CheckedState.Parent = this.dtpLastDate;
+            this.dtpLastDate.CustomFormat = "dd/MM/yyyy";
+            this.dtpLastDate.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
+            this.dtpLastDate.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.dtpLastDate.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dtpLastDate.HoverState.Parent = this.dtpLastDate;
+            this.dtpLastDate.Location = new System.Drawing.Point(789, 90);
+            this.dtpLastDate.MaxDate = new System.DateTime(9998, 12, 31, 0, 0, 0, 0);
+            this.dtpLastDate.MinDate = new System.DateTime(1753, 1, 1, 0, 0, 0, 0);
+            this.dtpLastDate.Name = "dtpLastDate";
+            this.dtpLastDate.ShadowDecoration.Parent = this.dtpLastDate;
+            this.dtpLastDate.Size = new System.Drawing.Size(306, 36);
+            this.dtpLastDate.TabIndex = 54;
+            this.dtpLastDate.Value = new System.DateTime(2021, 12, 14, 22, 56, 19, 194);
             // 
-            // guna2DateTimePicker1
+            // dtpFirstDay
             // 
-            this.guna2DateTimePicker1.Checked = true;
-            this.guna2DateTimePicker1.CheckedState.Parent = this.guna2DateTimePicker1;
-            this.guna2DateTimePicker1.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
-            this.guna2DateTimePicker1.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.guna2DateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Long;
-            this.guna2DateTimePicker1.HoverState.Parent = this.guna2DateTimePicker1;
-            this.guna2DateTimePicker1.Location = new System.Drawing.Point(129, 90);
-            this.guna2DateTimePicker1.MaxDate = new System.DateTime(9998, 12, 31, 0, 0, 0, 0);
-            this.guna2DateTimePicker1.MinDate = new System.DateTime(1753, 1, 1, 0, 0, 0, 0);
-            this.guna2DateTimePicker1.Name = "guna2DateTimePicker1";
-            this.guna2DateTimePicker1.ShadowDecoration.Parent = this.guna2DateTimePicker1;
-            this.guna2DateTimePicker1.Size = new System.Drawing.Size(306, 36);
-            this.guna2DateTimePicker1.TabIndex = 54;
-            this.guna2DateTimePicker1.Value = new System.DateTime(2021, 12, 14, 22, 56, 19, 194);
+            this.dtpFirstDay.Checked = true;
+            this.dtpFirstDay.CheckedState.Parent = this.dtpFirstDay;
+            this.dtpFirstDay.CustomFormat = "dd/MM/yyyy";
+            this.dtpFirstDay.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
+            this.dtpFirstDay.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.dtpFirstDay.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dtpFirstDay.HoverState.Parent = this.dtpFirstDay;
+            this.dtpFirstDay.Location = new System.Drawing.Point(129, 90);
+            this.dtpFirstDay.MaxDate = new System.DateTime(9998, 12, 31, 0, 0, 0, 0);
+            this.dtpFirstDay.MinDate = new System.DateTime(1753, 1, 1, 0, 0, 0, 0);
+            this.dtpFirstDay.Name = "dtpFirstDay";
+            this.dtpFirstDay.ShadowDecoration.Parent = this.dtpFirstDay;
+            this.dtpFirstDay.Size = new System.Drawing.Size(306, 36);
+            this.dtpFirstDay.TabIndex = 54;
+            this.dtpFirstDay.Value = new System.DateTime(2021, 12, 14, 22, 56, 19, 194);
             // 
             // label25
             // 
@@ -2521,8 +2523,8 @@ namespace MilkteaShopManager
         private System.Windows.Forms.ColumnHeader columnHeader26;
         private System.Windows.Forms.Panel panel13;
         private Guna.UI2.WinForms.Guna2Button guna2Button13;
-        private Guna.UI2.WinForms.Guna2DateTimePicker guna2DateTimePicker2;
-        private Guna.UI2.WinForms.Guna2DateTimePicker guna2DateTimePicker1;
+        private Guna.UI2.WinForms.Guna2DateTimePicker dtpLastDate;
+        private Guna.UI2.WinForms.Guna2DateTimePicker dtpFirstDay;
         private System.Windows.Forms.Label label25;
         private System.Windows.Forms.Label label26;
         private System.Windows.Forms.Label label27;
