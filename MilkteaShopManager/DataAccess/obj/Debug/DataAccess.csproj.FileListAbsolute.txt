@@ -10,3 +10,9 @@ D:\DACS_UPDATE\MilkteaShopManager\DataAccess\obj\Debug\DataAccess.csproj.Assembl
 D:\DACS_UPDATE\MilkteaShopManager\DataAccess\obj\Debug\DataAccess.csproj.CoreCompileInputs.cache
 D:\DACS_UPDATE\MilkteaShopManager\DataAccess\obj\Debug\DataAccess.dll
 D:\DACS_UPDATE\MilkteaShopManager\DataAccess\obj\Debug\DataAccess.pdb
+D:\Học tập\DACS_Back-up\MilkteaShopManager\DataAccess\bin\Debug\DataAccess.dll
+D:\Học tập\DACS_Back-up\MilkteaShopManager\DataAccess\bin\Debug\DataAccess.pdb
+D:\Học tập\DACS_Back-up\MilkteaShopManager\DataAccess\obj\Debug\DataAccess.csproj.AssemblyReference.cache
+D:\Học tập\DACS_Back-up\MilkteaShopManager\DataAccess\obj\Debug\DataAccess.csproj.CoreCompileInputs.cache
+D:\Học tập\DACS_Back-up\MilkteaShopManager\DataAccess\obj\Debug\DataAccess.dll
+D:\Học tập\DACS_Back-up\MilkteaShopManager\DataAccess\obj\Debug\DataAccess.pdb

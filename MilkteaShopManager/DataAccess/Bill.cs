@@ -10,7 +10,6 @@ namespace DataAccess
     public class Bill
     {
         public int Id { get; set; }
-
         public int Discount { get; set; }
         public int Tax { get; set; }
         public int Status { get; set; }
@@ -26,7 +25,11 @@ namespace DataAccess
             this.Tax = (int)row["Thue"];
             this.Status = (int)row["TrangThaiHD"];
             this.DateCheckIn = (DateTime)row["NgayTao"];
-            this.DateCheckOut = (DateTime)row["NgayThanhToan"];
+            var dateCheckOutTemp = row["NgayThanhToan"];
+            if (dateCheckOutTemp.ToString() != "")
+            {
+                this.DateCheckOut = (DateTime)dateCheckOutTemp;
+            }
             this.TableId = (int)row["MaBan"];
             this.Account = row["TaiKhoanTao"].ToString();
         }

@@ -46,6 +46,10 @@
     <Compile Include="BillDA.cs" />
     <Compile Include="BillInfo.cs" />
     <Compile Include="BillInfoDA.cs" />
+    <Compile Include="Category.cs" />
+    <Compile Include="CategoryDA.cs" />
+    <Compile Include="Drink.cs" />
+    <Compile Include="DrinkDA.cs" />
     <Compile Include="DrinkDetails.cs" />
     <Compile Include="DrinkDetailsDA.cs" />
     <Compile Include="HoaDon.cs" />

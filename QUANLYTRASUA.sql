@@ -45,8 +45,8 @@ CREATE TABLE Ban
 CREATE TABLE HoaDon
 (
 	MaHoaDon		INT IDENTITY (1,1) PRIMARY KEY,
-	GiamGia			FLOAT NOT NULL,
-	Thue			FLOAT NOT NULL,
+	GiamGia			INT NOT NULL,
+	Thue			INT NOT NULL,
 	TrangThaiHD		INT NOT NULL,
 	NgayTao			DATETIME,
 	NgayThanhToan	DATETIME,
@@ -259,3 +259,69 @@ BEGIN
 	WHERE CTHD.MaHoaDon = HD.MaHoaDon AND CTHD.MaNuocUong = Nu.MaNuocUong AND HD.TrangThaiHD = 0 AND HD.MaBan = @maBan
 END
 GO
+
+CREATE PROCEDURE GetListCategory
+AS
+BEGIN
+	SELECT * FROM LoaiNuoc
+END
+GO
+
+CREATE PROCEDURE GetListDrinkByCategoryId
+	@maLoai INT
+AS
+BEGIN
+	SELECT * FROM NuocUong
+	WHERE MaLoai = @maLoai
+END
+GO
+
+CREATE PROC [Insert_Bill]
+@maBan INT
+AS
+BEGIN
+	INSERT HoaDon ([GiamGia], [Thue], [MaBan], [NgayTao], [NgayThanhToan], [TrangThaiHD], [TaiKhoanTao]) VALUES (0, 0, @maBan, GETDATE(), NULL, 0, 'gominn')
+END
+GO
+
+CREATE PROC InsertBillInfoForTable
+@maHoaDon INT, @maNuocUong INT, @soLuong INT
+AS
+BEGIN
+	DECLARE @isExistsBillInfo INT;
+	DECLARE @drinkCount INT = 0;
+
+	SELECT @isExistsBillInfo = MaChiTietHoaDon, @drinkCount = SoLuong
+	FROM ChiTietHoaDon 
+	WHERE MaHoaDon = @maHoaDon AND MaNuocUong = @maNuocUong
+
+	IF(@isExistsBillInfo > 0)
+	BEGIN
+		DECLARE @newCount INT = @drinkCount + @soLuong;
+		IF (@newCount > 0)
+			UPDATE ChiTietHoaDon SET SoLuong = @drinkCount + @soLuong WHERE MaHoaDon = @maHoaDon AND MaNuocUong = @maNuocUong;
+		ELSE
+			DELETE ChiTietHoaDon WHERE MaHoaDon = @maHoaDon AND MaNuocUong = @maNuocUong
+	END
+	ELSE
+	BEGIN
+		INSERT ChiTietHoaDon (MaHoaDon, MaNuocUong, SoLuong) VALUES (@maHoaDon, @maNuocUong, @soLuong)
+	END
+END
+GO
+
+CREATE PROC GetMaxBillId
+AS
+BEGIN
+	SELECT MAX(MaHoaDon) FROM HoaDon
+END
+GO
+
+CREATE PROC CheckOut
+@maHoaDon INT
+AS
+BEGIN
+	UPDATE HoaDon SET TrangThaiHD = 1 WHERE MaHoaDon = @maHoaDon
+END
+GO
+
