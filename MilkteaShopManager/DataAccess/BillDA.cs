@@ -10,7 +10,7 @@ namespace DataAccess
 {
     public class BillDA
     {
-        private int GetUncheckBillIdByTableId(int tableId)
+        public int GetUncheckBillIdByTableId(int tableId)
         {
             SqlConnection conn = new SqlConnection(Ultilities.ConnectionString);
             conn.Open();
@@ -33,6 +33,49 @@ namespace DataAccess
                 return bill.Id;
             }
             return -1;
+        }
+
+        public void InsertBillForTable(int tableId)
+        {
+            SqlConnection conn = new SqlConnection(Ultilities.ConnectionString);
+            conn.Open();
+
+            SqlCommand cmd = conn.CreateCommand();
+            cmd.CommandType = CommandType.StoredProcedure;
+            cmd.CommandText = Ultilities.Insert_Bill;
+
+            cmd.Parameters.Add("@maBan", SqlDbType.Int).Value = tableId;
+            cmd.ExecuteNonQuery();
+            conn.Close();
+        }
+
+        public int GetMaxBillId()
+        {
+            SqlConnection conn = new SqlConnection(Ultilities.ConnectionString);
+            conn.Open();
+
+            SqlCommand cmd = conn.CreateCommand();
+            cmd.CommandType = CommandType.StoredProcedure;
+            cmd.CommandText = Ultilities.GetMaxBillId;
+
+            int result = (int)cmd.ExecuteScalar();
+            conn.Close();
+
+            return result;
+        }
+
+        public void CheckOut(int billId)
+        {
+            SqlConnection conn = new SqlConnection(Ultilities.ConnectionString);
+            conn.Open();
+
+            SqlCommand cmd = conn.CreateCommand();
+            cmd.CommandType = CommandType.StoredProcedure;
+            cmd.CommandText = Ultilities.CheckOut;
+
+            cmd.Parameters.Add("@maHoaDon", SqlDbType.Int).Value = billId;
+            cmd.ExecuteNonQuery();
+            conn.Close();
         }
     }
 }

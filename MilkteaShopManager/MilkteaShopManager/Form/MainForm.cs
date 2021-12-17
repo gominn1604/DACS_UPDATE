@@ -5,6 +5,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.Globalization;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -14,8 +15,12 @@ namespace MilkteaShopManager
 {
     public partial class MainForm : Form
     {
+        #region Khai báo ds toàn cục từng bảng
         TableBL tableBL = new TableBL();
         DrinkDetailsBL drinkDetailsBL = new DrinkDetailsBL();
+        DrinkBL drinkBL = new DrinkBL();
+        CategoryBL categoryBL = new CategoryBL();
+        BillBL billBL = new BillBL();
         // danh sách toàn cục bảng LoaiNuoc
         List<LoaiNuoc> listLoaiNuoc = new List<LoaiNuoc>();
 
@@ -28,6 +33,7 @@ namespace MilkteaShopManager
         NuocUongBL nuocUongBL = new NuocUongBL();
 
         LoaiNuocBL loaiNuocBL = new LoaiNuocBL();
+        #endregion
         public MainForm()
         {
             InitializeComponent();
@@ -35,6 +41,7 @@ namespace MilkteaShopManager
             LoadLoaiNuoc();
             LoadNuocDataToListView();
             LoadTable();
+            LoadCategory();
         }
 
         #region Hàm đóng mở form con
@@ -88,7 +95,7 @@ namespace MilkteaShopManager
                 flpDSBan.Controls.Add(btn);
                 if (table.Status == 0)
                 {
-                    status = "Phòng trống";
+                    status = "Bàn trống";
                 }
                 else
                 {
@@ -114,28 +121,125 @@ namespace MilkteaShopManager
 
         private void ShowBill(int tableId)
         {
-            List<DrinkDetails> listMenu = drinkDetailsBL.GetListDrinkDetailsByTableId(tableId);
-
+            int totalAmount = 0;
             lvHoaDon.Items.Clear();
-            foreach (DrinkDetails item in listMenu)
+            List<DrinkDetails> listDrinkDetails = drinkDetailsBL.GetListDrinkDetailsByTableId(tableId);
+            
+            foreach (DrinkDetails item in listDrinkDetails)
             {
                 ListViewItem lvitem = new ListViewItem(item.Name.ToString());
                 lvitem.SubItems.Add(item.Price.ToString());
                 lvitem.SubItems.Add(item.Count.ToString());
                 lvitem.SubItems.Add(item.TotalAmount.ToString());
+                totalAmount += item.TotalAmount;
 
                 lvHoaDon.Items.Add(lvitem);
             }
+            txtTongTien.Text = totalAmount.ToString("###,###");
+        }
+
+        private int TotalAmount(int tableId)
+        {
+            int totalAmount = 0;
+            List<DrinkDetails> listDrinkDetails = drinkDetailsBL.GetListDrinkDetailsByTableId(tableId);
+
+            foreach (DrinkDetails item in listDrinkDetails)
+            {
+                totalAmount += item.TotalAmount;
+            }
+            return totalAmount;
         }
 
         private void Btn_Click(object sender, EventArgs e)
         {
             lvHoaDon.Items.Clear();
             int tableId = ((sender as Button).Tag as Table).ID;
+            lvHoaDon.Tag = (sender as Button).Tag;
 
             ShowBill(tableId);
         }
 
+        private void LoadCategory()
+        {
+            List<Category> listCategory = categoryBL.GetListCategory();
+            cbbLoaiThucUong.DataSource = listCategory;
+            cbbLoaiThucUong.DisplayMember = "Name";
+        }
+
+        private void LoadDrinkListByCategoryId(int categoryId)
+        {
+            List<Drink> listDrink = drinkBL.GetListDrinkByCategoryId(categoryId);
+            cbbTenThucUong.DataSource = listDrink;
+            cbbTenThucUong.DisplayMember = "Name";
+        }
+
+        private void cbbLoaiThucUong_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            int categoryId = 0;
+            ComboBox cb = sender as ComboBox;
+
+            if (cb.SelectedItem == null)
+                return;
+
+            Category categorySelected = cb.SelectedItem as Category;
+            categoryId = categorySelected.ID;
+
+            LoadDrinkListByCategoryId(categoryId);
+        }
+
+        private void btnThemNuoc_Click(object sender, EventArgs e)
+        {
+            BillDA billDA = new BillDA();
+            BillInfoDA billInfoDA = new BillInfoDA();
+            Table table = lvHoaDon.Tag as Table;
+
+            if (table is null)
+                MessageBox.Show("Vui lòng chọn bàn bạn muốn thêm nước!", "Thông báo");
+            else
+            {
+                int billId = billBL.GetUncheckBillIdByTableId(table.ID);
+                int drinkId = (cbbTenThucUong.SelectedItem as Drink).Id;
+                int count = (int)nudSoLuong.Value;
+
+                if (billId == -1)
+                {
+                    billDA.InsertBillForTable(table.ID);
+                    billInfoDA.InsertBillInfoForTable(billBL.GetMaxBillId(), drinkId, count);
+                }
+                else
+                {
+                    billInfoDA.InsertBillInfoForTable(billId, drinkId, count);
+                }
+                ShowBill(table.ID);
+            }    
+        }
+
+        private void btnThanhToan_Click(object sender, EventArgs e)
+        {
+            BillDA billDA = new BillDA();
+            Table table = lvHoaDon.Tag as Table;
+            int billId = billDA.GetUncheckBillIdByTableId(table.ID);
+
+            if(table is null)
+            {
+                MessageBox.Show("Bạn chưa chọn bàn để thanh toán!", "Thông báo");
+            }    
+            else
+            {
+                if (billId != -1)
+                {
+                    FormThanhToan frmThanhToan = new FormThanhToan();
+                    frmThanhToan.Show(this);
+                    frmThanhToan.LoadForm(table, TotalAmount(table.ID));
+                }
+                else if (billId == -1)
+                {
+                    MessageBox.Show("Bàn này chưa có hóa đơn để thanh toán. Vui lòng kiểm tra lại!", "Thông báo");
+                } 
+                    
+            }    
+            
+        }
         #endregion
 
         #region Quản lý món
@@ -404,5 +508,7 @@ namespace MilkteaShopManager
             }
         }
         #endregion
+
+        
     }
 }

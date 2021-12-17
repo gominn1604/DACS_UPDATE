@@ -22,6 +22,13 @@ namespace DataAccess
 
         public static string GetUncheckBillIdByTableId = "GetUncheckBillIdByTableId";
 
-        public static string GetListDrinkDetailsByTableId = "GetListDrinkDetailsByTableId"; 
+        public static string GetListDrinkDetailsByTableId = "GetListDrinkDetailsByTableId";
+        public static string GetListDrinkByCategoryId = "GetListDrinkByCategoryId";
+        public static string GetListCategory = "GetListCategory";
+
+        public static string Insert_Bill = "Insert_Bill";
+        public static string InsertBillInfoForTable = "InsertBillInfoForTable";
+        public static string GetMaxBillId = "GetMaxBillId";
+        public static string CheckOut = "CheckOut";
     }
 }

@@ -77,3 +77,22 @@ D:\DACS_UPDATE\MilkteaShopManager\MilkteaShopManager\obj\Debug\MilkteaShopManage
 D:\DACS_UPDATE\MilkteaShopManager\MilkteaShopManager\obj\Debug\MilkteaShopManager.csproj.CopyComplete
 D:\DACS_UPDATE\MilkteaShopManager\MilkteaShopManager\obj\Debug\MilkteaShopManager.exe
 D:\DACS_UPDATE\MilkteaShopManager\MilkteaShopManager\obj\Debug\MilkteaShopManager.pdb
+D:\Học tập\DACS_Back-up\MilkteaShopManager\MilkteaShopManager\bin\Debug\MilkteaShopManager.exe.config
+D:\Học tập\DACS_Back-up\MilkteaShopManager\MilkteaShopManager\bin\Debug\MilkteaShopManager.exe
+D:\Học tập\DACS_Back-up\MilkteaShopManager\MilkteaShopManager\bin\Debug\MilkteaShopManager.pdb
+D:\Học tập\DACS_Back-up\MilkteaShopManager\MilkteaShopManager\bin\Debug\BusinessLogic.dll
+D:\Học tập\DACS_Back-up\MilkteaShopManager\MilkteaShopManager\bin\Debug\DataAccess.dll
+D:\Học tập\DACS_Back-up\MilkteaShopManager\MilkteaShopManager\bin\Debug\Guna.UI2.dll
+D:\Học tập\DACS_Back-up\MilkteaShopManager\MilkteaShopManager\bin\Debug\BusinessLogic.pdb
+D:\Học tập\DACS_Back-up\MilkteaShopManager\MilkteaShopManager\bin\Debug\DataAccess.pdb
+D:\Học tập\DACS_Back-up\MilkteaShopManager\MilkteaShopManager\obj\Debug\MilkteaShopManager.csproj.AssemblyReference.cache
+D:\Học tập\DACS_Back-up\MilkteaShopManager\MilkteaShopManager\obj\Debug\MilkteaShopManager.LoginForm.resources
+D:\Học tập\DACS_Back-up\MilkteaShopManager\MilkteaShopManager\obj\Debug\MilkteaShopManager.MainForm.resources
+D:\Học tập\DACS_Back-up\MilkteaShopManager\MilkteaShopManager\obj\Debug\MilkteaShopManager.frmThemNhanVien.resources
+D:\Học tập\DACS_Back-up\MilkteaShopManager\MilkteaShopManager\obj\Debug\MilkteaShopManager.Properties.Resources.resources
+D:\Học tập\DACS_Back-up\MilkteaShopManager\MilkteaShopManager\obj\Debug\MilkteaShopManager.csproj.GenerateResource.cache
+D:\Học tập\DACS_Back-up\MilkteaShopManager\MilkteaShopManager\obj\Debug\MilkteaShopManager.csproj.CoreCompileInputs.cache
+D:\Học tập\DACS_Back-up\MilkteaShopManager\MilkteaShopManager\obj\Debug\MilkteaShopManager.csproj.CopyComplete
+D:\Học tập\DACS_Back-up\MilkteaShopManager\MilkteaShopManager\obj\Debug\MilkteaShopManager.exe
+D:\Học tập\DACS_Back-up\MilkteaShopManager\MilkteaShopManager\obj\Debug\MilkteaShopManager.pdb
+D:\Học tập\DACS_Back-up\MilkteaShopManager\MilkteaShopManager\obj\Debug\MilkteaShopManager.FormThanhToan.resources

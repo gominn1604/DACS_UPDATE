@@ -13,6 +13,11 @@ namespace DataAccess
         public string Name { get; set; }
         public int Status { get; set; }
 
+        public Table()
+        {
+
+        }
+
         public Table(int iD, string name, int status)
         {
             this.ID = iD;
