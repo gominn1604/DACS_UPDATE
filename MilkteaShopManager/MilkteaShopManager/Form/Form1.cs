@@ -35,8 +35,6 @@ namespace MilkteaShopManager
                 MainForm quanLy = new MainForm();
                 this.Hide();
                 quanLy.ShowDialog();
-                this.Show();
-
             }
             else
             {
