@@ -222,7 +222,6 @@ namespace MilkteaShopManager
         {
             BillDA billDA = new BillDA();
             Table table = lvHoaDon.Tag as Table;
-            int billId = billDA.GetUncheckBillIdByTableId(table.ID);
 
             if (table is null)
             {
@@ -230,6 +229,7 @@ namespace MilkteaShopManager
             }
             else
             {
+                int billId = billDA.GetUncheckBillIdByTableId(table.ID);
                 if (billId != -1)
                 {
                     FormThanhToan frmThanhToan = new FormThanhToan();
