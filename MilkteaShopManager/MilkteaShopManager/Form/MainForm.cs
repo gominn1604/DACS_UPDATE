@@ -33,6 +33,9 @@ namespace MilkteaShopManager
         NuocUongBL nuocUongBL = new NuocUongBL();
 
         LoaiNuocBL loaiNuocBL = new LoaiNuocBL();
+
+        List<Table> listTable = new List<Table>();
+        string statusTable;
         #endregion
         public MainForm()
         {
@@ -43,6 +46,7 @@ namespace MilkteaShopManager
             LoadTable();
             LoadCategory();
             LoadComboBoxTable(cbbDSBan);
+            LoadTableToLV();
         }
 
         #region Hàm đóng mở form con
@@ -508,6 +512,23 @@ namespace MilkteaShopManager
         {
             tctMain.SelectedIndex = 2;
             hideMenu();
+        }
+
+        private void LoadTableToLV()
+        {
+            listTable = tableBL.GetAll();
+            lvBan.Items.Clear();
+            int count = 0;
+            foreach (var table in listTable)
+            {
+                ListViewItem item = lvBan.Items.Add(count.ToString());
+                item.SubItems.Add(table.ID.ToString());
+                item.SubItems.Add(table.Name);
+                if (table.Status == 0){ statusTable = "Bàn trống"; }
+                else if(table.Status == 1) { statusTable = "Có khách"; }
+                item.SubItems.Add(statusTable);
+                count++;
+            }
         }
         #endregion
 
