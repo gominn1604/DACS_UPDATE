@@ -45,6 +45,7 @@ namespace MilkteaShopManager
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
+            this.lblSoBan = new System.Windows.Forms.Label();
             this.guna2Panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.nudGiamGia)).BeginInit();
             this.SuspendLayout();
@@ -55,6 +56,7 @@ namespace MilkteaShopManager
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.guna2Panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(210)))), ((int)(((byte)(225)))));
+            this.guna2Panel1.Controls.Add(this.lblSoBan);
             this.guna2Panel1.Controls.Add(this.txtChiPhiKhac);
             this.guna2Panel1.Controls.Add(this.cbbThue);
             this.guna2Panel1.Controls.Add(this.mtxtGiamGia);
@@ -74,12 +76,12 @@ namespace MilkteaShopManager
             this.guna2Panel1.Margin = new System.Windows.Forms.Padding(4);
             this.guna2Panel1.Name = "guna2Panel1";
             this.guna2Panel1.ShadowDecoration.Parent = this.guna2Panel1;
-            this.guna2Panel1.Size = new System.Drawing.Size(505, 606);
+            this.guna2Panel1.Size = new System.Drawing.Size(505, 635);
             this.guna2Panel1.TabIndex = 0;
             // 
             // txtChiPhiKhac
             // 
-            this.txtChiPhiKhac.Location = new System.Drawing.Point(337, 224);
+            this.txtChiPhiKhac.Location = new System.Drawing.Point(334, 257);
             this.txtChiPhiKhac.Name = "txtChiPhiKhac";
             this.txtChiPhiKhac.Size = new System.Drawing.Size(140, 30);
             this.txtChiPhiKhac.TabIndex = 8;
@@ -95,7 +97,7 @@ namespace MilkteaShopManager
             "0",
             "5",
             "10"});
-            this.cbbThue.Location = new System.Drawing.Point(218, 271);
+            this.cbbThue.Location = new System.Drawing.Point(215, 304);
             this.cbbThue.Name = "cbbThue";
             this.cbbThue.Size = new System.Drawing.Size(80, 30);
             this.cbbThue.TabIndex = 7;
@@ -103,7 +105,7 @@ namespace MilkteaShopManager
             // 
             // mtxtGiamGia
             // 
-            this.mtxtGiamGia.Location = new System.Drawing.Point(337, 177);
+            this.mtxtGiamGia.Location = new System.Drawing.Point(334, 210);
             this.mtxtGiamGia.Name = "mtxtGiamGia";
             this.mtxtGiamGia.ReadOnly = true;
             this.mtxtGiamGia.Size = new System.Drawing.Size(140, 30);
@@ -113,7 +115,7 @@ namespace MilkteaShopManager
             // 
             // nudGiamGia
             // 
-            this.nudGiamGia.Location = new System.Drawing.Point(218, 177);
+            this.nudGiamGia.Location = new System.Drawing.Point(215, 210);
             this.nudGiamGia.Name = "nudGiamGia";
             this.nudGiamGia.Size = new System.Drawing.Size(80, 30);
             this.nudGiamGia.TabIndex = 5;
@@ -124,7 +126,7 @@ namespace MilkteaShopManager
             // 
             this.btnThanhToan.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
             this.btnThanhToan.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.btnThanhToan.Location = new System.Drawing.Point(118, 504);
+            this.btnThanhToan.Location = new System.Drawing.Point(115, 537);
             this.btnThanhToan.Name = "btnThanhToan";
             this.btnThanhToan.Size = new System.Drawing.Size(282, 57);
             this.btnThanhToan.TabIndex = 4;
@@ -146,7 +148,7 @@ namespace MilkteaShopManager
             this.guna2TextBox1.Font = new System.Drawing.Font("Times New Roman", 12F);
             this.guna2TextBox1.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.guna2TextBox1.HoverState.Parent = this.guna2TextBox1;
-            this.guna2TextBox1.Location = new System.Drawing.Point(34, 381);
+            this.guna2TextBox1.Location = new System.Drawing.Point(31, 414);
             this.guna2TextBox1.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.guna2TextBox1.Name = "guna2TextBox1";
             this.guna2TextBox1.PasswordChar = '\0';
@@ -158,7 +160,7 @@ namespace MilkteaShopManager
             // 
             // txtTongThanhToan
             // 
-            this.txtTongThanhToan.Location = new System.Drawing.Point(337, 318);
+            this.txtTongThanhToan.Location = new System.Drawing.Point(334, 351);
             this.txtTongThanhToan.Name = "txtTongThanhToan";
             this.txtTongThanhToan.ReadOnly = true;
             this.txtTongThanhToan.Size = new System.Drawing.Size(140, 30);
@@ -167,7 +169,7 @@ namespace MilkteaShopManager
             // 
             // txtThue
             // 
-            this.txtThue.Location = new System.Drawing.Point(337, 271);
+            this.txtThue.Location = new System.Drawing.Point(334, 304);
             this.txtThue.Name = "txtThue";
             this.txtThue.ReadOnly = true;
             this.txtThue.Size = new System.Drawing.Size(140, 30);
@@ -177,7 +179,7 @@ namespace MilkteaShopManager
             // 
             // txtCongTien
             // 
-            this.txtCongTien.Location = new System.Drawing.Point(337, 132);
+            this.txtCongTien.Location = new System.Drawing.Point(334, 165);
             this.txtCongTien.Name = "txtCongTien";
             this.txtCongTien.ReadOnly = true;
             this.txtCongTien.Size = new System.Drawing.Size(140, 30);
@@ -187,7 +189,7 @@ namespace MilkteaShopManager
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(30, 326);
+            this.label6.Location = new System.Drawing.Point(27, 359);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(140, 22);
             this.label6.TabIndex = 1;
@@ -196,7 +198,7 @@ namespace MilkteaShopManager
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(30, 279);
+            this.label5.Location = new System.Drawing.Point(27, 312);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(55, 22);
             this.label5.TabIndex = 1;
@@ -205,7 +207,7 @@ namespace MilkteaShopManager
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(30, 232);
+            this.label4.Location = new System.Drawing.Point(27, 265);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(115, 22);
             this.label4.TabIndex = 1;
@@ -214,7 +216,7 @@ namespace MilkteaShopManager
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(30, 185);
+            this.label3.Location = new System.Drawing.Point(27, 218);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(88, 22);
             this.label3.TabIndex = 1;
@@ -223,7 +225,7 @@ namespace MilkteaShopManager
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(30, 140);
+            this.label2.Location = new System.Drawing.Point(27, 173);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(91, 22);
             this.label2.TabIndex = 1;
@@ -232,21 +234,32 @@ namespace MilkteaShopManager
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Times New Roman", 18F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Font = new System.Drawing.Font("Times New Roman", 22.2F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.Red;
-            this.label1.Location = new System.Drawing.Point(117, 39);
+            this.label1.Location = new System.Drawing.Point(107, 38);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(283, 34);
+            this.label1.Size = new System.Drawing.Size(359, 44);
             this.label1.TabIndex = 0;
             this.label1.Text = "Thông tin thanh toán";
+            // 
+            // lblSoBan
+            // 
+            this.lblSoBan.AutoSize = true;
+            this.lblSoBan.Font = new System.Drawing.Font("Times New Roman", 13.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblSoBan.ForeColor = System.Drawing.Color.Red;
+            this.lblSoBan.Location = new System.Drawing.Point(225, 113);
+            this.lblSoBan.Name = "lblSoBan";
+            this.lblSoBan.Size = new System.Drawing.Size(36, 28);
+            this.lblSoBan.TabIndex = 10;
+            this.lblSoBan.Text = "20";
             // 
             // FormThanhToan
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 22F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
-            this.ClientSize = new System.Drawing.Size(516, 618);
+            this.ClientSize = new System.Drawing.Size(516, 647);
             this.Controls.Add(this.guna2Panel1);
             this.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Margin = new System.Windows.Forms.Padding(4);
@@ -278,5 +291,6 @@ namespace MilkteaShopManager
         private System.Windows.Forms.MaskedTextBox mtxtGiamGia;
         private System.Windows.Forms.ComboBox cbbThue;
         private System.Windows.Forms.TextBox txtChiPhiKhac;
+        private System.Windows.Forms.Label lblSoBan;
     }
 }

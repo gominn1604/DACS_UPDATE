@@ -45,9 +45,9 @@ CREATE TABLE Ban
 CREATE TABLE HoaDon
 (
 	MaHoaDon		INT IDENTITY (1,1) PRIMARY KEY,
-	GiamGia			INT NOT NULL,
-	Thue			INT NOT NULL,
-	TrangThaiHD		INT NOT NULL,
+	GiamGia			INT DEFAULT 0,
+	Thue			INT DEFAULT 0,
+	TrangThaiHD		INT DEFAULT 0,
 	NgayTao			DATETIME,
 	NgayThanhToan	DATETIME,
 	MaBan			INT REFERENCES Ban(MaBan),
@@ -318,10 +318,161 @@ END
 GO
 
 CREATE PROC CheckOut
-@maHoaDon INT
+@maHoaDon INT, @giamGia INT, @thue INT
 AS
 BEGIN
-	UPDATE HoaDon SET TrangThaiHD = 1 WHERE MaHoaDon = @maHoaDon
+	UPDATE HoaDon SET TrangThaiHD = 1, GiamGia = @giamGia, Thue = @thue WHERE MaHoaDon = @maHoaDon
 END
 GO
+
+ALTER TRIGGER UpdateBillInfo
+ON [ChiTietHoaDon] FOR INSERT, UPDATE
+AS
+BEGIN
+	DECLARE @maHoaDon INT
+
+	SELECT @maHoaDon = MaHoaDon FROM INSERTED
+
+	DECLARE @maBan INT
+
+	SELECT @maBan = MaBan FROM HoaDon WHERE MaHoaDon = @maHoaDon AND TrangThaiHD = 0
+
+	DECLARE @countBillInfo INT
+
+	UPDATE Ban SET TrangThaiBan = 1 WHERE MaBan = @maBan
+END
+GO
+
+CREATE TRIGGER UpdateBill
+ON HoaDon FOR UPDATE 
+AS
+BEGIN
+	DECLARE @maHoaDon INT
+
+	SELECT @maHoaDon = MaHoaDon FROM INSERTED
+
+	DECLARE @maBan INT
+
+	SELECT @maBan = MaBan FROM HoaDon WHERE MaHoaDon = @maHoaDon
+
+	DECLARE @count INT = 0
+
+	SELECT @count = COUNT(*) FROM HoaDon WHERE MaBan = @maBan AND TrangThaiHD = 0
+
+	IF (@count = 0)
+		UPDATE Ban SET TrangThaiBan = 0 WHERE MaBan = @maBan
+END
+GO
+
+
+
+CREATE PROCEDURE SwitchTable
+@idTable1 INT, @idTable2 INT
+AS
+BEGIN
+	DECLARE @idFirstBill INT
+	DECLARE @idSecondBill INT
+
+	SELECT @idSecondBill = MaHoaDon FROM HoaDon WHERE MaBan = @idTable2 AND TrangThaiHD = 0
+	SELECT @idFirstBill = MaHoaDon FROM HoaDon WHERE MaBan = @idTable1 AND TrangThaiHD = 0
+
+	IF (@idFirstBill IS NULL)
+	BEGIN
+		INSERT [HoaDon] ([GiamGia], [Thue], [NgayTao], [NgayThanhToan], [MaBan], [TrangThaiHD], [TaiKhoanTao]) VALUES (0, 0, GETDATE(), NULL, @idTable1, 0, 'gominn')
+		
+		SELECT @idFirstBill = MAX(MaHoaDon) FROM HoaDon WHERE MaBan = @idTable1 AND TrangThaiHD = 0
+	END
+
+	IF (@idSecondBill IS NULL)
+	BEGIN
+		INSERT [HoaDon] ([GiamGia], [Thue], [NgayTao], [NgayThanhToan], [MaBan], [TrangThaiHD], [TaiKhoanTao]) VALUES (0, 0, GETDATE(), NULL, @idTable2, 0, 'gominn')
+		
+		SELECT @idSecondBill = MAX(MaHoaDon) FROM HoaDon WHERE MaBan = @idTable2 AND TrangThaiHD = 0
+	END
+
+	SELECT MaChiTietHoaDon INTO IdBillInfoTable FROM ChiTietHoaDon WHERE MaHoaDon = @idSecondBill
+
+	UPDATE ChiTietHoaDon SET MaHoaDon = @idSecondBill WHERE MaHoaDon = @idFirstBill
+
+	UPDATE ChiTietHoaDon SET MaHoaDon = @idFirstBill WHERE MaChiTietHoaDon IN (SELECT * FROM IdBillInfoTable)
+
+	DROP TABLE IdBillInfoTable
+
+	DECLARE @countBillInfoByBill1 INT
+	DECLARE @countBillInfoByBill2 INT
+
+	SELECT @countBillInfoByBill1 = COUNT(*) FROM ChiTietHoaDon WHERE MaHoaDon = @idFirstBill
+	SELECT @countBillInfoByBill2 = COUNT(*) FROM ChiTietHoaDon WHERE MaHoaDon = @idSecondBill
+
+	IF (@countBillInfoByBill1 <= 0)
+		BEGIN
+			DECLARE @maBan1 INT
+			SELECT @maBan1 = MaBan FROM HoaDon WHERE MaHoaDon = @idFirstBill
+			UPDATE Ban SET TrangThaiBan = 0 WHERE MaBan = @maBan1
+			DELETE HoaDon WHERE MaHoaDon = @idFirstBill
+		END
+	IF (@countBillInfoByBill2 <= 0)
+		BEGIN
+			DECLARE @maBan2 INT
+			SELECT @maBan2 = MaBan FROM HoaDon WHERE MaHoaDon = @idSecondBill
+			UPDATE Ban SET TrangThaiBan = 0 WHERE MaBan = @maBan2
+			DELETE HoaDon WHERE MaHoaDon = @idSecondBill
+		END
+END
+GO
+
+DELETE ChiTietHoaDon
+DELETE HoaDon
+
+CREATE PROC MergeTable
+@idTable1 INT, @idTable2 INT
+AS
+BEGIN
+	DECLARE @idFirstBill INT
+	DECLARE @idSecondBill INT
+
+	SELECT @idSecondBill = MaHoaDon FROM HoaDon WHERE MaBan = @idTable2 AND TrangThaiHD = 0
+	SELECT @idFirstBill = MaHoaDon FROM HoaDon WHERE MaBan = @idTable1 AND TrangThaiHD = 0
+
+	IF (@idFirstBill IS NULL)
+	BEGIN
+		INSERT [HoaDon] ([GiamGia], [Thue], [NgayTao], [NgayThanhToan], [MaBan], [TrangThaiHD], [TaiKhoanTao]) VALUES (0, 0, GETDATE(), NULL, @idTable1, 0, 'gominn')
+		
+		SELECT @idFirstBill = MAX(MaHoaDon) FROM HoaDon WHERE MaBan = @idTable1 AND TrangThaiHD = 0
+	END
+
+	IF (@idSecondBill IS NULL)
+	BEGIN
+		INSERT [HoaDon] ([GiamGia], [Thue], [NgayTao], [NgayThanhToan], [MaBan], [TrangThaiHD], [TaiKhoanTao]) VALUES (0, 0, GETDATE(), NULL, @idTable2, 0, 'gominn')
+		
+		SELECT @idSecondBill = MAX(MaHoaDon) FROM HoaDon WHERE MaBan = @idTable2 AND TrangThaiHD = 0
+	END
+
+	UPDATE ChiTietHoaDon SET MaHoaDon = @idSecondBill WHERE MaHoaDon = @idFirstBill
+
+	DECLARE @countBillInfoByBill1 INT
+	DECLARE @countBillInfoByBill2 INT
+
+	SELECT @countBillInfoByBill1 = COUNT(*) FROM ChiTietHoaDon WHERE MaHoaDon = @idFirstBill
+	SELECT @countBillInfoByBill2 = COUNT(*) FROM ChiTietHoaDon WHERE MaHoaDon = @idSecondBill
+
+	IF (@countBillInfoByBill1 <= 0)
+		BEGIN
+			DECLARE @maBan1 INT
+			SELECT @maBan1 = MaBan FROM HoaDon WHERE MaHoaDon = @idFirstBill
+			UPDATE Ban SET TrangThaiBan = 0 WHERE MaBan = @maBan1
+			DELETE HoaDon WHERE MaHoaDon = @idFirstBill
+		END
+	IF (@countBillInfoByBill2 <= 0)
+		BEGIN
+			DECLARE @maBan2 INT
+			SELECT @maBan2 = MaBan FROM HoaDon WHERE MaHoaDon = @idSecondBill
+			UPDATE Ban SET TrangThaiBan = 0 WHERE MaBan = @maBan2
+			DELETE HoaDon WHERE MaHoaDon = @idSecondBill
+		END
+END
+GO
+
+
+
 
