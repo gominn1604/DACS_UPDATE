@@ -109,7 +109,7 @@ namespace MilkteaShopManager
             this.label14 = new System.Windows.Forms.Label();
             this.tabPage3 = new System.Windows.Forms.TabPage();
             this.guna2Panel2 = new Guna.UI2.WinForms.Guna2Panel();
-            this.listView5 = new System.Windows.Forms.ListView();
+            this.lvBan = new System.Windows.Forms.ListView();
             this.columnHeader30 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader31 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader32 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
@@ -828,7 +828,7 @@ namespace MilkteaShopManager
             this.label5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(210)))), ((int)(((byte)(225)))));
             this.label5.Location = new System.Drawing.Point(12, 82);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(128, 21);
+            this.label5.Size = new System.Drawing.Size(124, 20);
             this.label5.TabIndex = 0;
             this.label5.Text = "Tên nước uống:";
             // 
@@ -838,7 +838,7 @@ namespace MilkteaShopManager
             this.label6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(210)))), ((int)(((byte)(225)))));
             this.label6.Location = new System.Drawing.Point(438, 41);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(78, 21);
+            this.label6.Size = new System.Drawing.Size(74, 20);
             this.label6.TabIndex = 0;
             this.label6.Text = "Số lượng";
             // 
@@ -848,7 +848,7 @@ namespace MilkteaShopManager
             this.label7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(210)))), ((int)(((byte)(225)))));
             this.label7.Location = new System.Drawing.Point(13, 46);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(127, 21);
+            this.label7.Size = new System.Drawing.Size(122, 20);
             this.label7.TabIndex = 0;
             this.label7.Text = "Loại thức uống:";
             // 
@@ -1359,7 +1359,7 @@ namespace MilkteaShopManager
             // guna2Panel2
             // 
             this.guna2Panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(210)))), ((int)(((byte)(225)))));
-            this.guna2Panel2.Controls.Add(this.listView5);
+            this.guna2Panel2.Controls.Add(this.lvBan);
             this.guna2Panel2.Location = new System.Drawing.Point(396, 76);
             this.guna2Panel2.Margin = new System.Windows.Forms.Padding(4);
             this.guna2Panel2.Name = "guna2Panel2";
@@ -1367,26 +1367,26 @@ namespace MilkteaShopManager
             this.guna2Panel2.Size = new System.Drawing.Size(784, 664);
             this.guna2Panel2.TabIndex = 30;
             // 
-            // listView5
+            // lvBan
             // 
-            this.listView5.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.lvBan.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.listView5.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.lvBan.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
             this.columnHeader30,
             this.columnHeader31,
             this.columnHeader32,
             this.columnHeader33});
-            this.listView5.FullRowSelect = true;
-            this.listView5.GridLines = true;
-            this.listView5.HideSelection = false;
-            this.listView5.Location = new System.Drawing.Point(17, 14);
-            this.listView5.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.listView5.Name = "listView5";
-            this.listView5.Size = new System.Drawing.Size(749, 632);
-            this.listView5.TabIndex = 3;
-            this.listView5.UseCompatibleStateImageBehavior = false;
-            this.listView5.View = System.Windows.Forms.View.Details;
+            this.lvBan.FullRowSelect = true;
+            this.lvBan.GridLines = true;
+            this.lvBan.HideSelection = false;
+            this.lvBan.Location = new System.Drawing.Point(17, 14);
+            this.lvBan.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.lvBan.Name = "lvBan";
+            this.lvBan.Size = new System.Drawing.Size(749, 632);
+            this.lvBan.TabIndex = 3;
+            this.lvBan.UseCompatibleStateImageBehavior = false;
+            this.lvBan.View = System.Windows.Forms.View.Details;
             // 
             // columnHeader30
             // 
@@ -2567,7 +2567,7 @@ namespace MilkteaShopManager
         private System.Windows.Forms.GroupBox groupBox1;
         private Guna.UI2.WinForms.Guna2Panel guna2Panel3;
         private Guna.UI2.WinForms.Guna2Panel guna2Panel2;
-        private System.Windows.Forms.ListView listView5;
+        private System.Windows.Forms.ListView lvBan;
         private System.Windows.Forms.ColumnHeader columnHeader30;
         private System.Windows.Forms.ColumnHeader columnHeader31;
         private System.Windows.Forms.ColumnHeader columnHeader32;

@@ -33,6 +33,9 @@ namespace MilkteaShopManager
         NuocUongBL nuocUongBL = new NuocUongBL();
 
         LoaiNuocBL loaiNuocBL = new LoaiNuocBL();
+
+        List<Table> listTable = new List<Table>();
+        string statusTable;
         #endregion
         public MainForm()
         {
@@ -42,6 +45,7 @@ namespace MilkteaShopManager
             LoadNuocDataToListView();
             LoadTable();
             LoadCategory();
+            LoadTableToLV();
         }
 
         #region Hàm đóng mở form con
@@ -124,7 +128,7 @@ namespace MilkteaShopManager
             int totalAmount = 0;
             lvHoaDon.Items.Clear();
             List<DrinkDetails> listDrinkDetails = drinkDetailsBL.GetListDrinkDetailsByTableId(tableId);
-            
+
             foreach (DrinkDetails item in listDrinkDetails)
             {
                 ListViewItem lvitem = new ListViewItem(item.Name.ToString());
@@ -211,7 +215,7 @@ namespace MilkteaShopManager
                     billInfoDA.InsertBillInfoForTable(billId, drinkId, count);
                 }
                 ShowBill(table.ID);
-            }    
+            }
         }
 
         private void btnThanhToan_Click(object sender, EventArgs e)
@@ -220,10 +224,10 @@ namespace MilkteaShopManager
             Table table = lvHoaDon.Tag as Table;
             int billId = billDA.GetUncheckBillIdByTableId(table.ID);
 
-            if(table is null)
+            if (table is null)
             {
                 MessageBox.Show("Bạn chưa chọn bàn để thanh toán!", "Thông báo");
-            }    
+            }
             else
             {
                 if (billId != -1)
@@ -235,10 +239,10 @@ namespace MilkteaShopManager
                 else if (billId == -1)
                 {
                     MessageBox.Show("Bàn này chưa có hóa đơn để thanh toán. Vui lòng kiểm tra lại!", "Thông báo");
-                } 
-                    
-            }    
-            
+                }
+
+            }
+
         }
         #endregion
 
@@ -461,6 +465,24 @@ namespace MilkteaShopManager
             tctMain.SelectedIndex = 2;
             hideMenu();
         }
+
+        private void LoadTableToLV()
+        {
+            listTable = tableBL.GetAll();
+
+            lvBan.Items.Clear();
+            int count = 1;
+            foreach (var table in listTable)
+            {
+                ListViewItem item = lvBan.Items.Add(count.ToString());
+                item.SubItems.Add(table.ID.ToString());
+                item.SubItems.Add(table.Name);
+                if (table.Status == 0) { statusTable = "Bàn trống"; }
+                else if (table.Status == 1) { statusTable = "Có khách"; }
+                item.SubItems.Add(statusTable);
+                count++;
+            }
+        }
         #endregion
 
         #region Quản lý hoá đơn
@@ -509,6 +531,6 @@ namespace MilkteaShopManager
         }
         #endregion
 
-        
+
     }
 }
