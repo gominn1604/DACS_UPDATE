@@ -64,7 +64,7 @@ namespace DataAccess
             return result;
         }
 
-        public void CheckOut(int billId)
+        public void CheckOut(int billId, int discount, int tax)
         {
             SqlConnection conn = new SqlConnection(Ultilities.ConnectionString);
             conn.Open();
@@ -74,6 +74,8 @@ namespace DataAccess
             cmd.CommandText = Ultilities.CheckOut;
 
             cmd.Parameters.Add("@maHoaDon", SqlDbType.Int).Value = billId;
+            cmd.Parameters.Add("@giamGia", SqlDbType.Int).Value = discount;
+            cmd.Parameters.Add("@thue", SqlDbType.Int).Value = tax;
             cmd.ExecuteNonQuery();
             conn.Close();
         }

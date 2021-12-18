@@ -30,5 +30,7 @@ namespace DataAccess
         public static string InsertBillInfoForTable = "InsertBillInfoForTable";
         public static string GetMaxBillId = "GetMaxBillId";
         public static string CheckOut = "CheckOut";
+        public static string SwitchTable = "SwitchTable";
+        public static string MergeTable = "MergeTable";
     }
 }

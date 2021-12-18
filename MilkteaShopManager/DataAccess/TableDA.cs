@@ -34,5 +34,43 @@ namespace DataAccess
             }
             return tableList;
         }
+
+        public void SwitchTable(int idTable1, int idTable2)
+        {
+            SqlConnection conn = new SqlConnection(Ultilities.ConnectionString);
+            conn.Open();
+
+            SqlCommand cmd = conn.CreateCommand();
+            cmd.CommandType = CommandType.StoredProcedure;
+            cmd.CommandText = Ultilities.SwitchTable;
+
+            cmd.Parameters.Add("@idTable1", SqlDbType.Int).Value = idTable1;
+            cmd.Parameters.Add("@idTable2", SqlDbType.Int).Value = idTable2;
+
+            SqlDataAdapter da = new SqlDataAdapter(cmd);
+            DataTable data = new DataTable();
+
+            da.Fill(data);
+            conn.Close();
+        }
+
+        public void MergeTable(int idTable1, int idTable2)
+        {
+            SqlConnection conn = new SqlConnection(Ultilities.ConnectionString);
+            conn.Open();
+
+            SqlCommand cmd = conn.CreateCommand();
+            cmd.CommandType = CommandType.StoredProcedure;
+            cmd.CommandText = Ultilities.MergeTable;
+
+            cmd.Parameters.Add("@idTable1", SqlDbType.Int).Value = idTable1;
+            cmd.Parameters.Add("@idTable2", SqlDbType.Int).Value = idTable2;
+
+            SqlDataAdapter da = new SqlDataAdapter(cmd);
+            DataTable data = new DataTable();
+
+            da.Fill(data);
+            conn.Close();
+        }
     }
 }

@@ -26,6 +26,7 @@ namespace MilkteaShopManager
             txtCongTien.Text = tongTien.ToString("###,### đ");
             _tongTien = tongTien;
             _table = table;
+            lblSoBan.Text = table.Name;
 
             tongThanhToan = tongTien - Convert.ToInt32(mtxtGiamGia.Text) + Convert.ToInt32(txtThue.Text);
             txtTongThanhToan.Text = tongThanhToan.ToString("###,### đ");
@@ -45,9 +46,9 @@ namespace MilkteaShopManager
         {
             int thue;
             thue = _tongTien / 100 * Convert.ToInt32(cbbThue.SelectedItem.ToString());
-            if (cbbThue.SelectedItem.ToString() == "0")
+            if (cbbThue.SelectedIndex == 0)
             {
-                txtThue.Text = "0 đ";
+                txtThue.Text = "0";
             }    
             else
             {
@@ -81,13 +82,17 @@ namespace MilkteaShopManager
         {
             BillBL billBL = new BillBL();
             BillDA billDA = new BillDA();
+
             int billId = billBL.GetUncheckBillIdByTableId(_table.ID);
+            int discount = Convert.ToInt32(mtxtGiamGia.Text);
+            int tax = Convert.ToInt32(txtThue.Text);
 
             if (billId != -1)
             {
                 if (MessageBox.Show("Bạn có muốn thanh toán hóa đơn cho " + _table.Name.ToLower(), "Thông báo", MessageBoxButtons.OKCancel) == DialogResult.OK)
                 {
-                    billDA.CheckOut(billId);
+                    billDA.CheckOut(billId, discount, tax);
+                    this.Close();
                 }
             }
         }
