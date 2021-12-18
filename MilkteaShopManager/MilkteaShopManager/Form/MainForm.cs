@@ -42,6 +42,7 @@ namespace MilkteaShopManager
             LoadNuocDataToListView();
             LoadTable();
             LoadCategory();
+            LoadComboBoxTable(cbbDSBan);
         }
 
         #region Hàm đóng mở form con
@@ -81,7 +82,7 @@ namespace MilkteaShopManager
             tctMain.SelectedIndex = 0;
         }
 
-        private void LoadTable()
+        public void LoadTable()
         {
             List<Table> tableList = new List<Table>();
 
@@ -211,6 +212,7 @@ namespace MilkteaShopManager
                     billInfoDA.InsertBillInfoForTable(billId, drinkId, count);
                 }
                 ShowBill(table.ID);
+                LoadTable();
             }    
         }
 
@@ -231,6 +233,7 @@ namespace MilkteaShopManager
                     FormThanhToan frmThanhToan = new FormThanhToan();
                     frmThanhToan.Show(this);
                     frmThanhToan.LoadForm(table, TotalAmount(table.ID));
+                    frmThanhToan.FormClosed += FrmThanhToan_FormClosed;
                 }
                 else if (billId == -1)
                 {
@@ -239,6 +242,51 @@ namespace MilkteaShopManager
                     
             }    
             
+        }
+
+        private void FrmThanhToan_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            Table table = lvHoaDon.Tag as Table;
+            ShowBill(table.ID);
+            LoadTable();
+        }
+
+        private void btnChuyenBan_Click(object sender, EventArgs e)
+        {
+            TableDA tableDA = new TableDA();
+            Table table = lvHoaDon.Tag as Table;
+
+            int idTable1 = (lvHoaDon.Tag as Table).ID;
+            int idTable2 = (cbbDSBan.SelectedItem as Table).ID;
+
+            if (MessageBox.Show(string.Format("Bạn có muốn chuyển bàn {0} qua bàn {1} không?", idTable1, idTable2), "Thông báo", MessageBoxButtons.OKCancel) == DialogResult.OK)
+            {
+                tableDA.SwitchTable(idTable1, idTable2);
+                LoadTable();
+                ShowBill(table.ID);
+            }    
+        }
+
+        private void LoadComboBoxTable(ComboBox cbb)
+        {
+            cbb.DataSource = tableBL.GetAll();
+            cbb.DisplayMember = "Name";
+        }
+
+        private void btnGopBan_Click(object sender, EventArgs e)
+        {
+            TableDA tableDA = new TableDA();
+            Table table = lvHoaDon.Tag as Table;
+
+            int idTable1 = (lvHoaDon.Tag as Table).ID;
+            int idTable2 = (cbbDSBan.SelectedItem as Table).ID;
+
+            if (MessageBox.Show(string.Format("Bạn có muốn gộp từ bàn {0} qua bàn {1} không?", idTable1, idTable2), "Thông báo", MessageBoxButtons.OKCancel) == DialogResult.OK)
+            {
+                tableDA.MergeTable(idTable1, idTable2);
+                LoadTable();
+                ShowBill(table.ID);
+            }
         }
         #endregion
 
@@ -497,7 +545,9 @@ namespace MilkteaShopManager
         #region Đăng xuất
         private void btnDangXuat_Click(object sender, EventArgs e)
         {
+            LoginForm frm = new LoginForm();
             this.Close();
+            frm.Show();
         }
         private void MainForm_FormClosing(object sender, FormClosingEventArgs e)
         {
@@ -507,6 +557,8 @@ namespace MilkteaShopManager
                 e.Cancel = true;
             }
         }
+
+
         #endregion
 
         
