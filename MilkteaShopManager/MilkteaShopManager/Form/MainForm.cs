@@ -288,6 +288,11 @@ namespace MilkteaShopManager
                 ShowBill(table.ID);
             }
         }
+
+        private void MetQuaMaiLamTiep()
+        {
+            MessageBox.Show("@@");
+        }
         #endregion
 
         #region Quản lý món
