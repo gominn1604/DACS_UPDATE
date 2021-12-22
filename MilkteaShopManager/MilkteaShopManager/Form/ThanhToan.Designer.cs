@@ -30,7 +30,6 @@ namespace MilkteaShopManager
         private void InitializeComponent()
         {
             this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
-            this.lblSoBan = new System.Windows.Forms.Label();
             this.txtChiPhiKhac = new System.Windows.Forms.TextBox();
             this.cbbThue = new System.Windows.Forms.ComboBox();
             this.mtxtGiamGia = new System.Windows.Forms.MaskedTextBox();
@@ -46,6 +45,7 @@ namespace MilkteaShopManager
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
+            this.lblSoBan = new System.Windows.Forms.Label();
             this.guna2Panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.nudGiamGia)).BeginInit();
             this.SuspendLayout();
@@ -78,17 +78,6 @@ namespace MilkteaShopManager
             this.guna2Panel1.ShadowDecoration.Parent = this.guna2Panel1;
             this.guna2Panel1.Size = new System.Drawing.Size(505, 635);
             this.guna2Panel1.TabIndex = 0;
-            // 
-            // lblSoBan
-            // 
-            this.lblSoBan.AutoSize = true;
-            this.lblSoBan.Font = new System.Drawing.Font("Times New Roman", 13.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblSoBan.ForeColor = System.Drawing.Color.Red;
-            this.lblSoBan.Location = new System.Drawing.Point(225, 113);
-            this.lblSoBan.Name = "lblSoBan";
-            this.lblSoBan.Size = new System.Drawing.Size(36, 28);
-            this.lblSoBan.TabIndex = 10;
-            this.lblSoBan.Text = "20";
             // 
             // txtChiPhiKhac
             // 
@@ -253,6 +242,17 @@ namespace MilkteaShopManager
             this.label1.Size = new System.Drawing.Size(359, 44);
             this.label1.TabIndex = 0;
             this.label1.Text = "Thông tin thanh toán";
+            // 
+            // lblSoBan
+            // 
+            this.lblSoBan.AutoSize = true;
+            this.lblSoBan.Font = new System.Drawing.Font("Times New Roman", 13.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblSoBan.ForeColor = System.Drawing.Color.Red;
+            this.lblSoBan.Location = new System.Drawing.Point(225, 113);
+            this.lblSoBan.Name = "lblSoBan";
+            this.lblSoBan.Size = new System.Drawing.Size(36, 28);
+            this.lblSoBan.TabIndex = 10;
+            this.lblSoBan.Text = "20";
             // 
             // FormThanhToan
             // 

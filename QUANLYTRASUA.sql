@@ -502,3 +502,55 @@ SELECT * FROM HoaDon
 DELETE ChiTietHoaDon
 DELETE HoaDon
 
+
+-----------------------------------------------------------
+-- thêm - xoá - sửa bản ăn cho admin
+create proc [dbo].[Table_InsertUpdateDelete]
+	@MaBan int output,
+	@TenBan nvarchar(100),
+	@TrangThai int,
+	@Action int
+as
+if @Action = 0
+begin
+	If not exists (select * from ban where TenBan = @TenBan)
+	begin
+		insert into [Ban]([TenBan]) values (@TenBan)
+		set @MaBan = @@IDENTITY
+	end
+end
+else if @Action = 1
+begin
+	update [Ban] set [TenBan] = @TenBan
+	where [MaBan] = @MaBan
+end
+else if @Action = 2
+	begin
+		delete from [Ban] where [MaBan] = @MaBan
+	end
+go
+
+------------------------------------------------
+-- nhân viên
+create proc [dbo].[NhanVien_GetAll]
+AS
+begin
+	select * from NhanVien
+end
+go
+------------------------------------------------
+-- tài khoản
+Create proc [dbo].[TaiKhoan_GetAll]
+As
+Begin
+	select * from TaiKhoan
+End
+go
+------------------------------------------------
+-- chức vụ
+create proc [dbo].[ChucVu_GetAll]
+as
+begin
+	select * from ChucVu
+end
+go
