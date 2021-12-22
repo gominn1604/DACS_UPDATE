@@ -32,5 +32,7 @@ namespace DataAccess
         public static string CheckOut = "CheckOut";
         public static string SwitchTable = "SwitchTable";
         public static string MergeTable = "MergeTable";
+        public static string ShowBillInTheDay = "ShowBillInTheDay";
+        public static string GetListBillByDate = "GetListBillByDate";
     }
 }
