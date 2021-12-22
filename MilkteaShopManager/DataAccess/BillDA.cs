@@ -64,7 +64,7 @@ namespace DataAccess
             return result;
         }
 
-        public void CheckOut(int billId, int discount, int tax, int totalAmount)
+        public void CheckOut(int billId, int discount, int tax)
         {
             SqlConnection conn = new SqlConnection(Ultilities.ConnectionString);
             conn.Open();
@@ -76,48 +76,8 @@ namespace DataAccess
             cmd.Parameters.Add("@maHoaDon", SqlDbType.Int).Value = billId;
             cmd.Parameters.Add("@giamGia", SqlDbType.Int).Value = discount;
             cmd.Parameters.Add("@thue", SqlDbType.Int).Value = tax;
-            cmd.Parameters.Add("@tongTien", SqlDbType.Int).Value = totalAmount;
             cmd.ExecuteNonQuery();
             conn.Close();
-        }
-
-        public DataTable GetBillListInDay()
-        {
-            SqlConnection conn = new SqlConnection(Ultilities.ConnectionString);
-            conn.Open();
-
-            SqlCommand cmd = conn.CreateCommand();
-            cmd.CommandType = CommandType.StoredProcedure;
-            cmd.CommandText = Ultilities.ShowBillInTheDay;
-
-            SqlDataAdapter da = new SqlDataAdapter(cmd);
-            DataTable data = new DataTable();
-
-            da.Fill(data);
-            conn.Close();
-
-            return data;
-        }
-
-        public DataTable GetBillListByDate(DateTime checkIn, DateTime checkOut)
-        {
-            SqlConnection conn = new SqlConnection(Ultilities.ConnectionString);
-            conn.Open();
-
-            SqlCommand cmd = conn.CreateCommand();
-            cmd.CommandType = CommandType.StoredProcedure;
-            cmd.CommandText = Ultilities.GetListBillByDate;
-
-            cmd.Parameters.Add("@ngayVao", SqlDbType.Date).Value = checkIn;
-            cmd.Parameters.Add("@ngayThanhToan", SqlDbType.Date).Value = checkOut;
-
-            SqlDataAdapter da = new SqlDataAdapter(cmd);
-            DataTable data = new DataTable();
-
-            da.Fill(data);
-            conn.Close();
-
-            return data;
         }
     }
 }

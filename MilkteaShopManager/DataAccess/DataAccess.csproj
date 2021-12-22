@@ -42,12 +42,14 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AccountDA.cs" />
     <Compile Include="Bill.cs" />
     <Compile Include="BillDA.cs" />
     <Compile Include="BillInfo.cs" />
     <Compile Include="BillInfoDA.cs" />
     <Compile Include="Category.cs" />
     <Compile Include="CategoryDA.cs" />
+    <Compile Include="Position.cs" />
     <Compile Include="Drink.cs" />
     <Compile Include="DrinkDA.cs" />
     <Compile Include="DrinkDetails.cs" />
@@ -55,11 +57,15 @@
     <Compile Include="HoaDon.cs" />
     <Compile Include="LoaiNuocDA.cs" />
     <Compile Include="LoaiNuoc.cs" />
+    <Compile Include="PositionDA.cs" />
+    <Compile Include="Staff.cs" />
     <Compile Include="NuocUong.cs" />
     <Compile Include="NuocUongDA.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="StaffDA.cs" />
     <Compile Include="Table.cs" />
     <Compile Include="TableDA.cs" />
+    <Compile Include="Account.cs" />
     <Compile Include="Ultilities.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
