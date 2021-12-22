@@ -715,5 +715,10 @@ namespace MilkteaShopManager
 
 
         #endregion
+
+        public void DiNguThoi()
+        {
+            txtChucVu.Text = "";
+        }
     }
 }
