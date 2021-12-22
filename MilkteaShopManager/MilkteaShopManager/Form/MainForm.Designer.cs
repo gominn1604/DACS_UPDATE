@@ -533,7 +533,7 @@ namespace MilkteaShopManager
             this.txtTimKiem.PlaceholderText = "Tìm theo tên bàn";
             this.txtTimKiem.SelectedText = "";
             this.txtTimKiem.ShadowDecoration.Parent = this.txtTimKiem;
-            this.txtTimKiem.Size = new System.Drawing.Size(292, 29);
+            this.txtTimKiem.Size = new System.Drawing.Size(326, 29);
             this.txtTimKiem.TabIndex = 1;
             this.txtTimKiem.TextChanged += new System.EventHandler(this.txtTimKiem_TextChanged);
             // 
@@ -784,7 +784,7 @@ namespace MilkteaShopManager
             this.label5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(210)))), ((int)(((byte)(225)))));
             this.label5.Location = new System.Drawing.Point(12, 82);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(124, 20);
+            this.label5.Size = new System.Drawing.Size(128, 21);
             this.label5.TabIndex = 0;
             this.label5.Text = "Tên nước uống:";
             // 
@@ -794,7 +794,7 @@ namespace MilkteaShopManager
             this.label6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(210)))), ((int)(((byte)(225)))));
             this.label6.Location = new System.Drawing.Point(438, 41);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(74, 20);
+            this.label6.Size = new System.Drawing.Size(78, 21);
             this.label6.TabIndex = 0;
             this.label6.Text = "Số lượng";
             // 
@@ -804,7 +804,7 @@ namespace MilkteaShopManager
             this.label7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(210)))), ((int)(((byte)(225)))));
             this.label7.Location = new System.Drawing.Point(13, 46);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(122, 20);
+            this.label7.Size = new System.Drawing.Size(127, 21);
             this.label7.TabIndex = 0;
             this.label7.Text = "Loại thức uống:";
             // 
@@ -1053,11 +1053,11 @@ namespace MilkteaShopManager
             this.btnDongYLoai.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
             this.btnDongYLoai.DisabledState.Parent = this.btnDongYLoai;
             this.btnDongYLoai.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
-            this.btnDongYLoai.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.btnDongYLoai.Font = new System.Drawing.Font("Times New Roman", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnDongYLoai.ForeColor = System.Drawing.Color.Black;
             this.btnDongYLoai.HoverState.Parent = this.btnDongYLoai;
             this.btnDongYLoai.ImageSize = new System.Drawing.Size(30, 30);
-            this.btnDongYLoai.Location = new System.Drawing.Point(993, 148);
+            this.btnDongYLoai.Location = new System.Drawing.Point(1050, 170);
             this.btnDongYLoai.Name = "btnDongYLoai";
             this.btnDongYLoai.ShadowDecoration.Parent = this.btnDongYLoai;
             this.btnDongYLoai.Size = new System.Drawing.Size(99, 32);
@@ -1077,12 +1077,12 @@ namespace MilkteaShopManager
             this.cbbLoaiNuoc.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.cbbLoaiNuoc.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.cbbLoaiNuoc.FocusedState.Parent = this.cbbLoaiNuoc;
-            this.cbbLoaiNuoc.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.cbbLoaiNuoc.Font = new System.Drawing.Font("Times New Roman", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbbLoaiNuoc.ForeColor = System.Drawing.Color.White;
             this.cbbLoaiNuoc.HoverState.Parent = this.cbbLoaiNuoc;
             this.cbbLoaiNuoc.ItemHeight = 30;
             this.cbbLoaiNuoc.ItemsAppearance.Parent = this.cbbLoaiNuoc;
-            this.cbbLoaiNuoc.Location = new System.Drawing.Point(157, 144);
+            this.cbbLoaiNuoc.Location = new System.Drawing.Point(162, 166);
             this.cbbLoaiNuoc.Name = "cbbLoaiNuoc";
             this.cbbLoaiNuoc.ShadowDecoration.Parent = this.cbbLoaiNuoc;
             this.cbbLoaiNuoc.Size = new System.Drawing.Size(306, 36);
@@ -1103,11 +1103,11 @@ namespace MilkteaShopManager
             this.txtThemLoai.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
             this.txtThemLoai.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtThemLoai.FocusedState.Parent = this.txtThemLoai;
-            this.txtThemLoai.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.txtThemLoai.Font = new System.Drawing.Font("Times New Roman", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtThemLoai.ForeColor = System.Drawing.Color.White;
             this.txtThemLoai.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtThemLoai.HoverState.Parent = this.txtThemLoai;
-            this.txtThemLoai.Location = new System.Drawing.Point(681, 144);
+            this.txtThemLoai.Location = new System.Drawing.Point(738, 166);
             this.txtThemLoai.Name = "txtThemLoai";
             this.txtThemLoai.PasswordChar = '\0';
             this.txtThemLoai.PlaceholderForeColor = System.Drawing.Color.Gray;
@@ -1129,11 +1129,11 @@ namespace MilkteaShopManager
             this.btnThemLoai.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
             this.btnThemLoai.DisabledState.Parent = this.btnThemLoai;
             this.btnThemLoai.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
-            this.btnThemLoai.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.btnThemLoai.Font = new System.Drawing.Font("Times New Roman", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnThemLoai.ForeColor = System.Drawing.Color.Black;
             this.btnThemLoai.HoverState.Parent = this.btnThemLoai;
             this.btnThemLoai.ImageSize = new System.Drawing.Size(30, 30);
-            this.btnThemLoai.Location = new System.Drawing.Point(482, 144);
+            this.btnThemLoai.Location = new System.Drawing.Point(487, 166);
             this.btnThemLoai.Name = "btnThemLoai";
             this.btnThemLoai.ShadowDecoration.Parent = this.btnThemLoai;
             this.btnThemLoai.Size = new System.Drawing.Size(111, 36);
@@ -1156,11 +1156,11 @@ namespace MilkteaShopManager
             this.txtTenNuocUong.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
             this.txtTenNuocUong.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtTenNuocUong.FocusedState.Parent = this.txtTenNuocUong;
-            this.txtTenNuocUong.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.txtTenNuocUong.Font = new System.Drawing.Font("Times New Roman", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtTenNuocUong.ForeColor = System.Drawing.Color.White;
             this.txtTenNuocUong.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtTenNuocUong.HoverState.Parent = this.txtTenNuocUong;
-            this.txtTenNuocUong.Location = new System.Drawing.Point(157, 94);
+            this.txtTenNuocUong.Location = new System.Drawing.Point(162, 116);
             this.txtTenNuocUong.Name = "txtTenNuocUong";
             this.txtTenNuocUong.PasswordChar = '\0';
             this.txtTenNuocUong.PlaceholderText = "";
@@ -1184,11 +1184,11 @@ namespace MilkteaShopManager
             this.txtDVT.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
             this.txtDVT.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtDVT.FocusedState.Parent = this.txtDVT;
-            this.txtDVT.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.txtDVT.Font = new System.Drawing.Font("Times New Roman", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtDVT.ForeColor = System.Drawing.Color.White;
             this.txtDVT.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtDVT.HoverState.Parent = this.txtDVT;
-            this.txtDVT.Location = new System.Drawing.Point(681, 94);
+            this.txtDVT.Location = new System.Drawing.Point(738, 116);
             this.txtDVT.Name = "txtDVT";
             this.txtDVT.PasswordChar = '\0';
             this.txtDVT.PlaceholderText = "";
@@ -1213,11 +1213,11 @@ namespace MilkteaShopManager
             this.txtIDNuoc.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
             this.txtIDNuoc.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtIDNuoc.FocusedState.Parent = this.txtIDNuoc;
-            this.txtIDNuoc.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.txtIDNuoc.Font = new System.Drawing.Font("Times New Roman", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtIDNuoc.ForeColor = System.Drawing.Color.White;
             this.txtIDNuoc.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtIDNuoc.HoverState.Parent = this.txtIDNuoc;
-            this.txtIDNuoc.Location = new System.Drawing.Point(157, 52);
+            this.txtIDNuoc.Location = new System.Drawing.Point(162, 74);
             this.txtIDNuoc.Name = "txtIDNuoc";
             this.txtIDNuoc.PasswordChar = '\0';
             this.txtIDNuoc.PlaceholderText = "";
@@ -1229,11 +1229,11 @@ namespace MilkteaShopManager
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.Font = new System.Drawing.Font("Times New Roman", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label9.ForeColor = System.Drawing.Color.Black;
-            this.label9.Location = new System.Drawing.Point(565, 101);
+            this.label9.Location = new System.Drawing.Point(622, 123);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(91, 19);
+            this.label9.Size = new System.Drawing.Size(95, 21);
             this.label9.TabIndex = 7;
             this.label9.Text = "Đơn vị tính";
             // 
@@ -1252,11 +1252,11 @@ namespace MilkteaShopManager
             this.txtDonGia.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
             this.txtDonGia.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtDonGia.FocusedState.Parent = this.txtDonGia;
-            this.txtDonGia.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.txtDonGia.Font = new System.Drawing.Font("Times New Roman", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtDonGia.ForeColor = System.Drawing.Color.White;
             this.txtDonGia.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtDonGia.HoverState.Parent = this.txtDonGia;
-            this.txtDonGia.Location = new System.Drawing.Point(681, 52);
+            this.txtDonGia.Location = new System.Drawing.Point(738, 74);
             this.txtDonGia.Name = "txtDonGia";
             this.txtDonGia.PasswordChar = '\0';
             this.txtDonGia.PlaceholderText = "";
@@ -1268,55 +1268,55 @@ namespace MilkteaShopManager
             // label10
             // 
             this.label10.AutoSize = true;
-            this.label10.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label10.Font = new System.Drawing.Font("Times New Roman", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label10.ForeColor = System.Drawing.Color.Black;
-            this.label10.Location = new System.Drawing.Point(565, 58);
+            this.label10.Location = new System.Drawing.Point(622, 80);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(66, 19);
+            this.label10.Size = new System.Drawing.Size(69, 21);
             this.label10.TabIndex = 8;
             this.label10.Text = "Đơn giá";
             // 
             // label11
             // 
             this.label11.AutoSize = true;
-            this.label11.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label11.Font = new System.Drawing.Font("Times New Roman", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label11.ForeColor = System.Drawing.Color.Black;
-            this.label11.Location = new System.Drawing.Point(20, 148);
+            this.label11.Location = new System.Drawing.Point(25, 170);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(123, 19);
+            this.label11.Size = new System.Drawing.Size(128, 21);
             this.label11.TabIndex = 9;
             this.label11.Text = "Loại nước uống";
             // 
             // label12
             // 
             this.label12.AutoSize = true;
-            this.label12.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label12.Font = new System.Drawing.Font("Times New Roman", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label12.ForeColor = System.Drawing.Color.Black;
-            this.label12.Location = new System.Drawing.Point(20, 101);
+            this.label12.Location = new System.Drawing.Point(25, 123);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(116, 19);
+            this.label12.Size = new System.Drawing.Size(124, 21);
             this.label12.TabIndex = 10;
             this.label12.Text = "Tên nước uống";
             // 
             // label13
             // 
             this.label13.AutoSize = true;
-            this.label13.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label13.Font = new System.Drawing.Font("Times New Roman", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label13.ForeColor = System.Drawing.Color.Black;
-            this.label13.Location = new System.Drawing.Point(20, 58);
+            this.label13.Location = new System.Drawing.Point(25, 80);
             this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(113, 19);
+            this.label13.Size = new System.Drawing.Size(119, 21);
             this.label13.TabIndex = 11;
             this.label13.Text = "Mã nước uống";
             // 
             // label14
             // 
             this.label14.AutoSize = true;
-            this.label14.Font = new System.Drawing.Font("Times New Roman", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label14.Font = new System.Drawing.Font("Times New Roman", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label14.ForeColor = System.Drawing.Color.Red;
-            this.label14.Location = new System.Drawing.Point(430, 14);
+            this.label14.Location = new System.Drawing.Point(451, 12);
             this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(315, 35);
+            this.label14.Size = new System.Drawing.Size(281, 33);
             this.label14.TabIndex = 12;
             this.label14.Text = "DANH MỤC MÓN ĂN";
             // 
@@ -1646,9 +1646,9 @@ namespace MilkteaShopManager
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Times New Roman", 13.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
-            this.label3.Location = new System.Drawing.Point(18, 176);
+            this.label3.Location = new System.Drawing.Point(23, 182);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(172, 26);
+            this.label3.Size = new System.Drawing.Size(179, 28);
             this.label3.TabIndex = 59;
             this.label3.Text = "Tổng doanh thu:";
             // 
@@ -1657,9 +1657,9 @@ namespace MilkteaShopManager
             this.lblTongDoanhThu.AutoSize = true;
             this.lblTongDoanhThu.Font = new System.Drawing.Font("Times New Roman", 13.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
             this.lblTongDoanhThu.ForeColor = System.Drawing.Color.Red;
-            this.lblTongDoanhThu.Location = new System.Drawing.Point(213, 176);
+            this.lblTongDoanhThu.Location = new System.Drawing.Point(218, 182);
             this.lblTongDoanhThu.Name = "lblTongDoanhThu";
-            this.lblTongDoanhThu.Size = new System.Drawing.Size(30, 26);
+            this.lblTongDoanhThu.Size = new System.Drawing.Size(30, 28);
             this.lblTongDoanhThu.TabIndex = 58;
             this.lblTongDoanhThu.Text = "...";
             // 
@@ -1667,7 +1667,7 @@ namespace MilkteaShopManager
             // 
             this.btnThongKe.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
             this.btnThongKe.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnThongKe.Location = new System.Drawing.Point(535, 90);
+            this.btnThongKe.Location = new System.Drawing.Point(528, 97);
             this.btnThongKe.Name = "btnThongKe";
             this.btnThongKe.Size = new System.Drawing.Size(118, 36);
             this.btnThongKe.TabIndex = 57;
@@ -1683,7 +1683,7 @@ namespace MilkteaShopManager
             this.dtpEndDay.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dtpEndDay.Format = System.Windows.Forms.DateTimePickerFormat.Long;
             this.dtpEndDay.HoverState.Parent = this.dtpEndDay;
-            this.dtpEndDay.Location = new System.Drawing.Point(789, 90);
+            this.dtpEndDay.Location = new System.Drawing.Point(783, 97);
             this.dtpEndDay.MaxDate = new System.DateTime(9998, 12, 31, 0, 0, 0, 0);
             this.dtpEndDay.MinDate = new System.DateTime(1753, 1, 1, 0, 0, 0, 0);
             this.dtpEndDay.Name = "dtpEndDay";
@@ -1700,7 +1700,7 @@ namespace MilkteaShopManager
             this.dtpStartDay.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dtpStartDay.Format = System.Windows.Forms.DateTimePickerFormat.Long;
             this.dtpStartDay.HoverState.Parent = this.dtpStartDay;
-            this.dtpStartDay.Location = new System.Drawing.Point(105, 90);
+            this.dtpStartDay.Location = new System.Drawing.Point(108, 97);
             this.dtpStartDay.MaxDate = new System.DateTime(9998, 12, 31, 0, 0, 0, 0);
             this.dtpStartDay.MinDate = new System.DateTime(1753, 1, 1, 0, 0, 0, 0);
             this.dtpStartDay.Name = "dtpStartDay";
@@ -1714,22 +1714,22 @@ namespace MilkteaShopManager
             this.label25.AutoSize = true;
             this.label25.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label25.ForeColor = System.Drawing.Color.Black;
-            this.label25.Location = new System.Drawing.Point(692, 96);
+            this.label25.Location = new System.Drawing.Point(681, 103);
             this.label25.Name = "label25";
-            this.label25.Size = new System.Drawing.Size(89, 23);
+            this.label25.Size = new System.Drawing.Size(96, 23);
             this.label25.TabIndex = 47;
-            this.label25.Text = "Đến ngày";
+            this.label25.Text = "Đến ngày:";
             // 
             // label26
             // 
             this.label26.AutoSize = true;
             this.label26.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label26.ForeColor = System.Drawing.Color.Black;
-            this.label26.Location = new System.Drawing.Point(19, 96);
+            this.label26.Location = new System.Drawing.Point(15, 103);
             this.label26.Name = "label26";
-            this.label26.Size = new System.Drawing.Size(80, 23);
+            this.label26.Size = new System.Drawing.Size(87, 23);
             this.label26.TabIndex = 48;
-            this.label26.Text = "Từ ngày";
+            this.label26.Text = "Từ ngày:";
             // 
             // label27
             // 
