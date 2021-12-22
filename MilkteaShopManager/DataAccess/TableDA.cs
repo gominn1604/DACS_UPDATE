@@ -54,30 +54,6 @@ namespace DataAccess
             conn.Close();
         }
 
-        public int Table_InsertUpdateDelete(Table table, int action)
-        {
-            SqlConnection sqlConn=new SqlConnection(Ultilities.ConnectionString);
-            sqlConn.Open();
-
-            SqlCommand cmd = sqlConn.CreateCommand();
-            cmd.CommandType=CommandType.StoredProcedure;
-            cmd.CommandText = Ultilities.Table_InsertUpdateDelete;
-
-            SqlParameter maBan = new SqlParameter("@MaBan", SqlDbType.Int);
-            maBan.Direction = ParameterDirection.InputOutput;
-
-            cmd.Parameters.Add(maBan).Value=table.ID;
-            cmd.Parameters.Add("@TenBan", SqlDbType.NVarChar,100).Value = table.Name;
-            cmd.Parameters.Add("@TrangThai", SqlDbType.Int).Value = table.Status;
-            cmd.Parameters.Add("@Action", SqlDbType.Int).Value = action;
-
-            int result = cmd.ExecuteNonQuery();
-            // Thực thi lệnh
-            if (result > 0) // Nếu thành công thì trả về ID đã thêm
-                return (int)cmd.Parameters["@MaBan"].Value;
-            return 0;
-        }
-
         public void MergeTable(int idTable1, int idTable2)
         {
             SqlConnection conn = new SqlConnection(Ultilities.ConnectionString);

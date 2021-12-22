@@ -166,7 +166,6 @@ namespace MilkteaShopManager
             this.txtTenDangNhap.PlaceholderForeColor = System.Drawing.Color.Gray;
             this.txtTenDangNhap.PlaceholderText = "Tên đăng nhập";
             this.txtTenDangNhap.SelectedText = "";
-            this.txtTenDangNhap.SelectionStart = 4;
             this.txtTenDangNhap.ShadowDecoration.Parent = this.txtTenDangNhap;
             this.txtTenDangNhap.Size = new System.Drawing.Size(275, 40);
             this.txtTenDangNhap.TabIndex = 1;
@@ -209,7 +208,6 @@ namespace MilkteaShopManager
             this.Name = "LoginForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Đăng nhập";
-            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.LoginForm_FormClosing);
             this.guna2Panel1.ResumeLayout(false);
             this.guna2Panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).EndInit();

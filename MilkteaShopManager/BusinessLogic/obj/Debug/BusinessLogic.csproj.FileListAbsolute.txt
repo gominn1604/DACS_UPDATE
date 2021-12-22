@@ -34,12 +34,3 @@ C:\Users\Kin\Documents\GitHub\DACS_UPDATE\MilkteaShopManager\BusinessLogic\obj\D
 C:\Users\Kin\Documents\GitHub\DACS_UPDATE\MilkteaShopManager\BusinessLogic\obj\Debug\BusinessLogic.csproj.CopyComplete
 C:\Users\Kin\Documents\GitHub\DACS_UPDATE\MilkteaShopManager\BusinessLogic\obj\Debug\BusinessLogic.dll
 C:\Users\Kin\Documents\GitHub\DACS_UPDATE\MilkteaShopManager\BusinessLogic\obj\Debug\BusinessLogic.pdb
-C:\Users\Kin\Desktop\New folder\MilkteaShopManager\BusinessLogic\bin\Debug\BusinessLogic.dll
-C:\Users\Kin\Desktop\New folder\MilkteaShopManager\BusinessLogic\bin\Debug\BusinessLogic.pdb
-C:\Users\Kin\Desktop\New folder\MilkteaShopManager\BusinessLogic\bin\Debug\DataAccess.dll
-C:\Users\Kin\Desktop\New folder\MilkteaShopManager\BusinessLogic\bin\Debug\DataAccess.pdb
-C:\Users\Kin\Desktop\New folder\MilkteaShopManager\BusinessLogic\obj\Debug\BusinessLogic.csproj.AssemblyReference.cache
-C:\Users\Kin\Desktop\New folder\MilkteaShopManager\BusinessLogic\obj\Debug\BusinessLogic.csproj.CoreCompileInputs.cache
-C:\Users\Kin\Desktop\New folder\MilkteaShopManager\BusinessLogic\obj\Debug\BusinessLogic.csproj.CopyComplete
-C:\Users\Kin\Desktop\New folder\MilkteaShopManager\BusinessLogic\obj\Debug\BusinessLogic.dll
-C:\Users\Kin\Desktop\New folder\MilkteaShopManager\BusinessLogic\obj\Debug\BusinessLogic.pdb

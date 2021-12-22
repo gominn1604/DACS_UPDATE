@@ -22,9 +22,3 @@ C:\Users\Kin\Documents\GitHub\DACS_UPDATE\MilkteaShopManager\DataAccess\obj\Debu
 C:\Users\Kin\Documents\GitHub\DACS_UPDATE\MilkteaShopManager\DataAccess\obj\Debug\DataAccess.csproj.CoreCompileInputs.cache
 C:\Users\Kin\Documents\GitHub\DACS_UPDATE\MilkteaShopManager\DataAccess\obj\Debug\DataAccess.dll
 C:\Users\Kin\Documents\GitHub\DACS_UPDATE\MilkteaShopManager\DataAccess\obj\Debug\DataAccess.pdb
-C:\Users\Kin\Desktop\New folder\MilkteaShopManager\DataAccess\bin\Debug\DataAccess.dll
-C:\Users\Kin\Desktop\New folder\MilkteaShopManager\DataAccess\bin\Debug\DataAccess.pdb
-C:\Users\Kin\Desktop\New folder\MilkteaShopManager\DataAccess\obj\Debug\DataAccess.csproj.AssemblyReference.cache
-C:\Users\Kin\Desktop\New folder\MilkteaShopManager\DataAccess\obj\Debug\DataAccess.csproj.CoreCompileInputs.cache
-C:\Users\Kin\Desktop\New folder\MilkteaShopManager\DataAccess\obj\Debug\DataAccess.dll
-C:\Users\Kin\Desktop\New folder\MilkteaShopManager\DataAccess\obj\Debug\DataAccess.pdb
