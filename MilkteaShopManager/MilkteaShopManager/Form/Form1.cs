@@ -17,15 +17,6 @@ namespace MilkteaShopManager
             InitializeComponent();
         }
 
-        private void btnThoat_Click(object sender, EventArgs e)
-        {
-            DialogResult dlg = MessageBox.Show("Bạn có muốn thoát ứng dụng hay không?", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
-            if (dlg == DialogResult.Yes)
-            {
-                Application.Exit();
-            }
-        }
-
         private void btnDangNhap_Click(object sender, EventArgs e)
         {
             var loginName = txtTenDangNhap.Text;
@@ -35,11 +26,24 @@ namespace MilkteaShopManager
                 MainForm quanLy = new MainForm();
                 this.Hide();
                 quanLy.ShowDialog();
-                
+                this.Show();
             }
             else
             {
                 lblThongBao.Text = "Sai tên đăng nhập hoặc mật khẩu!";
+            }
+        }
+
+        private void btnThoat_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void LoginForm_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            if (MessageBox.Show("Bạn có muốn thoát khỏi ứng dụng hay không?", "Thông báo", MessageBoxButtons.OKCancel, MessageBoxIcon.Question) != System.Windows.Forms.DialogResult.OK)
+            {
+                e.Cancel = true;
             }
         }
     }

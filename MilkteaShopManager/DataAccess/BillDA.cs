@@ -80,7 +80,6 @@ namespace DataAccess
             cmd.ExecuteNonQuery();
             conn.Close();
         }
-
         public DataTable GetBillListInDay()
         {
             SqlConnection conn = new SqlConnection(Ultilities.ConnectionString);

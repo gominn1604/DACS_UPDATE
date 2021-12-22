@@ -87,6 +87,7 @@ namespace MilkteaShopManager
         private void btnGoiMon_Click(object sender, EventArgs e)
         {
             tctMain.SelectedIndex = 0;
+            tctGoiMon.SelectedIndex = 0;
         }
 
         public void LoadTable()
@@ -295,11 +296,54 @@ namespace MilkteaShopManager
                 ShowBill(table.ID);
             }
         }
-
-        private void MetQuaMaiLamTiep()
+        //Hiển thị danh sách hóa đơn trong ngày
+        public void ShowBillToday()
         {
-            MessageBox.Show("@@");
+            BillDA billDA = new BillDA();
+            SetColumnsFormat(billDA.GetBillListInDay());
         }
+        private void SetColumnsFormat(DataTable dt)
+        {
+            int count = dgvHoaDonTrongNgay.Columns.Count - 1;
+
+            dgvHoaDonTrongNgay.DataSource = dt;
+            dgvHoaDonTrongNgay.Columns[0].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
+            dgvHoaDonTrongNgay.Columns[0].HeaderCell.Style.Alignment = DataGridViewContentAlignment.MiddleCenter;
+            dgvHoaDonTrongNgay.Columns[2].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
+            dgvHoaDonTrongNgay.Columns[2].HeaderCell.Style.Alignment = DataGridViewContentAlignment.MiddleCenter;
+            dgvHoaDonTrongNgay.Columns[3].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
+            dgvHoaDonTrongNgay.Columns[3].HeaderCell.Style.Alignment = DataGridViewContentAlignment.MiddleCenter;
+
+            dgvHoaDonTrongNgay.Columns[4].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleRight;
+            dgvHoaDonTrongNgay.Columns[4].HeaderCell.Style.Alignment = DataGridViewContentAlignment.MiddleCenter;
+            dgvHoaDonTrongNgay.Columns[5].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleRight;
+            dgvHoaDonTrongNgay.Columns[5].HeaderCell.Style.Alignment = DataGridViewContentAlignment.MiddleCenter;
+            dgvHoaDonTrongNgay.Columns[6].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleRight;
+            dgvHoaDonTrongNgay.Columns[6].HeaderCell.Style.Alignment = DataGridViewContentAlignment.MiddleCenter;
+        }
+        private void btnHoaDon_Click(object sender, EventArgs e)
+        {
+            tctGoiMon.SelectedIndex = 1;
+            ShowBillToday();
+        }
+        public void BillSearch()
+        {
+            BillDA billDA = new BillDA();
+
+            //tạo bộ lọc và phân loại
+            string filterExpresstion = "[Tên bàn] like '%" + txtTimKiem.Text + "%'";
+            string sortExpresstion = "[Mã hóa đơn] ASC";
+            DataViewRowState rowStateFilter = DataViewRowState.OriginalRows;
+            DataTable billTable = billDA.GetBillListInDay();
+            DataView billView = new DataView(billTable, filterExpresstion, sortExpresstion, rowStateFilter);
+
+            dgvHoaDonTrongNgay.DataSource = billView;
+        }
+        private void txtTimKiem_TextChanged(object sender, EventArgs e)
+        {
+            BillSearch();
+        }
+
         #endregion
 
         #region Quản lý món
@@ -669,6 +713,47 @@ namespace MilkteaShopManager
             tctMain.SelectedIndex = 3;
             hideMenu();
         }
+        public void LoadListBillByDate(DateTime checkIn, DateTime checkOut)
+        {
+            BillDA billDA = new BillDA();
+            SetColumnsFormatBillsByDate(billDA.GetBillListByDate(checkIn, checkOut));
+            DataTable data = billDA.GetBillListByDate(checkIn, checkOut);
+
+            int count = dgvDSHoaDon.Rows.Count - 1, totalAmount = 0;
+            for (int i = 0; i <= count; i++)
+            {
+                if (dgvDSHoaDon.Rows[i].Cells[6].Value is null)
+                {
+                    dgvDSHoaDon.Rows[i].Cells[6].Value = 0;
+                }
+                totalAmount = totalAmount + Convert.ToInt32(dgvDSHoaDon.Rows[i].Cells[6].Value);
+            }
+            lblTongDoanhThu.Text = totalAmount.ToString("###,### đ");
+        }
+        private void SetColumnsFormatBillsByDate(DataTable dt)
+        {
+            int count = dgvDSHoaDon.Columns.Count - 1;
+
+            dgvDSHoaDon.DataSource = dt;
+            dgvDSHoaDon.Columns[0].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
+            dgvDSHoaDon.Columns[0].HeaderCell.Style.Alignment = DataGridViewContentAlignment.MiddleCenter;
+            dgvDSHoaDon.Columns[2].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
+            dgvDSHoaDon.Columns[2].HeaderCell.Style.Alignment = DataGridViewContentAlignment.MiddleCenter;
+            dgvDSHoaDon.Columns[3].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
+            dgvDSHoaDon.Columns[3].HeaderCell.Style.Alignment = DataGridViewContentAlignment.MiddleCenter;
+
+            dgvDSHoaDon.Columns[4].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleRight;
+            dgvDSHoaDon.Columns[4].HeaderCell.Style.Alignment = DataGridViewContentAlignment.MiddleCenter;
+            dgvDSHoaDon.Columns[5].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleRight;
+            dgvDSHoaDon.Columns[5].HeaderCell.Style.Alignment = DataGridViewContentAlignment.MiddleCenter;
+            dgvDSHoaDon.Columns[6].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleRight;
+            dgvDSHoaDon.Columns[6].HeaderCell.Style.Alignment = DataGridViewContentAlignment.MiddleCenter;
+        }
+        private void btnThongKe_Click(object sender, EventArgs e)
+        {
+            LoadListBillByDate(dtpStartDay.Value, dtpEndDay.Value);
+
+        }
         #endregion
 
         #region Thống kê nhân viên
@@ -714,11 +799,10 @@ namespace MilkteaShopManager
 
 
 
+
+
         #endregion
 
-        public void DiNguThoi()
-        {
-            txtChucVu.Text = "";
-        }
+
     }
 }
