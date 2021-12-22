@@ -33,6 +33,12 @@ namespace MilkteaShopManager
         NuocUongBL nuocUongBL = new NuocUongBL();
 
         LoaiNuocBL loaiNuocBL = new LoaiNuocBL();
+
+        Table tableCurrent = new Table();
+
+        List<Table> listTable = new List<Table>();
+        string statusTable;
+
         #endregion
         public MainForm()
         {
@@ -43,6 +49,7 @@ namespace MilkteaShopManager
             LoadTable();
             LoadCategory();
             LoadComboBoxTable(cbbDSBan);
+            LoadTableToLV();
         }
 
         #region Hàm đóng mở form con
@@ -80,7 +87,6 @@ namespace MilkteaShopManager
         private void btnGoiMon_Click(object sender, EventArgs e)
         {
             tctMain.SelectedIndex = 0;
-            tctGoiMon.SelectedIndex = 0;
         }
 
         public void LoadTable()
@@ -152,7 +158,6 @@ namespace MilkteaShopManager
             return totalAmount;
         }
 
-        //Sự kiện khi click vào một bàn bất kỳ
         private void Btn_Click(object sender, EventArgs e)
         {
             lvHoaDon.Items.Clear();
@@ -291,56 +296,9 @@ namespace MilkteaShopManager
             }
         }
 
-        //Hiển thị danh sách hóa đơn trong ngày
-        public void ShowBillToday()
+        private void MetQuaMaiLamTiep()
         {
-            BillDA billDA = new BillDA();
-            SetColumnsFormat(billDA.GetBillListInDay());
-        }
-
-        private void btnTodayBill_Click(object sender, EventArgs e)
-        {
-            tctGoiMon.SelectedIndex = 1;
-            ShowBillToday();
-        }
-
-        private void SetColumnsFormat(DataTable dt)
-        {
-            int count = dgvHoaDonTrongNgay.Columns.Count - 1;
-
-            dgvHoaDonTrongNgay.DataSource = dt;
-            dgvHoaDonTrongNgay.Columns[0].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
-            dgvHoaDonTrongNgay.Columns[0].HeaderCell.Style.Alignment = DataGridViewContentAlignment.MiddleCenter;
-            dgvHoaDonTrongNgay.Columns[2].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
-            dgvHoaDonTrongNgay.Columns[2].HeaderCell.Style.Alignment = DataGridViewContentAlignment.MiddleCenter;
-            dgvHoaDonTrongNgay.Columns[3].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
-            dgvHoaDonTrongNgay.Columns[3].HeaderCell.Style.Alignment = DataGridViewContentAlignment.MiddleCenter;
-
-            dgvHoaDonTrongNgay.Columns[4].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleRight;
-            dgvHoaDonTrongNgay.Columns[4].HeaderCell.Style.Alignment = DataGridViewContentAlignment.MiddleCenter;
-            dgvHoaDonTrongNgay.Columns[5].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleRight;
-            dgvHoaDonTrongNgay.Columns[5].HeaderCell.Style.Alignment = DataGridViewContentAlignment.MiddleCenter;
-            dgvHoaDonTrongNgay.Columns[6].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleRight;
-            dgvHoaDonTrongNgay.Columns[6].HeaderCell.Style.Alignment = DataGridViewContentAlignment.MiddleCenter;
-        }
-
-        public void BillSearch()
-        {
-            BillDA billDA = new BillDA();
-
-            //tạo bộ lọc và phân loại
-            string filterExpresstion = "[Tên bàn] like '%" + txtTimKiem.Text + "%'";
-            string sortExpresstion = "[Mã hóa đơn] ASC";
-            DataViewRowState rowStateFilter = DataViewRowState.OriginalRows;
-            DataTable billTable = billDA.GetBillListInDay();
-            DataView billView = new DataView(billTable, filterExpresstion, sortExpresstion, rowStateFilter);
-
-            dgvHoaDonTrongNgay.DataSource = billView;
-        }
-
-        private void txtTimKiem_TextChanged(object sender, EventArgs e)
-        {
-            BillSearch();
+            MessageBox.Show("@@");
         }
         #endregion
 
@@ -563,6 +521,146 @@ namespace MilkteaShopManager
             tctMain.SelectedIndex = 2;
             hideMenu();
         }
+
+        private void LoadTableToLV()
+        {
+            listTable = tableBL.GetAll();
+            lvBan.Items.Clear();
+            int count = 1;
+            foreach (var table in listTable)
+            {
+                ListViewItem item = lvBan.Items.Add(count.ToString());
+                item.SubItems.Add(table.ID.ToString());
+                item.SubItems.Add(table.Name);
+                if (table.Status == 0) { statusTable = "Bàn trống"; }
+                else if (table.Status == 1) { statusTable = "Có khách"; }
+                item.SubItems.Add(statusTable);
+                count++;
+            }
+        }
+        private void lvBan_Click(object sender, EventArgs e)
+        {
+            for (int i = 0; i < lvBan.Items.Count; i++)
+            {
+                // nếu có thì lấy
+                if (lvBan.Items[i].Selected)
+                {
+                    tableCurrent = listTable[i];
+                    txtIDBan.Text = tableCurrent.ID.ToString();
+                    txtTenBan.Text = tableCurrent.Name;
+                }
+            }
+        }
+
+        public int InsertBan()
+        {
+            Table table = new Table();
+            table.ID = 0;
+
+            if (txtTenBan.Text == "")
+            {
+                lblThongBaoBan.Text = "Vui lòng kiểm tra đầy đủ dữ liệu trước khi thêm!";
+                lblThongBaoBan.ForeColor = Color.Red;
+            }
+            else
+            {
+                table.Name = txtTenBan.Text;
+                lblThongBaoBan.Text = "Bạn đã thêm " + table.Name + " thành công!";
+                lblThongBaoBan.ForeColor = Color.Green;
+                tableBL = new TableBL();
+                return tableBL.Insert(table);
+
+            }
+            return -1;
+        }
+        private void btnAddBan_Click(object sender, EventArgs e)
+        {
+            // gọi phương thức thêm dữ liệu
+            int result = InsertBan();
+            if (result > 0)
+            {
+                MessageBox.Show("Đã thêm dữ liệu!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                LoadTableToLV();
+                txtTenBan.Text = "";
+                txtIDBan.Text = "";
+            }
+            else
+            {
+                lblThongBaoBan.Text = "Bàn đã tồn tại!";
+                lblThongBaoBan.ForeColor = Color.Red;
+            }
+        }
+
+        private int UpdateTable()
+        {
+            Table table = tableCurrent;
+            if (txtTenBan.Text == "")
+            {
+                lblThongBaoBan.Text = "Vui lòng điền đầy đủ thông tin để cập nhật!";
+                lblThongBaoBan.ForeColor = Color.Red;
+            }
+            else
+            {
+                table.Name = txtTenBan.Text;
+                lblThongBaoBan.Text = "Bạn đã sửa " + table.Name + " thành công!";
+                lblThongBaoBan.ForeColor = Color.Green;
+                tableBL = new TableBL();
+                return tableBL.Update(table);
+            }
+            return -1;
+        }
+
+        private void btnUpdateBan_Click(object sender, EventArgs e)
+        {
+            int result = UpdateTable();
+            if (lvBan.SelectedItems.Count == 0)
+            {
+                lblThongBaoBan.Text = "Vui lòng chọn bàn để sửa!";
+                lblThongBaoBan.ForeColor = Color.Red;
+            }
+            else
+            {
+                if (result > 0)
+                {
+                    MessageBox.Show("Bạn đã sửa thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    LoadTableToLV();
+                }
+                else
+                {
+                    MessageBox.Show("Sửa thất bại!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+            }
+        }
+
+        private void btnDeleteBan_Click(object sender, EventArgs e)
+        {
+            if (lvBan.SelectedItems.Count > 0)
+            {
+                if (MessageBox.Show("Bạn có muốn xoá " + tableCurrent.Name + " không?", "Cảnh báo", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                {
+                    tableBL = new TableBL();
+                    if (tableBL.Delete(tableCurrent) > 0)
+                    {
+                        lblThongBaoBan.Text = "Đã xoá bàn " + tableCurrent.Name + " thành công!";
+                        lblThongBaoBan.ForeColor = Color.Green;
+                        LoadTableToLV();
+                        txtTenBan.Text = "";
+                        txtIDBan.Text = "";
+                    }
+                    else
+                    {
+                        lblThongBaoBan.Text = "Xoá bàn " + tableCurrent.Name + " thất bại, vui lòng kiểm tra lại!";
+                        lblThongBaoBan.ForeColor = Color.Red;
+                    }
+                }
+            }
+            else
+            {
+                lblThongBaoBan.Text = "Vui lòng chọn bàn để xoá!";
+                lblThongBaoBan.ForeColor = Color.Red;
+            }
+        }
+
         #endregion
 
         #region Quản lý hoá đơn
@@ -571,52 +669,6 @@ namespace MilkteaShopManager
             tctMain.SelectedIndex = 3;
             hideMenu();
         }
-
-        public void LoadListBillByDate(DateTime checkIn, DateTime checkOut)
-        {
-            BillDA billDA = new BillDA();
-            SetColumnsFormatBillsByDate(billDA.GetBillListByDate(checkIn, checkOut));
-            DataTable data = billDA.GetBillListByDate(checkIn, checkOut);
-
-            int count = dgvDSHoaDon.Rows.Count - 1, totalAmount = 0;
-            for (int i = 0; i<=count;i++)
-            {
-                if (dgvDSHoaDon.Rows[i].Cells[6].Value is null)
-                {
-                    dgvDSHoaDon.Rows[i].Cells[6].Value = 0;
-                }    
-                totalAmount = totalAmount + Convert.ToInt32(dgvDSHoaDon.Rows[i].Cells[6].Value);
-            }
-            lblTongDoanhThu.Text = totalAmount.ToString("###,### đ");
-        }
-
-        private void btnThongKe_Click_1(object sender, EventArgs e)
-        {
-            LoadListBillByDate(dtpStartDay.Value, dtpEndDay.Value);
-
-            
-        }
-
-        private void SetColumnsFormatBillsByDate(DataTable dt)
-        {
-            int count = dgvHoaDonTrongNgay.Columns.Count - 1;
-
-            dgvDSHoaDon.DataSource = dt;
-            dgvDSHoaDon.Columns[0].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
-            dgvDSHoaDon.Columns[0].HeaderCell.Style.Alignment = DataGridViewContentAlignment.MiddleCenter;
-            dgvDSHoaDon.Columns[2].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
-            dgvDSHoaDon.Columns[2].HeaderCell.Style.Alignment = DataGridViewContentAlignment.MiddleCenter;
-            dgvDSHoaDon.Columns[3].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
-            dgvDSHoaDon.Columns[3].HeaderCell.Style.Alignment = DataGridViewContentAlignment.MiddleCenter;
-
-            dgvDSHoaDon.Columns[4].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleRight;
-            dgvDSHoaDon.Columns[4].HeaderCell.Style.Alignment = DataGridViewContentAlignment.MiddleCenter;
-            dgvDSHoaDon.Columns[5].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleRight;
-            dgvDSHoaDon.Columns[5].HeaderCell.Style.Alignment = DataGridViewContentAlignment.MiddleCenter;
-            dgvDSHoaDon.Columns[6].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleRight;
-            dgvDSHoaDon.Columns[6].HeaderCell.Style.Alignment = DataGridViewContentAlignment.MiddleCenter;
-        }
-
         #endregion
 
         #region Thống kê nhân viên
@@ -645,9 +697,9 @@ namespace MilkteaShopManager
         #region Đăng xuất
         private void btnDangXuat_Click(object sender, EventArgs e)
         {
-            LoginForm frm = new LoginForm();
+            //LoginForm frm = new LoginForm();
             this.Close();
-            frm.Show();
+            //frm.Show();
         }
         private void MainForm_FormClosing(object sender, FormClosingEventArgs e)
         {
@@ -662,9 +714,11 @@ namespace MilkteaShopManager
 
 
 
-
         #endregion
 
-
+        public void DiNguThoi()
+        {
+            txtChucVu.Text = "";
+        }
     }
 }
