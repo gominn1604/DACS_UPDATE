@@ -46,42 +46,10 @@ namespace MilkteaShopManager
             this.tctMain = new System.Windows.Forms.TabControl();
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.button1 = new System.Windows.Forms.Button();
+            this.btnHoaDon = new System.Windows.Forms.Button();
             this.btnMangVe = new System.Windows.Forms.Button();
-            this.guna2TextBox1 = new Guna.UI2.WinForms.Guna2TextBox();
+            this.txtTimKiem = new Guna.UI2.WinForms.Guna2TextBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.tabControl1 = new System.Windows.Forms.TabControl();
-            this.tabPage7 = new System.Windows.Forms.TabPage();
-            this.panel14 = new System.Windows.Forms.Panel();
-            this.label4 = new System.Windows.Forms.Label();
-            this.lblSoLuong = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.listView1 = new System.Windows.Forms.ListView();
-            this.tabPage8 = new System.Windows.Forms.TabPage();
-            this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
-            this.btnThanhToan = new System.Windows.Forms.Button();
-            this.txtTongTien = new System.Windows.Forms.TextBox();
-            this.label8 = new System.Windows.Forms.Label();
-            this.lvHoaDon = new System.Windows.Forms.ListView();
-            this.columnHeader27 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader34 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader28 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader29 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.panel15 = new System.Windows.Forms.Panel();
-            this.btnGopBan = new System.Windows.Forms.Button();
-            this.label24 = new System.Windows.Forms.Label();
-            this.cbbDSBan = new System.Windows.Forms.ComboBox();
-            this.btnChuyenBan = new System.Windows.Forms.Button();
-            this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.btnThemNuoc = new System.Windows.Forms.Button();
-            this.nudSoLuong = new System.Windows.Forms.NumericUpDown();
-            this.cbbTenThucUong = new System.Windows.Forms.ComboBox();
-            this.cbbLoaiThucUong = new System.Windows.Forms.ComboBox();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.flpDSBan = new System.Windows.Forms.FlowLayoutPanel();
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.panel7 = new System.Windows.Forms.Panel();
             this.btnHuyNhap = new Guna.UI2.WinForms.Guna2Button();
@@ -117,24 +85,24 @@ namespace MilkteaShopManager
             this.columnHeader31 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader32 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader33 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.guna2Panel4 = new Guna.UI2.WinForms.Guna2Panel();
+            this.lblThongBaoBan = new System.Windows.Forms.Label();
+            this.btnDeleteBan = new Guna.UI2.WinForms.Guna2Button();
+            this.btnUpdateBan = new Guna.UI2.WinForms.Guna2Button();
+            this.txtTenBan = new Guna.UI2.WinForms.Guna2TextBox();
+            this.label30 = new System.Windows.Forms.Label();
+            this.txtIDBan = new Guna.UI2.WinForms.Guna2TextBox();
+            this.label28 = new System.Windows.Forms.Label();
+            this.btnAddBan = new Guna.UI2.WinForms.Guna2Button();
             this.guna2Panel3 = new Guna.UI2.WinForms.Guna2Panel();
             this.label31 = new System.Windows.Forms.Label();
             this.tabPage4 = new System.Windows.Forms.TabPage();
             this.groupBox5 = new System.Windows.Forms.GroupBox();
-            this.listView4 = new System.Windows.Forms.ListView();
-            this.columnHeader20 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader21 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader22 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader23 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader24 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader25 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader26 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.dgvDSHoaDon = new System.Windows.Forms.DataGridView();
             this.panel13 = new System.Windows.Forms.Panel();
-            this.label23 = new System.Windows.Forms.Label();
-            this.label22 = new System.Windows.Forms.Label();
-            this.guna2Button13 = new Guna.UI2.WinForms.Guna2Button();
-            this.guna2DateTimePicker2 = new Guna.UI2.WinForms.Guna2DateTimePicker();
-            this.guna2DateTimePicker1 = new Guna.UI2.WinForms.Guna2DateTimePicker();
+            this.btnThongKe = new System.Windows.Forms.Button();
+            this.dtpEndDay = new Guna.UI2.WinForms.Guna2DateTimePicker();
+            this.dtpStartDay = new Guna.UI2.WinForms.Guna2DateTimePicker();
             this.label25 = new System.Windows.Forms.Label();
             this.label26 = new System.Windows.Forms.Label();
             this.label27 = new System.Windows.Forms.Label();
@@ -183,15 +151,36 @@ namespace MilkteaShopManager
             this.txtMaTaiKhoan = new Guna.UI2.WinForms.Guna2TextBox();
             this.label20 = new System.Windows.Forms.Label();
             this.label15 = new System.Windows.Forms.Label();
-            this.btnAddBan = new Guna.UI2.WinForms.Guna2Button();
-            this.label28 = new System.Windows.Forms.Label();
-            this.txtIDBan = new Guna.UI2.WinForms.Guna2TextBox();
-            this.label30 = new System.Windows.Forms.Label();
-            this.txtTenBan = new Guna.UI2.WinForms.Guna2TextBox();
-            this.btnUpdateBan = new Guna.UI2.WinForms.Guna2Button();
-            this.btnDeleteBan = new Guna.UI2.WinForms.Guna2Button();
-            this.lblThongBaoBan = new System.Windows.Forms.Label();
-            this.guna2Panel4 = new Guna.UI2.WinForms.Guna2Panel();
+            this.tabPage8 = new System.Windows.Forms.TabPage();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.flpDSBan = new System.Windows.Forms.FlowLayoutPanel();
+            this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.label7 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.cbbLoaiThucUong = new System.Windows.Forms.ComboBox();
+            this.cbbTenThucUong = new System.Windows.Forms.ComboBox();
+            this.nudSoLuong = new System.Windows.Forms.NumericUpDown();
+            this.btnThemNuoc = new System.Windows.Forms.Button();
+            this.panel15 = new System.Windows.Forms.Panel();
+            this.btnChuyenBan = new System.Windows.Forms.Button();
+            this.cbbDSBan = new System.Windows.Forms.ComboBox();
+            this.label24 = new System.Windows.Forms.Label();
+            this.btnGopBan = new System.Windows.Forms.Button();
+            this.lvHoaDon = new System.Windows.Forms.ListView();
+            this.columnHeader27 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader34 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader28 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader29 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
+            this.label8 = new System.Windows.Forms.Label();
+            this.txtTongTien = new System.Windows.Forms.TextBox();
+            this.btnThanhToan = new System.Windows.Forms.Button();
+            this.tctGoiMon = new System.Windows.Forms.TabControl();
+            this.tctHoaDon = new System.Windows.Forms.TabPage();
+            this.dgvHoaDonTrongNgay = new System.Windows.Forms.DataGridView();
+            this.lblTongDoanhThu = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.panel3.SuspendLayout();
             this.pnlQuanLy.SuspendLayout();
@@ -200,24 +189,17 @@ namespace MilkteaShopManager
             this.tctMain.SuspendLayout();
             this.tabPage2.SuspendLayout();
             this.panel2.SuspendLayout();
-            this.tabControl1.SuspendLayout();
-            this.tabPage7.SuspendLayout();
-            this.panel14.SuspendLayout();
-            this.tabPage8.SuspendLayout();
-            this.guna2Panel1.SuspendLayout();
-            this.panel15.SuspendLayout();
-            this.groupBox2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.nudSoLuong)).BeginInit();
-            this.groupBox1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.panel7.SuspendLayout();
             this.panel6.SuspendLayout();
             this.panel5.SuspendLayout();
             this.tabPage3.SuspendLayout();
             this.guna2Panel2.SuspendLayout();
+            this.guna2Panel4.SuspendLayout();
             this.guna2Panel3.SuspendLayout();
             this.tabPage4.SuspendLayout();
             this.groupBox5.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvDSHoaDon)).BeginInit();
             this.panel13.SuspendLayout();
             this.tabPage5.SuspendLayout();
             this.panel12.SuspendLayout();
@@ -228,7 +210,15 @@ namespace MilkteaShopManager
             this.panel9.SuspendLayout();
             this.groupBox3.SuspendLayout();
             this.panel8.SuspendLayout();
-            this.guna2Panel4.SuspendLayout();
+            this.tabPage8.SuspendLayout();
+            this.groupBox1.SuspendLayout();
+            this.groupBox2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.nudSoLuong)).BeginInit();
+            this.panel15.SuspendLayout();
+            this.guna2Panel1.SuspendLayout();
+            this.tctGoiMon.SuspendLayout();
+            this.tctHoaDon.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvHoaDonTrongNgay)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -489,7 +479,7 @@ namespace MilkteaShopManager
             // 
             this.tabPage2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
             this.tabPage2.Controls.Add(this.panel2);
-            this.tabPage2.Controls.Add(this.tabControl1);
+            this.tabPage2.Controls.Add(this.tctGoiMon);
             this.tabPage2.Location = new System.Drawing.Point(4, 29);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
@@ -500,24 +490,25 @@ namespace MilkteaShopManager
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(210)))), ((int)(((byte)(225)))));
-            this.panel2.Controls.Add(this.button1);
+            this.panel2.Controls.Add(this.btnHoaDon);
             this.panel2.Controls.Add(this.btnMangVe);
-            this.panel2.Controls.Add(this.guna2TextBox1);
+            this.panel2.Controls.Add(this.txtTimKiem);
             this.panel2.Controls.Add(this.label2);
             this.panel2.Location = new System.Drawing.Point(6, 6);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(1177, 74);
             this.panel2.TabIndex = 1;
             // 
-            // button1
+            // btnHoaDon
             // 
-            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
-            this.button1.Location = new System.Drawing.Point(705, 20);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(225, 35);
-            this.button1.TabIndex = 2;
-            this.button1.Text = "Hóa đơn hôm nay";
-            this.button1.UseVisualStyleBackColor = false;
+            this.btnHoaDon.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
+            this.btnHoaDon.Location = new System.Drawing.Point(705, 20);
+            this.btnHoaDon.Name = "btnHoaDon";
+            this.btnHoaDon.Size = new System.Drawing.Size(225, 35);
+            this.btnHoaDon.TabIndex = 2;
+            this.btnHoaDon.Text = "Hóa đơn hôm nay";
+            this.btnHoaDon.UseVisualStyleBackColor = false;
+            this.btnHoaDon.Click += new System.EventHandler(this.btnHoaDon_Click);
             // 
             // btnMangVe
             // 
@@ -529,33 +520,34 @@ namespace MilkteaShopManager
             this.btnMangVe.Text = "Tạo đơn mang về";
             this.btnMangVe.UseVisualStyleBackColor = false;
             // 
-            // guna2TextBox1
+            // txtTimKiem
             // 
-            this.guna2TextBox1.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
-            this.guna2TextBox1.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.guna2TextBox1.DefaultText = "";
-            this.guna2TextBox1.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.guna2TextBox1.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.guna2TextBox1.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.guna2TextBox1.DisabledState.Parent = this.guna2TextBox1;
-            this.guna2TextBox1.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.guna2TextBox1.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(210)))), ((int)(((byte)(225)))));
-            this.guna2TextBox1.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2TextBox1.FocusedState.Parent = this.guna2TextBox1;
-            this.guna2TextBox1.Font = new System.Drawing.Font("Times New Roman", 12F);
-            this.guna2TextBox1.ForeColor = System.Drawing.Color.Empty;
-            this.guna2TextBox1.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2TextBox1.HoverState.Parent = this.guna2TextBox1;
-            this.guna2TextBox1.Location = new System.Drawing.Point(161, 25);
-            this.guna2TextBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.guna2TextBox1.Name = "guna2TextBox1";
-            this.guna2TextBox1.PasswordChar = '\0';
-            this.guna2TextBox1.PlaceholderForeColor = System.Drawing.Color.Gray;
-            this.guna2TextBox1.PlaceholderText = "Tìm mã hóa đơn";
-            this.guna2TextBox1.SelectedText = "";
-            this.guna2TextBox1.ShadowDecoration.Parent = this.guna2TextBox1;
-            this.guna2TextBox1.Size = new System.Drawing.Size(292, 29);
-            this.guna2TextBox1.TabIndex = 1;
+            this.txtTimKiem.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
+            this.txtTimKiem.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtTimKiem.DefaultText = "";
+            this.txtTimKiem.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txtTimKiem.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txtTimKiem.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtTimKiem.DisabledState.Parent = this.txtTimKiem;
+            this.txtTimKiem.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtTimKiem.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(210)))), ((int)(((byte)(225)))));
+            this.txtTimKiem.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtTimKiem.FocusedState.Parent = this.txtTimKiem;
+            this.txtTimKiem.Font = new System.Drawing.Font("Times New Roman", 12F);
+            this.txtTimKiem.ForeColor = System.Drawing.Color.Empty;
+            this.txtTimKiem.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtTimKiem.HoverState.Parent = this.txtTimKiem;
+            this.txtTimKiem.Location = new System.Drawing.Point(161, 25);
+            this.txtTimKiem.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txtTimKiem.Name = "txtTimKiem";
+            this.txtTimKiem.PasswordChar = '\0';
+            this.txtTimKiem.PlaceholderForeColor = System.Drawing.Color.Gray;
+            this.txtTimKiem.PlaceholderText = "Tìm theo tên bàn";
+            this.txtTimKiem.SelectedText = "";
+            this.txtTimKiem.ShadowDecoration.Parent = this.txtTimKiem;
+            this.txtTimKiem.Size = new System.Drawing.Size(292, 29);
+            this.txtTimKiem.TabIndex = 1;
+            this.txtTimKiem.TextChanged += new System.EventHandler(this.txtTimKiem_TextChanged);
             // 
             // label2
             // 
@@ -567,351 +559,6 @@ namespace MilkteaShopManager
             this.label2.Size = new System.Drawing.Size(124, 34);
             this.label2.TabIndex = 0;
             this.label2.Text = "Gọi món";
-            // 
-            // tabControl1
-            // 
-            this.tabControl1.Controls.Add(this.tabPage7);
-            this.tabControl1.Controls.Add(this.tabPage8);
-            this.tabControl1.Location = new System.Drawing.Point(6, 86);
-            this.tabControl1.Name = "tabControl1";
-            this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(1177, 652);
-            this.tabControl1.TabIndex = 0;
-            // 
-            // tabPage7
-            // 
-            this.tabPage7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
-            this.tabPage7.Controls.Add(this.panel14);
-            this.tabPage7.Controls.Add(this.listView1);
-            this.tabPage7.Location = new System.Drawing.Point(4, 29);
-            this.tabPage7.Name = "tabPage7";
-            this.tabPage7.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage7.Size = new System.Drawing.Size(1169, 619);
-            this.tabPage7.TabIndex = 0;
-            this.tabPage7.Text = "Mang về";
-            // 
-            // panel14
-            // 
-            this.panel14.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(210)))), ((int)(((byte)(225)))));
-            this.panel14.Controls.Add(this.label4);
-            this.panel14.Controls.Add(this.lblSoLuong);
-            this.panel14.Controls.Add(this.label3);
-            this.panel14.Location = new System.Drawing.Point(6, 7);
-            this.panel14.Name = "panel14";
-            this.panel14.Size = new System.Drawing.Size(1157, 68);
-            this.panel14.TabIndex = 1;
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(99, 25);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(213, 22);
-            this.label4.TabIndex = 2;
-            this.label4.Text = "hóa đơn chưa thanh toán";
-            // 
-            // lblSoLuong
-            // 
-            this.lblSoLuong.AutoSize = true;
-            this.lblSoLuong.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblSoLuong.ForeColor = System.Drawing.Color.Red;
-            this.lblSoLuong.Location = new System.Drawing.Point(73, 25);
-            this.lblSoLuong.Name = "lblSoLuong";
-            this.lblSoLuong.Size = new System.Drawing.Size(20, 22);
-            this.lblSoLuong.TabIndex = 1;
-            this.lblSoLuong.Text = "3";
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(17, 25);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(51, 22);
-            this.label3.TabIndex = 0;
-            this.label3.Text = "Tổng";
-            // 
-            // listView1
-            // 
-            this.listView1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(210)))), ((int)(((byte)(225)))));
-            this.listView1.HideSelection = false;
-            this.listView1.Location = new System.Drawing.Point(6, 81);
-            this.listView1.Name = "listView1";
-            this.listView1.Size = new System.Drawing.Size(1157, 532);
-            this.listView1.TabIndex = 0;
-            this.listView1.UseCompatibleStateImageBehavior = false;
-            // 
-            // tabPage8
-            // 
-            this.tabPage8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
-            this.tabPage8.Controls.Add(this.guna2Panel1);
-            this.tabPage8.Controls.Add(this.lvHoaDon);
-            this.tabPage8.Controls.Add(this.panel15);
-            this.tabPage8.Controls.Add(this.groupBox2);
-            this.tabPage8.Controls.Add(this.groupBox1);
-            this.tabPage8.ForeColor = System.Drawing.Color.Black;
-            this.tabPage8.Location = new System.Drawing.Point(4, 29);
-            this.tabPage8.Name = "tabPage8";
-            this.tabPage8.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage8.Size = new System.Drawing.Size(1169, 619);
-            this.tabPage8.TabIndex = 1;
-            this.tabPage8.Text = "Tại quán";
-            // 
-            // guna2Panel1
-            // 
-            this.guna2Panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(210)))), ((int)(((byte)(225)))));
-            this.guna2Panel1.Controls.Add(this.btnThanhToan);
-            this.guna2Panel1.Controls.Add(this.txtTongTien);
-            this.guna2Panel1.Controls.Add(this.label8);
-            this.guna2Panel1.Location = new System.Drawing.Point(701, 459);
-            this.guna2Panel1.Name = "guna2Panel1";
-            this.guna2Panel1.ShadowDecoration.Parent = this.guna2Panel1;
-            this.guna2Panel1.Size = new System.Drawing.Size(462, 154);
-            this.guna2Panel1.TabIndex = 5;
-            // 
-            // btnThanhToan
-            // 
-            this.btnThanhToan.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(60)))), ((int)(((byte)(60)))));
-            this.btnThanhToan.ForeColor = System.Drawing.Color.White;
-            this.btnThanhToan.Location = new System.Drawing.Point(99, 72);
-            this.btnThanhToan.Name = "btnThanhToan";
-            this.btnThanhToan.Size = new System.Drawing.Size(272, 61);
-            this.btnThanhToan.TabIndex = 3;
-            this.btnThanhToan.Text = "Thanh toán";
-            this.btnThanhToan.UseVisualStyleBackColor = false;
-            this.btnThanhToan.Click += new System.EventHandler(this.btnThanhToan_Click);
-            // 
-            // txtTongTien
-            // 
-            this.txtTongTien.Font = new System.Drawing.Font("Times New Roman", 13.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtTongTien.Location = new System.Drawing.Point(257, 18);
-            this.txtTongTien.Name = "txtTongTien";
-            this.txtTongTien.Size = new System.Drawing.Size(172, 33);
-            this.txtTongTien.TabIndex = 1;
-            this.txtTongTien.Text = "0";
-            this.txtTongTien.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(13, 24);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(120, 22);
-            this.label8.TabIndex = 0;
-            this.label8.Text = "CỘNG TIỀN:";
-            // 
-            // lvHoaDon
-            // 
-            this.lvHoaDon.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(210)))), ((int)(((byte)(225)))));
-            this.lvHoaDon.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
-            this.columnHeader27,
-            this.columnHeader34,
-            this.columnHeader28,
-            this.columnHeader29});
-            this.lvHoaDon.GridLines = true;
-            this.lvHoaDon.HideSelection = false;
-            this.lvHoaDon.Location = new System.Drawing.Point(700, 137);
-            this.lvHoaDon.Name = "lvHoaDon";
-            this.lvHoaDon.Size = new System.Drawing.Size(463, 316);
-            this.lvHoaDon.TabIndex = 4;
-            this.lvHoaDon.UseCompatibleStateImageBehavior = false;
-            this.lvHoaDon.View = System.Windows.Forms.View.Details;
-            // 
-            // columnHeader27
-            // 
-            this.columnHeader27.Text = "Tên thức uống";
-            this.columnHeader27.Width = 130;
-            // 
-            // columnHeader34
-            // 
-            this.columnHeader34.Text = "Đơn giá";
-            this.columnHeader34.Width = 70;
-            // 
-            // columnHeader28
-            // 
-            this.columnHeader28.Text = "Số lượng";
-            this.columnHeader28.Width = 70;
-            // 
-            // columnHeader29
-            // 
-            this.columnHeader29.Text = "Thành tiền";
-            this.columnHeader29.Width = 75;
-            // 
-            // panel15
-            // 
-            this.panel15.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(210)))), ((int)(((byte)(225)))));
-            this.panel15.Controls.Add(this.btnGopBan);
-            this.panel15.Controls.Add(this.label24);
-            this.panel15.Controls.Add(this.cbbDSBan);
-            this.panel15.Controls.Add(this.btnChuyenBan);
-            this.panel15.Location = new System.Drawing.Point(700, 6);
-            this.panel15.Name = "panel15";
-            this.panel15.Size = new System.Drawing.Size(463, 125);
-            this.panel15.TabIndex = 3;
-            // 
-            // btnGopBan
-            // 
-            this.btnGopBan.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
-            this.btnGopBan.ForeColor = System.Drawing.Color.Black;
-            this.btnGopBan.Location = new System.Drawing.Point(319, 43);
-            this.btnGopBan.Name = "btnGopBan";
-            this.btnGopBan.Size = new System.Drawing.Size(111, 65);
-            this.btnGopBan.TabIndex = 3;
-            this.btnGopBan.Text = "Gộp bàn";
-            this.btnGopBan.UseVisualStyleBackColor = false;
-            this.btnGopBan.Click += new System.EventHandler(this.btnGopBan_Click);
-            // 
-            // label24
-            // 
-            this.label24.AutoSize = true;
-            this.label24.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label24.Location = new System.Drawing.Point(170, 46);
-            this.label24.Name = "label24";
-            this.label24.Size = new System.Drawing.Size(124, 22);
-            this.label24.TabIndex = 2;
-            this.label24.Text = "Danh sách bàn";
-            // 
-            // cbbDSBan
-            // 
-            this.cbbDSBan.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cbbDSBan.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cbbDSBan.FormattingEnabled = true;
-            this.cbbDSBan.Location = new System.Drawing.Point(169, 73);
-            this.cbbDSBan.Name = "cbbDSBan";
-            this.cbbDSBan.Size = new System.Drawing.Size(125, 30);
-            this.cbbDSBan.TabIndex = 1;
-            // 
-            // btnChuyenBan
-            // 
-            this.btnChuyenBan.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
-            this.btnChuyenBan.ForeColor = System.Drawing.Color.Black;
-            this.btnChuyenBan.Location = new System.Drawing.Point(33, 42);
-            this.btnChuyenBan.Name = "btnChuyenBan";
-            this.btnChuyenBan.Size = new System.Drawing.Size(111, 65);
-            this.btnChuyenBan.TabIndex = 0;
-            this.btnChuyenBan.Text = "Chuyển bàn";
-            this.btnChuyenBan.UseVisualStyleBackColor = false;
-            this.btnChuyenBan.Click += new System.EventHandler(this.btnChuyenBan_Click);
-            // 
-            // groupBox2
-            // 
-            this.groupBox2.BackgroundImage = global::MilkteaShopManager.Properties.Resources.background_2;
-            this.groupBox2.Controls.Add(this.btnThemNuoc);
-            this.groupBox2.Controls.Add(this.nudSoLuong);
-            this.groupBox2.Controls.Add(this.cbbTenThucUong);
-            this.groupBox2.Controls.Add(this.cbbLoaiThucUong);
-            this.groupBox2.Controls.Add(this.label5);
-            this.groupBox2.Controls.Add(this.label6);
-            this.groupBox2.Controls.Add(this.label7);
-            this.groupBox2.Location = new System.Drawing.Point(6, 6);
-            this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(688, 125);
-            this.groupBox2.TabIndex = 2;
-            this.groupBox2.TabStop = false;
-            this.groupBox2.Text = "Thêm thức uống";
-            // 
-            // btnThemNuoc
-            // 
-            this.btnThemNuoc.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
-            this.btnThemNuoc.Location = new System.Drawing.Point(559, 42);
-            this.btnThemNuoc.Name = "btnThemNuoc";
-            this.btnThemNuoc.Size = new System.Drawing.Size(113, 66);
-            this.btnThemNuoc.TabIndex = 3;
-            this.btnThemNuoc.Text = "Thêm nước";
-            this.btnThemNuoc.UseVisualStyleBackColor = false;
-            this.btnThemNuoc.Click += new System.EventHandler(this.btnThemNuoc_Click);
-            // 
-            // nudSoLuong
-            // 
-            this.nudSoLuong.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.nudSoLuong.Location = new System.Drawing.Point(423, 77);
-            this.nudSoLuong.Maximum = new decimal(new int[] {
-            10000,
-            0,
-            0,
-            0});
-            this.nudSoLuong.Minimum = new decimal(new int[] {
-            10000,
-            0,
-            0,
-            -2147483648});
-            this.nudSoLuong.Name = "nudSoLuong";
-            this.nudSoLuong.Size = new System.Drawing.Size(120, 30);
-            this.nudSoLuong.TabIndex = 2;
-            // 
-            // cbbTenThucUong
-            // 
-            this.cbbTenThucUong.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cbbTenThucUong.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cbbTenThucUong.FormattingEnabled = true;
-            this.cbbTenThucUong.Location = new System.Drawing.Point(146, 78);
-            this.cbbTenThucUong.Name = "cbbTenThucUong";
-            this.cbbTenThucUong.Size = new System.Drawing.Size(260, 30);
-            this.cbbTenThucUong.TabIndex = 1;
-            // 
-            // cbbLoaiThucUong
-            // 
-            this.cbbLoaiThucUong.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cbbLoaiThucUong.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cbbLoaiThucUong.FormattingEnabled = true;
-            this.cbbLoaiThucUong.Location = new System.Drawing.Point(146, 42);
-            this.cbbLoaiThucUong.Name = "cbbLoaiThucUong";
-            this.cbbLoaiThucUong.Size = new System.Drawing.Size(260, 30);
-            this.cbbLoaiThucUong.TabIndex = 1;
-            this.cbbLoaiThucUong.SelectedIndexChanged += new System.EventHandler(this.cbbLoaiThucUong_SelectedIndexChanged);
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(210)))), ((int)(((byte)(225)))));
-            this.label5.Location = new System.Drawing.Point(12, 82);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(124, 20);
-            this.label5.TabIndex = 0;
-            this.label5.Text = "Tên nước uống:";
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(210)))), ((int)(((byte)(225)))));
-            this.label6.Location = new System.Drawing.Point(438, 41);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(74, 20);
-            this.label6.TabIndex = 0;
-            this.label6.Text = "Số lượng";
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(210)))), ((int)(((byte)(225)))));
-            this.label7.Location = new System.Drawing.Point(13, 46);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(122, 20);
-            this.label7.TabIndex = 0;
-            this.label7.Text = "Loại thức uống:";
-            // 
-            // groupBox1
-            // 
-            this.groupBox1.BackgroundImage = global::MilkteaShopManager.Properties.Resources.background_2;
-            this.groupBox1.Controls.Add(this.flpDSBan);
-            this.groupBox1.ForeColor = System.Drawing.Color.Black;
-            this.groupBox1.Location = new System.Drawing.Point(6, 137);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(688, 476);
-            this.groupBox1.TabIndex = 1;
-            this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Danh sách bàn";
-            // 
-            // flpDSBan
-            // 
-            this.flpDSBan.AutoScroll = true;
-            this.flpDSBan.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(210)))), ((int)(((byte)(225)))));
-            this.flpDSBan.Location = new System.Drawing.Point(7, 28);
-            this.flpDSBan.Name = "flpDSBan";
-            this.flpDSBan.Size = new System.Drawing.Size(675, 442);
-            this.flpDSBan.TabIndex = 0;
             // 
             // tabPage1
             // 
@@ -1451,6 +1098,186 @@ namespace MilkteaShopManager
             this.columnHeader33.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.columnHeader33.Width = 120;
             // 
+            // guna2Panel4
+            // 
+            this.guna2Panel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(210)))), ((int)(((byte)(225)))));
+            this.guna2Panel4.Controls.Add(this.lblThongBaoBan);
+            this.guna2Panel4.Controls.Add(this.btnDeleteBan);
+            this.guna2Panel4.Controls.Add(this.btnUpdateBan);
+            this.guna2Panel4.Controls.Add(this.txtTenBan);
+            this.guna2Panel4.Controls.Add(this.label30);
+            this.guna2Panel4.Controls.Add(this.txtIDBan);
+            this.guna2Panel4.Controls.Add(this.label28);
+            this.guna2Panel4.Controls.Add(this.btnAddBan);
+            this.guna2Panel4.Location = new System.Drawing.Point(4, 75);
+            this.guna2Panel4.Margin = new System.Windows.Forms.Padding(4);
+            this.guna2Panel4.Name = "guna2Panel4";
+            this.guna2Panel4.ShadowDecoration.Parent = this.guna2Panel4;
+            this.guna2Panel4.Size = new System.Drawing.Size(384, 665);
+            this.guna2Panel4.TabIndex = 7;
+            // 
+            // lblThongBaoBan
+            // 
+            this.lblThongBaoBan.AutoSize = true;
+            this.lblThongBaoBan.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblThongBaoBan.Location = new System.Drawing.Point(29, 169);
+            this.lblThongBaoBan.Name = "lblThongBaoBan";
+            this.lblThongBaoBan.Size = new System.Drawing.Size(0, 19);
+            this.lblThongBaoBan.TabIndex = 30;
+            // 
+            // btnDeleteBan
+            // 
+            this.btnDeleteBan.BorderRadius = 10;
+            this.btnDeleteBan.CheckedState.Parent = this.btnDeleteBan;
+            this.btnDeleteBan.CustomImages.Parent = this.btnDeleteBan;
+            this.btnDeleteBan.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnDeleteBan.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnDeleteBan.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnDeleteBan.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnDeleteBan.DisabledState.Parent = this.btnDeleteBan;
+            this.btnDeleteBan.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
+            this.btnDeleteBan.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.btnDeleteBan.ForeColor = System.Drawing.Color.Black;
+            this.btnDeleteBan.HoverState.Parent = this.btnDeleteBan;
+            this.btnDeleteBan.ImageSize = new System.Drawing.Size(30, 30);
+            this.btnDeleteBan.Location = new System.Drawing.Point(129, 281);
+            this.btnDeleteBan.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnDeleteBan.Name = "btnDeleteBan";
+            this.btnDeleteBan.ShadowDecoration.Parent = this.btnDeleteBan;
+            this.btnDeleteBan.Size = new System.Drawing.Size(111, 36);
+            this.btnDeleteBan.TabIndex = 29;
+            this.btnDeleteBan.Text = "Xóa bàn";
+            this.btnDeleteBan.Click += new System.EventHandler(this.btnDeleteBan_Click);
+            // 
+            // btnUpdateBan
+            // 
+            this.btnUpdateBan.BorderRadius = 10;
+            this.btnUpdateBan.CheckedState.Parent = this.btnUpdateBan;
+            this.btnUpdateBan.CustomImages.Parent = this.btnUpdateBan;
+            this.btnUpdateBan.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnUpdateBan.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnUpdateBan.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnUpdateBan.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnUpdateBan.DisabledState.Parent = this.btnUpdateBan;
+            this.btnUpdateBan.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
+            this.btnUpdateBan.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.btnUpdateBan.ForeColor = System.Drawing.Color.Black;
+            this.btnUpdateBan.HoverState.Parent = this.btnUpdateBan;
+            this.btnUpdateBan.ImageSize = new System.Drawing.Size(30, 30);
+            this.btnUpdateBan.Location = new System.Drawing.Point(245, 281);
+            this.btnUpdateBan.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnUpdateBan.Name = "btnUpdateBan";
+            this.btnUpdateBan.ShadowDecoration.Parent = this.btnUpdateBan;
+            this.btnUpdateBan.Size = new System.Drawing.Size(111, 36);
+            this.btnUpdateBan.TabIndex = 28;
+            this.btnUpdateBan.Text = "Sửa bàn";
+            this.btnUpdateBan.Click += new System.EventHandler(this.btnUpdateBan_Click);
+            // 
+            // txtTenBan
+            // 
+            this.txtTenBan.Animated = true;
+            this.txtTenBan.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(234)))), ((int)(((byte)(153)))), ((int)(((byte)(149)))));
+            this.txtTenBan.BorderRadius = 6;
+            this.txtTenBan.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtTenBan.DefaultText = "";
+            this.txtTenBan.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txtTenBan.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txtTenBan.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtTenBan.DisabledState.Parent = this.txtTenBan;
+            this.txtTenBan.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtTenBan.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
+            this.txtTenBan.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtTenBan.FocusedState.Parent = this.txtTenBan;
+            this.txtTenBan.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.txtTenBan.ForeColor = System.Drawing.Color.White;
+            this.txtTenBan.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtTenBan.HoverState.Parent = this.txtTenBan;
+            this.txtTenBan.Location = new System.Drawing.Point(145, 114);
+            this.txtTenBan.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txtTenBan.Name = "txtTenBan";
+            this.txtTenBan.PasswordChar = '\0';
+            this.txtTenBan.PlaceholderText = "";
+            this.txtTenBan.SelectedText = "";
+            this.txtTenBan.ShadowDecoration.Parent = this.txtTenBan;
+            this.txtTenBan.Size = new System.Drawing.Size(164, 36);
+            this.txtTenBan.TabIndex = 27;
+            // 
+            // label30
+            // 
+            this.label30.AutoSize = true;
+            this.label30.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label30.ForeColor = System.Drawing.Color.Black;
+            this.label30.Location = new System.Drawing.Point(28, 114);
+            this.label30.Name = "label30";
+            this.label30.Size = new System.Drawing.Size(66, 19);
+            this.label30.TabIndex = 25;
+            this.label30.Text = "Tên bàn";
+            // 
+            // txtIDBan
+            // 
+            this.txtIDBan.Animated = true;
+            this.txtIDBan.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(234)))), ((int)(((byte)(153)))), ((int)(((byte)(149)))));
+            this.txtIDBan.BorderRadius = 6;
+            this.txtIDBan.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtIDBan.DefaultText = "";
+            this.txtIDBan.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txtIDBan.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txtIDBan.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtIDBan.DisabledState.Parent = this.txtIDBan;
+            this.txtIDBan.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtIDBan.Enabled = false;
+            this.txtIDBan.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
+            this.txtIDBan.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtIDBan.FocusedState.Parent = this.txtIDBan;
+            this.txtIDBan.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.txtIDBan.ForeColor = System.Drawing.Color.White;
+            this.txtIDBan.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtIDBan.HoverState.Parent = this.txtIDBan;
+            this.txtIDBan.Location = new System.Drawing.Point(145, 57);
+            this.txtIDBan.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txtIDBan.Name = "txtIDBan";
+            this.txtIDBan.PasswordChar = '\0';
+            this.txtIDBan.PlaceholderText = "";
+            this.txtIDBan.SelectedText = "";
+            this.txtIDBan.ShadowDecoration.Parent = this.txtIDBan;
+            this.txtIDBan.Size = new System.Drawing.Size(164, 36);
+            this.txtIDBan.TabIndex = 23;
+            // 
+            // label28
+            // 
+            this.label28.AutoSize = true;
+            this.label28.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label28.ForeColor = System.Drawing.Color.Black;
+            this.label28.Location = new System.Drawing.Point(28, 57);
+            this.label28.Name = "label28";
+            this.label28.Size = new System.Drawing.Size(63, 19);
+            this.label28.TabIndex = 22;
+            this.label28.Text = "Mã bàn";
+            // 
+            // btnAddBan
+            // 
+            this.btnAddBan.BorderRadius = 10;
+            this.btnAddBan.CheckedState.Parent = this.btnAddBan;
+            this.btnAddBan.CustomImages.Parent = this.btnAddBan;
+            this.btnAddBan.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnAddBan.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnAddBan.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnAddBan.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnAddBan.DisabledState.Parent = this.btnAddBan;
+            this.btnAddBan.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
+            this.btnAddBan.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.btnAddBan.ForeColor = System.Drawing.Color.Black;
+            this.btnAddBan.HoverState.Parent = this.btnAddBan;
+            this.btnAddBan.ImageSize = new System.Drawing.Size(30, 30);
+            this.btnAddBan.Location = new System.Drawing.Point(13, 281);
+            this.btnAddBan.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnAddBan.Name = "btnAddBan";
+            this.btnAddBan.ShadowDecoration.Parent = this.btnAddBan;
+            this.btnAddBan.Size = new System.Drawing.Size(111, 36);
+            this.btnAddBan.TabIndex = 21;
+            this.btnAddBan.Text = "Thêm bàn";
+            this.btnAddBan.Click += new System.EventHandler(this.btnAddBan_Click);
+            // 
             // guna2Panel3
             // 
             this.guna2Panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(210)))), ((int)(((byte)(225)))));
@@ -1489,7 +1316,7 @@ namespace MilkteaShopManager
             // groupBox5
             // 
             this.groupBox5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(210)))), ((int)(((byte)(225)))));
-            this.groupBox5.Controls.Add(this.listView4);
+            this.groupBox5.Controls.Add(this.dgvDSHoaDon);
             this.groupBox5.Location = new System.Drawing.Point(3, 234);
             this.groupBox5.Name = "groupBox5";
             this.groupBox5.Size = new System.Drawing.Size(1183, 502);
@@ -1497,41 +1324,25 @@ namespace MilkteaShopManager
             this.groupBox5.TabStop = false;
             this.groupBox5.Text = "Danh sách hoá đơn";
             // 
-            // listView4
+            // dgvDSHoaDon
             // 
-            this.listView4.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.listView4.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
-            this.columnHeader20,
-            this.columnHeader21,
-            this.columnHeader22,
-            this.columnHeader23,
-            this.columnHeader24,
-            this.columnHeader25,
-            this.columnHeader26});
-            this.listView4.FullRowSelect = true;
-            this.listView4.GridLines = true;
-            this.listView4.HideSelection = false;
-            this.listView4.Location = new System.Drawing.Point(0, 27);
-            this.listView4.Name = "listView4";
-            this.listView4.Size = new System.Drawing.Size(1175, 469);
-            this.listView4.TabIndex = 3;
-            this.listView4.UseCompatibleStateImageBehavior = false;
-            this.listView4.View = System.Windows.Forms.View.Details;
-            // 
-            // columnHeader20
-            // 
-            this.columnHeader20.Text = "ColumnHeader";
+            this.dgvDSHoaDon.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgvDSHoaDon.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvDSHoaDon.Location = new System.Drawing.Point(6, 28);
+            this.dgvDSHoaDon.Name = "dgvDSHoaDon";
+            this.dgvDSHoaDon.RowHeadersWidth = 51;
+            this.dgvDSHoaDon.RowTemplate.Height = 24;
+            this.dgvDSHoaDon.Size = new System.Drawing.Size(1171, 468);
+            this.dgvDSHoaDon.TabIndex = 0;
             // 
             // panel13
             // 
             this.panel13.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(210)))), ((int)(((byte)(225)))));
-            this.panel13.Controls.Add(this.label23);
-            this.panel13.Controls.Add(this.label22);
-            this.panel13.Controls.Add(this.guna2Button13);
-            this.panel13.Controls.Add(this.guna2DateTimePicker2);
-            this.panel13.Controls.Add(this.guna2DateTimePicker1);
+            this.panel13.Controls.Add(this.label3);
+            this.panel13.Controls.Add(this.lblTongDoanhThu);
+            this.panel13.Controls.Add(this.btnThongKe);
+            this.panel13.Controls.Add(this.dtpEndDay);
+            this.panel13.Controls.Add(this.dtpStartDay);
             this.panel13.Controls.Add(this.label25);
             this.panel13.Controls.Add(this.label26);
             this.panel13.Controls.Add(this.label27);
@@ -1541,101 +1352,71 @@ namespace MilkteaShopManager
             this.panel13.Size = new System.Drawing.Size(1183, 225);
             this.panel13.TabIndex = 1;
             // 
-            // label23
+            // btnThongKe
             // 
-            this.label23.AutoSize = true;
-            this.label23.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Bold);
-            this.label23.ForeColor = System.Drawing.Color.Black;
-            this.label23.Location = new System.Drawing.Point(224, 202);
-            this.label23.Name = "label23";
-            this.label23.Size = new System.Drawing.Size(21, 19);
-            this.label23.TabIndex = 56;
-            this.label23.Text = "...";
+            this.btnThongKe.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
+            this.btnThongKe.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnThongKe.Location = new System.Drawing.Point(535, 90);
+            this.btnThongKe.Name = "btnThongKe";
+            this.btnThongKe.Size = new System.Drawing.Size(118, 36);
+            this.btnThongKe.TabIndex = 57;
+            this.btnThongKe.Text = "Thống kê";
+            this.btnThongKe.UseVisualStyleBackColor = false;
+            this.btnThongKe.Click += new System.EventHandler(this.btnThongKe_Click);
             // 
-            // label22
+            // dtpEndDay
             // 
-            this.label22.AutoSize = true;
-            this.label22.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Bold);
-            this.label22.ForeColor = System.Drawing.Color.Black;
-            this.label22.Location = new System.Drawing.Point(3, 202);
-            this.label22.Name = "label22";
-            this.label22.Size = new System.Drawing.Size(215, 19);
-            this.label22.TabIndex = 56;
-            this.label22.Text = "Tổng doanh thu trong ngày: ";
+            this.dtpEndDay.Checked = true;
+            this.dtpEndDay.CheckedState.Parent = this.dtpEndDay;
+            this.dtpEndDay.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
+            this.dtpEndDay.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dtpEndDay.Format = System.Windows.Forms.DateTimePickerFormat.Long;
+            this.dtpEndDay.HoverState.Parent = this.dtpEndDay;
+            this.dtpEndDay.Location = new System.Drawing.Point(789, 90);
+            this.dtpEndDay.MaxDate = new System.DateTime(9998, 12, 31, 0, 0, 0, 0);
+            this.dtpEndDay.MinDate = new System.DateTime(1753, 1, 1, 0, 0, 0, 0);
+            this.dtpEndDay.Name = "dtpEndDay";
+            this.dtpEndDay.ShadowDecoration.Parent = this.dtpEndDay;
+            this.dtpEndDay.Size = new System.Drawing.Size(379, 36);
+            this.dtpEndDay.TabIndex = 54;
+            this.dtpEndDay.Value = new System.DateTime(2021, 12, 14, 22, 56, 19, 194);
             // 
-            // guna2Button13
+            // dtpStartDay
             // 
-            this.guna2Button13.CheckedState.Parent = this.guna2Button13;
-            this.guna2Button13.CustomImages.Parent = this.guna2Button13;
-            this.guna2Button13.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button13.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button13.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.guna2Button13.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.guna2Button13.DisabledState.Parent = this.guna2Button13;
-            this.guna2Button13.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
-            this.guna2Button13.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2Button13.ForeColor = System.Drawing.Color.Black;
-            this.guna2Button13.HoverState.Parent = this.guna2Button13;
-            this.guna2Button13.Location = new System.Drawing.Point(525, 90);
-            this.guna2Button13.Name = "guna2Button13";
-            this.guna2Button13.ShadowDecoration.Parent = this.guna2Button13;
-            this.guna2Button13.Size = new System.Drawing.Size(104, 36);
-            this.guna2Button13.TabIndex = 55;
-            this.guna2Button13.Text = "Tìm";
-            // 
-            // guna2DateTimePicker2
-            // 
-            this.guna2DateTimePicker2.Checked = true;
-            this.guna2DateTimePicker2.CheckedState.Parent = this.guna2DateTimePicker2;
-            this.guna2DateTimePicker2.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
-            this.guna2DateTimePicker2.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.guna2DateTimePicker2.Format = System.Windows.Forms.DateTimePickerFormat.Long;
-            this.guna2DateTimePicker2.HoverState.Parent = this.guna2DateTimePicker2;
-            this.guna2DateTimePicker2.Location = new System.Drawing.Point(789, 90);
-            this.guna2DateTimePicker2.MaxDate = new System.DateTime(9998, 12, 31, 0, 0, 0, 0);
-            this.guna2DateTimePicker2.MinDate = new System.DateTime(1753, 1, 1, 0, 0, 0, 0);
-            this.guna2DateTimePicker2.Name = "guna2DateTimePicker2";
-            this.guna2DateTimePicker2.ShadowDecoration.Parent = this.guna2DateTimePicker2;
-            this.guna2DateTimePicker2.Size = new System.Drawing.Size(306, 36);
-            this.guna2DateTimePicker2.TabIndex = 54;
-            this.guna2DateTimePicker2.Value = new System.DateTime(2021, 12, 14, 22, 56, 19, 194);
-            // 
-            // guna2DateTimePicker1
-            // 
-            this.guna2DateTimePicker1.Checked = true;
-            this.guna2DateTimePicker1.CheckedState.Parent = this.guna2DateTimePicker1;
-            this.guna2DateTimePicker1.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
-            this.guna2DateTimePicker1.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.guna2DateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Long;
-            this.guna2DateTimePicker1.HoverState.Parent = this.guna2DateTimePicker1;
-            this.guna2DateTimePicker1.Location = new System.Drawing.Point(129, 90);
-            this.guna2DateTimePicker1.MaxDate = new System.DateTime(9998, 12, 31, 0, 0, 0, 0);
-            this.guna2DateTimePicker1.MinDate = new System.DateTime(1753, 1, 1, 0, 0, 0, 0);
-            this.guna2DateTimePicker1.Name = "guna2DateTimePicker1";
-            this.guna2DateTimePicker1.ShadowDecoration.Parent = this.guna2DateTimePicker1;
-            this.guna2DateTimePicker1.Size = new System.Drawing.Size(306, 36);
-            this.guna2DateTimePicker1.TabIndex = 54;
-            this.guna2DateTimePicker1.Value = new System.DateTime(2021, 12, 14, 22, 56, 19, 194);
+            this.dtpStartDay.Checked = true;
+            this.dtpStartDay.CheckedState.Parent = this.dtpStartDay;
+            this.dtpStartDay.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
+            this.dtpStartDay.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dtpStartDay.Format = System.Windows.Forms.DateTimePickerFormat.Long;
+            this.dtpStartDay.HoverState.Parent = this.dtpStartDay;
+            this.dtpStartDay.Location = new System.Drawing.Point(105, 90);
+            this.dtpStartDay.MaxDate = new System.DateTime(9998, 12, 31, 0, 0, 0, 0);
+            this.dtpStartDay.MinDate = new System.DateTime(1753, 1, 1, 0, 0, 0, 0);
+            this.dtpStartDay.Name = "dtpStartDay";
+            this.dtpStartDay.ShadowDecoration.Parent = this.dtpStartDay;
+            this.dtpStartDay.Size = new System.Drawing.Size(379, 36);
+            this.dtpStartDay.TabIndex = 54;
+            this.dtpStartDay.Value = new System.DateTime(2021, 12, 14, 22, 56, 19, 194);
             // 
             // label25
             // 
             this.label25.AutoSize = true;
-            this.label25.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Bold);
+            this.label25.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label25.ForeColor = System.Drawing.Color.Black;
             this.label25.Location = new System.Drawing.Point(692, 96);
             this.label25.Name = "label25";
-            this.label25.Size = new System.Drawing.Size(76, 19);
+            this.label25.Size = new System.Drawing.Size(89, 23);
             this.label25.TabIndex = 47;
             this.label25.Text = "Đến ngày";
             // 
             // label26
             // 
             this.label26.AutoSize = true;
-            this.label26.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Bold);
+            this.label26.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label26.ForeColor = System.Drawing.Color.Black;
-            this.label26.Location = new System.Drawing.Point(46, 96);
+            this.label26.Location = new System.Drawing.Point(19, 96);
             this.label26.Name = "label26";
-            this.label26.Size = new System.Drawing.Size(67, 19);
+            this.label26.Size = new System.Drawing.Size(80, 23);
             this.label26.TabIndex = 48;
             this.label26.Text = "Từ ngày";
             // 
@@ -2221,185 +2002,328 @@ namespace MilkteaShopManager
             this.label15.TabIndex = 43;
             this.label15.Text = "Quản lý mật khẩu";
             // 
-            // btnAddBan
+            // tabPage8
             // 
-            this.btnAddBan.BorderRadius = 10;
-            this.btnAddBan.CheckedState.Parent = this.btnAddBan;
-            this.btnAddBan.CustomImages.Parent = this.btnAddBan;
-            this.btnAddBan.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btnAddBan.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btnAddBan.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnAddBan.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnAddBan.DisabledState.Parent = this.btnAddBan;
-            this.btnAddBan.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
-            this.btnAddBan.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.btnAddBan.ForeColor = System.Drawing.Color.Black;
-            this.btnAddBan.HoverState.Parent = this.btnAddBan;
-            this.btnAddBan.ImageSize = new System.Drawing.Size(30, 30);
-            this.btnAddBan.Location = new System.Drawing.Point(13, 281);
-            this.btnAddBan.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.btnAddBan.Name = "btnAddBan";
-            this.btnAddBan.ShadowDecoration.Parent = this.btnAddBan;
-            this.btnAddBan.Size = new System.Drawing.Size(111, 36);
-            this.btnAddBan.TabIndex = 21;
-            this.btnAddBan.Text = "Thêm bàn";
-            this.btnAddBan.Click += new System.EventHandler(this.btnAddBan_Click);
+            this.tabPage8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
+            this.tabPage8.Controls.Add(this.guna2Panel1);
+            this.tabPage8.Controls.Add(this.lvHoaDon);
+            this.tabPage8.Controls.Add(this.panel15);
+            this.tabPage8.Controls.Add(this.groupBox2);
+            this.tabPage8.Controls.Add(this.groupBox1);
+            this.tabPage8.ForeColor = System.Drawing.Color.Black;
+            this.tabPage8.Location = new System.Drawing.Point(4, 29);
+            this.tabPage8.Name = "tabPage8";
+            this.tabPage8.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage8.Size = new System.Drawing.Size(1169, 619);
+            this.tabPage8.TabIndex = 1;
+            this.tabPage8.Text = "Gọi món";
             // 
-            // label28
+            // groupBox1
             // 
-            this.label28.AutoSize = true;
-            this.label28.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label28.ForeColor = System.Drawing.Color.Black;
-            this.label28.Location = new System.Drawing.Point(28, 57);
-            this.label28.Name = "label28";
-            this.label28.Size = new System.Drawing.Size(63, 19);
-            this.label28.TabIndex = 22;
-            this.label28.Text = "Mã bàn";
+            this.groupBox1.BackgroundImage = global::MilkteaShopManager.Properties.Resources.background_2;
+            this.groupBox1.Controls.Add(this.flpDSBan);
+            this.groupBox1.ForeColor = System.Drawing.Color.Black;
+            this.groupBox1.Location = new System.Drawing.Point(6, 137);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(688, 476);
+            this.groupBox1.TabIndex = 1;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "Danh sách bàn";
             // 
-            // txtIDBan
+            // flpDSBan
             // 
-            this.txtIDBan.Animated = true;
-            this.txtIDBan.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(234)))), ((int)(((byte)(153)))), ((int)(((byte)(149)))));
-            this.txtIDBan.BorderRadius = 6;
-            this.txtIDBan.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtIDBan.DefaultText = "";
-            this.txtIDBan.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.txtIDBan.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.txtIDBan.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtIDBan.DisabledState.Parent = this.txtIDBan;
-            this.txtIDBan.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtIDBan.Enabled = false;
-            this.txtIDBan.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
-            this.txtIDBan.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtIDBan.FocusedState.Parent = this.txtIDBan;
-            this.txtIDBan.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.txtIDBan.ForeColor = System.Drawing.Color.White;
-            this.txtIDBan.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtIDBan.HoverState.Parent = this.txtIDBan;
-            this.txtIDBan.Location = new System.Drawing.Point(145, 57);
-            this.txtIDBan.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.txtIDBan.Name = "txtIDBan";
-            this.txtIDBan.PasswordChar = '\0';
-            this.txtIDBan.PlaceholderText = "";
-            this.txtIDBan.SelectedText = "";
-            this.txtIDBan.ShadowDecoration.Parent = this.txtIDBan;
-            this.txtIDBan.Size = new System.Drawing.Size(164, 36);
-            this.txtIDBan.TabIndex = 23;
+            this.flpDSBan.AutoScroll = true;
+            this.flpDSBan.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(210)))), ((int)(((byte)(225)))));
+            this.flpDSBan.Location = new System.Drawing.Point(7, 28);
+            this.flpDSBan.Name = "flpDSBan";
+            this.flpDSBan.Size = new System.Drawing.Size(675, 442);
+            this.flpDSBan.TabIndex = 0;
             // 
-            // label30
+            // groupBox2
             // 
-            this.label30.AutoSize = true;
-            this.label30.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label30.ForeColor = System.Drawing.Color.Black;
-            this.label30.Location = new System.Drawing.Point(28, 114);
-            this.label30.Name = "label30";
-            this.label30.Size = new System.Drawing.Size(66, 19);
-            this.label30.TabIndex = 25;
-            this.label30.Text = "Tên bàn";
+            this.groupBox2.BackgroundImage = global::MilkteaShopManager.Properties.Resources.background_2;
+            this.groupBox2.Controls.Add(this.btnThemNuoc);
+            this.groupBox2.Controls.Add(this.nudSoLuong);
+            this.groupBox2.Controls.Add(this.cbbTenThucUong);
+            this.groupBox2.Controls.Add(this.cbbLoaiThucUong);
+            this.groupBox2.Controls.Add(this.label5);
+            this.groupBox2.Controls.Add(this.label6);
+            this.groupBox2.Controls.Add(this.label7);
+            this.groupBox2.Location = new System.Drawing.Point(6, 6);
+            this.groupBox2.Name = "groupBox2";
+            this.groupBox2.Size = new System.Drawing.Size(688, 125);
+            this.groupBox2.TabIndex = 2;
+            this.groupBox2.TabStop = false;
+            this.groupBox2.Text = "Thêm thức uống";
             // 
-            // txtTenBan
+            // label7
             // 
-            this.txtTenBan.Animated = true;
-            this.txtTenBan.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(234)))), ((int)(((byte)(153)))), ((int)(((byte)(149)))));
-            this.txtTenBan.BorderRadius = 6;
-            this.txtTenBan.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtTenBan.DefaultText = "";
-            this.txtTenBan.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.txtTenBan.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.txtTenBan.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtTenBan.DisabledState.Parent = this.txtTenBan;
-            this.txtTenBan.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtTenBan.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
-            this.txtTenBan.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtTenBan.FocusedState.Parent = this.txtTenBan;
-            this.txtTenBan.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.txtTenBan.ForeColor = System.Drawing.Color.White;
-            this.txtTenBan.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtTenBan.HoverState.Parent = this.txtTenBan;
-            this.txtTenBan.Location = new System.Drawing.Point(145, 114);
-            this.txtTenBan.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.txtTenBan.Name = "txtTenBan";
-            this.txtTenBan.PasswordChar = '\0';
-            this.txtTenBan.PlaceholderText = "";
-            this.txtTenBan.SelectedText = "";
-            this.txtTenBan.ShadowDecoration.Parent = this.txtTenBan;
-            this.txtTenBan.Size = new System.Drawing.Size(164, 36);
-            this.txtTenBan.TabIndex = 27;
+            this.label7.AutoSize = true;
+            this.label7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(210)))), ((int)(((byte)(225)))));
+            this.label7.Location = new System.Drawing.Point(13, 46);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(122, 20);
+            this.label7.TabIndex = 0;
+            this.label7.Text = "Loại thức uống:";
             // 
-            // btnUpdateBan
+            // label6
             // 
-            this.btnUpdateBan.BorderRadius = 10;
-            this.btnUpdateBan.CheckedState.Parent = this.btnUpdateBan;
-            this.btnUpdateBan.CustomImages.Parent = this.btnUpdateBan;
-            this.btnUpdateBan.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btnUpdateBan.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btnUpdateBan.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnUpdateBan.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnUpdateBan.DisabledState.Parent = this.btnUpdateBan;
-            this.btnUpdateBan.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
-            this.btnUpdateBan.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.btnUpdateBan.ForeColor = System.Drawing.Color.Black;
-            this.btnUpdateBan.HoverState.Parent = this.btnUpdateBan;
-            this.btnUpdateBan.ImageSize = new System.Drawing.Size(30, 30);
-            this.btnUpdateBan.Location = new System.Drawing.Point(245, 281);
-            this.btnUpdateBan.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.btnUpdateBan.Name = "btnUpdateBan";
-            this.btnUpdateBan.ShadowDecoration.Parent = this.btnUpdateBan;
-            this.btnUpdateBan.Size = new System.Drawing.Size(111, 36);
-            this.btnUpdateBan.TabIndex = 28;
-            this.btnUpdateBan.Text = "Sửa bàn";
-            this.btnUpdateBan.Click += new System.EventHandler(this.btnUpdateBan_Click);
+            this.label6.AutoSize = true;
+            this.label6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(210)))), ((int)(((byte)(225)))));
+            this.label6.Location = new System.Drawing.Point(438, 41);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(74, 20);
+            this.label6.TabIndex = 0;
+            this.label6.Text = "Số lượng";
             // 
-            // btnDeleteBan
+            // label5
             // 
-            this.btnDeleteBan.BorderRadius = 10;
-            this.btnDeleteBan.CheckedState.Parent = this.btnDeleteBan;
-            this.btnDeleteBan.CustomImages.Parent = this.btnDeleteBan;
-            this.btnDeleteBan.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btnDeleteBan.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btnDeleteBan.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnDeleteBan.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnDeleteBan.DisabledState.Parent = this.btnDeleteBan;
-            this.btnDeleteBan.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
-            this.btnDeleteBan.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.btnDeleteBan.ForeColor = System.Drawing.Color.Black;
-            this.btnDeleteBan.HoverState.Parent = this.btnDeleteBan;
-            this.btnDeleteBan.ImageSize = new System.Drawing.Size(30, 30);
-            this.btnDeleteBan.Location = new System.Drawing.Point(129, 281);
-            this.btnDeleteBan.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.btnDeleteBan.Name = "btnDeleteBan";
-            this.btnDeleteBan.ShadowDecoration.Parent = this.btnDeleteBan;
-            this.btnDeleteBan.Size = new System.Drawing.Size(111, 36);
-            this.btnDeleteBan.TabIndex = 29;
-            this.btnDeleteBan.Text = "Xóa bàn";
-            this.btnDeleteBan.Click += new System.EventHandler(this.btnDeleteBan_Click);
+            this.label5.AutoSize = true;
+            this.label5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(210)))), ((int)(((byte)(225)))));
+            this.label5.Location = new System.Drawing.Point(12, 82);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(124, 20);
+            this.label5.TabIndex = 0;
+            this.label5.Text = "Tên nước uống:";
             // 
-            // lblThongBaoBan
+            // cbbLoaiThucUong
             // 
-            this.lblThongBaoBan.AutoSize = true;
-            this.lblThongBaoBan.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblThongBaoBan.Location = new System.Drawing.Point(29, 169);
-            this.lblThongBaoBan.Name = "lblThongBaoBan";
-            this.lblThongBaoBan.Size = new System.Drawing.Size(0, 19);
-            this.lblThongBaoBan.TabIndex = 30;
+            this.cbbLoaiThucUong.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbbLoaiThucUong.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbbLoaiThucUong.FormattingEnabled = true;
+            this.cbbLoaiThucUong.Location = new System.Drawing.Point(146, 42);
+            this.cbbLoaiThucUong.Name = "cbbLoaiThucUong";
+            this.cbbLoaiThucUong.Size = new System.Drawing.Size(260, 30);
+            this.cbbLoaiThucUong.TabIndex = 1;
+            this.cbbLoaiThucUong.SelectedIndexChanged += new System.EventHandler(this.cbbLoaiThucUong_SelectedIndexChanged);
             // 
-            // guna2Panel4
+            // cbbTenThucUong
             // 
-            this.guna2Panel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(210)))), ((int)(((byte)(225)))));
-            this.guna2Panel4.Controls.Add(this.lblThongBaoBan);
-            this.guna2Panel4.Controls.Add(this.btnDeleteBan);
-            this.guna2Panel4.Controls.Add(this.btnUpdateBan);
-            this.guna2Panel4.Controls.Add(this.txtTenBan);
-            this.guna2Panel4.Controls.Add(this.label30);
-            this.guna2Panel4.Controls.Add(this.txtIDBan);
-            this.guna2Panel4.Controls.Add(this.label28);
-            this.guna2Panel4.Controls.Add(this.btnAddBan);
-            this.guna2Panel4.Location = new System.Drawing.Point(4, 75);
-            this.guna2Panel4.Margin = new System.Windows.Forms.Padding(4);
-            this.guna2Panel4.Name = "guna2Panel4";
-            this.guna2Panel4.ShadowDecoration.Parent = this.guna2Panel4;
-            this.guna2Panel4.Size = new System.Drawing.Size(384, 665);
-            this.guna2Panel4.TabIndex = 7;
+            this.cbbTenThucUong.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbbTenThucUong.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbbTenThucUong.FormattingEnabled = true;
+            this.cbbTenThucUong.Location = new System.Drawing.Point(146, 78);
+            this.cbbTenThucUong.Name = "cbbTenThucUong";
+            this.cbbTenThucUong.Size = new System.Drawing.Size(260, 30);
+            this.cbbTenThucUong.TabIndex = 1;
+            // 
+            // nudSoLuong
+            // 
+            this.nudSoLuong.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.nudSoLuong.Location = new System.Drawing.Point(423, 77);
+            this.nudSoLuong.Maximum = new decimal(new int[] {
+            10000,
+            0,
+            0,
+            0});
+            this.nudSoLuong.Minimum = new decimal(new int[] {
+            10000,
+            0,
+            0,
+            -2147483648});
+            this.nudSoLuong.Name = "nudSoLuong";
+            this.nudSoLuong.Size = new System.Drawing.Size(120, 30);
+            this.nudSoLuong.TabIndex = 2;
+            // 
+            // btnThemNuoc
+            // 
+            this.btnThemNuoc.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
+            this.btnThemNuoc.Location = new System.Drawing.Point(559, 42);
+            this.btnThemNuoc.Name = "btnThemNuoc";
+            this.btnThemNuoc.Size = new System.Drawing.Size(113, 66);
+            this.btnThemNuoc.TabIndex = 3;
+            this.btnThemNuoc.Text = "Thêm nước";
+            this.btnThemNuoc.UseVisualStyleBackColor = false;
+            this.btnThemNuoc.Click += new System.EventHandler(this.btnThemNuoc_Click);
+            // 
+            // panel15
+            // 
+            this.panel15.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(210)))), ((int)(((byte)(225)))));
+            this.panel15.Controls.Add(this.btnGopBan);
+            this.panel15.Controls.Add(this.label24);
+            this.panel15.Controls.Add(this.cbbDSBan);
+            this.panel15.Controls.Add(this.btnChuyenBan);
+            this.panel15.Location = new System.Drawing.Point(700, 6);
+            this.panel15.Name = "panel15";
+            this.panel15.Size = new System.Drawing.Size(463, 125);
+            this.panel15.TabIndex = 3;
+            // 
+            // btnChuyenBan
+            // 
+            this.btnChuyenBan.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
+            this.btnChuyenBan.ForeColor = System.Drawing.Color.Black;
+            this.btnChuyenBan.Location = new System.Drawing.Point(33, 42);
+            this.btnChuyenBan.Name = "btnChuyenBan";
+            this.btnChuyenBan.Size = new System.Drawing.Size(111, 65);
+            this.btnChuyenBan.TabIndex = 0;
+            this.btnChuyenBan.Text = "Chuyển bàn";
+            this.btnChuyenBan.UseVisualStyleBackColor = false;
+            this.btnChuyenBan.Click += new System.EventHandler(this.btnChuyenBan_Click);
+            // 
+            // cbbDSBan
+            // 
+            this.cbbDSBan.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbbDSBan.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbbDSBan.FormattingEnabled = true;
+            this.cbbDSBan.Location = new System.Drawing.Point(169, 73);
+            this.cbbDSBan.Name = "cbbDSBan";
+            this.cbbDSBan.Size = new System.Drawing.Size(125, 30);
+            this.cbbDSBan.TabIndex = 1;
+            // 
+            // label24
+            // 
+            this.label24.AutoSize = true;
+            this.label24.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label24.Location = new System.Drawing.Point(170, 46);
+            this.label24.Name = "label24";
+            this.label24.Size = new System.Drawing.Size(124, 22);
+            this.label24.TabIndex = 2;
+            this.label24.Text = "Danh sách bàn";
+            // 
+            // btnGopBan
+            // 
+            this.btnGopBan.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
+            this.btnGopBan.ForeColor = System.Drawing.Color.Black;
+            this.btnGopBan.Location = new System.Drawing.Point(319, 43);
+            this.btnGopBan.Name = "btnGopBan";
+            this.btnGopBan.Size = new System.Drawing.Size(111, 65);
+            this.btnGopBan.TabIndex = 3;
+            this.btnGopBan.Text = "Gộp bàn";
+            this.btnGopBan.UseVisualStyleBackColor = false;
+            this.btnGopBan.Click += new System.EventHandler(this.btnGopBan_Click);
+            // 
+            // lvHoaDon
+            // 
+            this.lvHoaDon.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(210)))), ((int)(((byte)(225)))));
+            this.lvHoaDon.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.columnHeader27,
+            this.columnHeader34,
+            this.columnHeader28,
+            this.columnHeader29});
+            this.lvHoaDon.GridLines = true;
+            this.lvHoaDon.HideSelection = false;
+            this.lvHoaDon.Location = new System.Drawing.Point(700, 137);
+            this.lvHoaDon.Name = "lvHoaDon";
+            this.lvHoaDon.Size = new System.Drawing.Size(463, 316);
+            this.lvHoaDon.TabIndex = 4;
+            this.lvHoaDon.UseCompatibleStateImageBehavior = false;
+            this.lvHoaDon.View = System.Windows.Forms.View.Details;
+            // 
+            // columnHeader27
+            // 
+            this.columnHeader27.Text = "Tên thức uống";
+            this.columnHeader27.Width = 130;
+            // 
+            // columnHeader34
+            // 
+            this.columnHeader34.Text = "Đơn giá";
+            this.columnHeader34.Width = 70;
+            // 
+            // columnHeader28
+            // 
+            this.columnHeader28.Text = "Số lượng";
+            this.columnHeader28.Width = 70;
+            // 
+            // columnHeader29
+            // 
+            this.columnHeader29.Text = "Thành tiền";
+            this.columnHeader29.Width = 75;
+            // 
+            // guna2Panel1
+            // 
+            this.guna2Panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(210)))), ((int)(((byte)(225)))));
+            this.guna2Panel1.Controls.Add(this.btnThanhToan);
+            this.guna2Panel1.Controls.Add(this.txtTongTien);
+            this.guna2Panel1.Controls.Add(this.label8);
+            this.guna2Panel1.Location = new System.Drawing.Point(701, 459);
+            this.guna2Panel1.Name = "guna2Panel1";
+            this.guna2Panel1.ShadowDecoration.Parent = this.guna2Panel1;
+            this.guna2Panel1.Size = new System.Drawing.Size(462, 154);
+            this.guna2Panel1.TabIndex = 5;
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.Location = new System.Drawing.Point(13, 24);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(120, 22);
+            this.label8.TabIndex = 0;
+            this.label8.Text = "CỘNG TIỀN:";
+            // 
+            // txtTongTien
+            // 
+            this.txtTongTien.Font = new System.Drawing.Font("Times New Roman", 13.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtTongTien.Location = new System.Drawing.Point(257, 18);
+            this.txtTongTien.Name = "txtTongTien";
+            this.txtTongTien.Size = new System.Drawing.Size(172, 33);
+            this.txtTongTien.TabIndex = 1;
+            this.txtTongTien.Text = "0";
+            this.txtTongTien.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            // 
+            // btnThanhToan
+            // 
+            this.btnThanhToan.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(60)))), ((int)(((byte)(60)))));
+            this.btnThanhToan.ForeColor = System.Drawing.Color.White;
+            this.btnThanhToan.Location = new System.Drawing.Point(99, 72);
+            this.btnThanhToan.Name = "btnThanhToan";
+            this.btnThanhToan.Size = new System.Drawing.Size(272, 61);
+            this.btnThanhToan.TabIndex = 3;
+            this.btnThanhToan.Text = "Thanh toán";
+            this.btnThanhToan.UseVisualStyleBackColor = false;
+            this.btnThanhToan.Click += new System.EventHandler(this.btnThanhToan_Click);
+            // 
+            // tctGoiMon
+            // 
+            this.tctGoiMon.Controls.Add(this.tabPage8);
+            this.tctGoiMon.Controls.Add(this.tctHoaDon);
+            this.tctGoiMon.Location = new System.Drawing.Point(6, 86);
+            this.tctGoiMon.Name = "tctGoiMon";
+            this.tctGoiMon.SelectedIndex = 0;
+            this.tctGoiMon.Size = new System.Drawing.Size(1177, 652);
+            this.tctGoiMon.TabIndex = 0;
+            // 
+            // tctHoaDon
+            // 
+            this.tctHoaDon.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(210)))), ((int)(((byte)(225)))));
+            this.tctHoaDon.Controls.Add(this.dgvHoaDonTrongNgay);
+            this.tctHoaDon.Location = new System.Drawing.Point(4, 29);
+            this.tctHoaDon.Name = "tctHoaDon";
+            this.tctHoaDon.Padding = new System.Windows.Forms.Padding(3);
+            this.tctHoaDon.Size = new System.Drawing.Size(1169, 619);
+            this.tctHoaDon.TabIndex = 2;
+            // 
+            // dgvHoaDonTrongNgay
+            // 
+            this.dgvHoaDonTrongNgay.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgvHoaDonTrongNgay.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvHoaDonTrongNgay.Location = new System.Drawing.Point(6, 6);
+            this.dgvHoaDonTrongNgay.Name = "dgvHoaDonTrongNgay";
+            this.dgvHoaDonTrongNgay.RowHeadersWidth = 51;
+            this.dgvHoaDonTrongNgay.RowTemplate.Height = 24;
+            this.dgvHoaDonTrongNgay.Size = new System.Drawing.Size(1157, 607);
+            this.dgvHoaDonTrongNgay.TabIndex = 0;
+            // 
+            // lblTongDoanhThu
+            // 
+            this.lblTongDoanhThu.AutoSize = true;
+            this.lblTongDoanhThu.Font = new System.Drawing.Font("Times New Roman", 13.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
+            this.lblTongDoanhThu.ForeColor = System.Drawing.Color.Red;
+            this.lblTongDoanhThu.Location = new System.Drawing.Point(213, 176);
+            this.lblTongDoanhThu.Name = "lblTongDoanhThu";
+            this.lblTongDoanhThu.Size = new System.Drawing.Size(30, 26);
+            this.lblTongDoanhThu.TabIndex = 58;
+            this.lblTongDoanhThu.Text = "...";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Times New Roman", 13.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
+            this.label3.Location = new System.Drawing.Point(18, 176);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(172, 26);
+            this.label3.TabIndex = 59;
+            this.label3.Text = "Tổng doanh thu:";
             // 
             // MainForm
             // 
@@ -2424,19 +2348,6 @@ namespace MilkteaShopManager
             this.tabPage2.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
-            this.tabControl1.ResumeLayout(false);
-            this.tabPage7.ResumeLayout(false);
-            this.panel14.ResumeLayout(false);
-            this.panel14.PerformLayout();
-            this.tabPage8.ResumeLayout(false);
-            this.guna2Panel1.ResumeLayout(false);
-            this.guna2Panel1.PerformLayout();
-            this.panel15.ResumeLayout(false);
-            this.panel15.PerformLayout();
-            this.groupBox2.ResumeLayout(false);
-            this.groupBox2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.nudSoLuong)).EndInit();
-            this.groupBox1.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
             this.panel7.ResumeLayout(false);
             this.panel6.ResumeLayout(false);
@@ -2444,10 +2355,13 @@ namespace MilkteaShopManager
             this.panel5.PerformLayout();
             this.tabPage3.ResumeLayout(false);
             this.guna2Panel2.ResumeLayout(false);
+            this.guna2Panel4.ResumeLayout(false);
+            this.guna2Panel4.PerformLayout();
             this.guna2Panel3.ResumeLayout(false);
             this.guna2Panel3.PerformLayout();
             this.tabPage4.ResumeLayout(false);
             this.groupBox5.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dgvDSHoaDon)).EndInit();
             this.panel13.ResumeLayout(false);
             this.panel13.PerformLayout();
             this.tabPage5.ResumeLayout(false);
@@ -2461,8 +2375,18 @@ namespace MilkteaShopManager
             this.groupBox3.ResumeLayout(false);
             this.panel8.ResumeLayout(false);
             this.panel8.PerformLayout();
-            this.guna2Panel4.ResumeLayout(false);
-            this.guna2Panel4.PerformLayout();
+            this.tabPage8.ResumeLayout(false);
+            this.groupBox1.ResumeLayout(false);
+            this.groupBox2.ResumeLayout(false);
+            this.groupBox2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.nudSoLuong)).EndInit();
+            this.panel15.ResumeLayout(false);
+            this.panel15.PerformLayout();
+            this.guna2Panel1.ResumeLayout(false);
+            this.guna2Panel1.PerformLayout();
+            this.tctGoiMon.ResumeLayout(false);
+            this.tctHoaDon.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dgvHoaDonTrongNgay)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -2555,18 +2479,8 @@ namespace MilkteaShopManager
         private System.Windows.Forms.ColumnHeader columnHeader18;
         private System.Windows.Forms.ColumnHeader columnHeader19;
         private System.Windows.Forms.GroupBox groupBox5;
-        private System.Windows.Forms.ListView listView4;
-        private System.Windows.Forms.ColumnHeader columnHeader20;
-        private System.Windows.Forms.ColumnHeader columnHeader21;
-        private System.Windows.Forms.ColumnHeader columnHeader22;
-        private System.Windows.Forms.ColumnHeader columnHeader23;
-        private System.Windows.Forms.ColumnHeader columnHeader24;
-        private System.Windows.Forms.ColumnHeader columnHeader25;
-        private System.Windows.Forms.ColumnHeader columnHeader26;
         private System.Windows.Forms.Panel panel13;
-        private Guna.UI2.WinForms.Guna2Button guna2Button13;
-        private Guna.UI2.WinForms.Guna2DateTimePicker guna2DateTimePicker2;
-        private Guna.UI2.WinForms.Guna2DateTimePicker guna2DateTimePicker1;
+        private Guna.UI2.WinForms.Guna2DateTimePicker dtpEndDay;
         private System.Windows.Forms.Label label25;
         private System.Windows.Forms.Label label26;
         private System.Windows.Forms.Label label27;
@@ -2575,39 +2489,11 @@ namespace MilkteaShopManager
         private Guna.UI2.WinForms.Guna2Button btnThemNhanVien;
         private Guna.UI2.WinForms.Guna2Button guna2Button12;
         private Guna.UI2.WinForms.Guna2Button guna2Button11;
-        private System.Windows.Forms.Label label23;
-        private System.Windows.Forms.Label label22;
         private System.Windows.Forms.Panel panel2;
-        private Guna.UI2.WinForms.Guna2TextBox guna2TextBox1;
+        private Guna.UI2.WinForms.Guna2TextBox txtTimKiem;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TabControl tabControl1;
-        private System.Windows.Forms.TabPage tabPage7;
-        private System.Windows.Forms.ListView listView1;
-        private System.Windows.Forms.TabPage tabPage8;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnHoaDon;
         private System.Windows.Forms.Button btnMangVe;
-        private System.Windows.Forms.Panel panel14;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label lblSoLuong;
-        private System.Windows.Forms.Label label3;
-        private Guna.UI2.WinForms.Guna2Panel guna2Panel1;
-        private System.Windows.Forms.Button btnThanhToan;
-        private System.Windows.Forms.TextBox txtTongTien;
-        private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.ListView lvHoaDon;
-        private System.Windows.Forms.ColumnHeader columnHeader27;
-        private System.Windows.Forms.ColumnHeader columnHeader28;
-        private System.Windows.Forms.ColumnHeader columnHeader29;
-        private System.Windows.Forms.Panel panel15;
-        private System.Windows.Forms.GroupBox groupBox2;
-        private System.Windows.Forms.Button btnThemNuoc;
-        private System.Windows.Forms.NumericUpDown nudSoLuong;
-        private System.Windows.Forms.ComboBox cbbTenThucUong;
-        private System.Windows.Forms.ComboBox cbbLoaiThucUong;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.GroupBox groupBox1;
         private Guna.UI2.WinForms.Guna2Panel guna2Panel3;
         private Guna.UI2.WinForms.Guna2Panel guna2Panel2;
         private System.Windows.Forms.ListView lvBan;
@@ -2617,12 +2503,6 @@ namespace MilkteaShopManager
         private System.Windows.Forms.ColumnHeader columnHeader33;
         private System.Windows.Forms.Label label31;
         private Guna.UI2.WinForms.Guna2Button btnCapNhat;
-        private System.Windows.Forms.FlowLayoutPanel flpDSBan;
-        private System.Windows.Forms.ColumnHeader columnHeader34;
-        private System.Windows.Forms.Button btnChuyenBan;
-        private System.Windows.Forms.ComboBox cbbDSBan;
-        private System.Windows.Forms.Label label24;
-        private System.Windows.Forms.Button btnGopBan;
         private Guna.UI2.WinForms.Guna2Panel guna2Panel4;
         private System.Windows.Forms.Label lblThongBaoBan;
         private Guna.UI2.WinForms.Guna2Button btnDeleteBan;
@@ -2632,5 +2512,38 @@ namespace MilkteaShopManager
         private Guna.UI2.WinForms.Guna2TextBox txtIDBan;
         private System.Windows.Forms.Label label28;
         private Guna.UI2.WinForms.Guna2Button btnAddBan;
+        private System.Windows.Forms.DataGridView dgvDSHoaDon;
+        private System.Windows.Forms.Button btnThongKe;
+        private Guna.UI2.WinForms.Guna2DateTimePicker dtpStartDay;
+        private System.Windows.Forms.TabControl tctGoiMon;
+        private System.Windows.Forms.TabPage tabPage8;
+        private Guna.UI2.WinForms.Guna2Panel guna2Panel1;
+        private System.Windows.Forms.Button btnThanhToan;
+        private System.Windows.Forms.TextBox txtTongTien;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.ListView lvHoaDon;
+        private System.Windows.Forms.ColumnHeader columnHeader27;
+        private System.Windows.Forms.ColumnHeader columnHeader34;
+        private System.Windows.Forms.ColumnHeader columnHeader28;
+        private System.Windows.Forms.ColumnHeader columnHeader29;
+        private System.Windows.Forms.Panel panel15;
+        private System.Windows.Forms.Button btnGopBan;
+        private System.Windows.Forms.Label label24;
+        private System.Windows.Forms.ComboBox cbbDSBan;
+        private System.Windows.Forms.Button btnChuyenBan;
+        private System.Windows.Forms.GroupBox groupBox2;
+        private System.Windows.Forms.Button btnThemNuoc;
+        private System.Windows.Forms.NumericUpDown nudSoLuong;
+        private System.Windows.Forms.ComboBox cbbTenThucUong;
+        private System.Windows.Forms.ComboBox cbbLoaiThucUong;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.FlowLayoutPanel flpDSBan;
+        private System.Windows.Forms.TabPage tctHoaDon;
+        private System.Windows.Forms.DataGridView dgvHoaDonTrongNgay;
+        private System.Windows.Forms.Label lblTongDoanhThu;
+        private System.Windows.Forms.Label label3;
     }
 }

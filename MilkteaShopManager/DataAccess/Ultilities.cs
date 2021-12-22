@@ -33,12 +33,13 @@ namespace DataAccess
         public static string CheckOut = "CheckOut";
         public static string SwitchTable = "SwitchTable";
         public static string MergeTable = "MergeTable";
+        public static string ShowBillInTheDay = "ShowBillInTheDay";
+        public static string GetListBillByDate = "GetListBillByDate";
 
         public static string NhanVien_GetAll = "NhanVien_GetAll";
 
         public static string TaiKhoan_GetAll = "TaiKhoan_GetAll";
 
         public static string ChucVu_GetAll = "ChucVu_GetAll";
-
     }
 }

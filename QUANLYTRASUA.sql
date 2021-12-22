@@ -48,8 +48,9 @@ CREATE TABLE HoaDon
 	GiamGia			INT DEFAULT 0,
 	Thue			INT DEFAULT 0,
 	TrangThaiHD		INT DEFAULT 0,
-	NgayTao			DATETIME,
-	NgayThanhToan	DATETIME,
+	NgayTao			DATE NOT NULL DEFAULT GETDATE(),
+	NgayThanhToan	DATE,
+	TongTien		INT,
 	MaBan			INT REFERENCES Ban(MaBan),
 	TaiKhoanTao		NVARCHAR(100) REFERENCES TaiKhoan(TenTaiKhoan)
 )
@@ -122,6 +123,8 @@ INSERT [HoaDon] ([MaHoaDon], [GiamGia], [Thue], [TrangThaiHD], [NgayTao], [NgayT
 INSERT [HoaDon] ([MaHoaDon], [GiamGia], [Thue], [TrangThaiHD], [NgayTao], [NgayThanhToan], [MaBan], [TaiKhoanTao]) VALUES (4, 5, 10, 1, '20/11/2021', '20/11/2021',	5, 'gominn')
 INSERT [HoaDon] ([MaHoaDon], [GiamGia], [Thue], [TrangThaiHD], [NgayTao], [NgayThanhToan], [MaBan], [TaiKhoanTao]) VALUES (5, 5, 10, 0,	'20/11/2021', NULL,			3, 'gominn')
 INSERT [HoaDon] ([MaHoaDon], [GiamGia], [Thue], [TrangThaiHD], [NgayTao], [NgayThanhToan], [MaBan], [TaiKhoanTao]) VALUES (6, 5, 10, 0, '20/11/2021', NULL,			4, 'gominn')
+INSERT [HoaDon] ([GiamGia], [Thue], [TrangThaiHD], [NgayTao], [NgayThanhToan], [MaBan], [TaiKhoanTao]) VALUES (15000, 15000, 1, '21/12/2021', '22/12/2021', 5, 'gominn')
+
 SET IDENTITY_INSERT [HoaDon] OFF
 
 SET IDENTITY_INSERT [LoaiNuoc] ON 
@@ -165,11 +168,13 @@ GO
 Create procedure [dbo].[NuocUong_GetAll]
 as
 	select * from NuocUong
+GO
 -----------------------------------------
 -- thủ tục lấy bảng LoaiNuoc
 Create procedure [LoaiNuoc_GetAll]
 as
 	select * from LoaiNuoc
+GO
 -----------------------------------------
 -- thủ tục thêm, xoá, sửa bảng LoaiNuoc
 create PROCEDURE [dbo].[LoaiNuoc_InsertUpdateDelete]
@@ -198,6 +203,7 @@ ELSE IF @Action = 2
 	BEGIN
 		DELETE FROM [LoaiNuoc] WHERE [MaLoai] = @MaLoai
 	END
+GO
 -----------------------------------------
 -- thủ tục thêm, xoá, sửa bảng NuocUong
 CREATE PROCEDURE [dbo].[NuocUong_InsertUpdateDelete]
@@ -231,7 +237,7 @@ ELSE IF @Action = 2 -- Nếu Action = 2, xóa dữ liệu
 	BEGIN
 		DELETE FROM [NuocUong] WHERE [MaNuocUong] = @MaNuocUong
 	END
-
+GO
 -----------------------------------------
 -- tìm kiếm theo tên bảng NuocUong
 create procedure [dbo].[NuocUong_TimTheoTen]
@@ -240,7 +246,7 @@ As
 	Begin
 		select * from NuocUong where TenNuocUong = '%' + @TenNuocUong + '%'
 	End
-
+GO
 -------------------------
 CREATE PROCEDURE [GetUncheckBillIdByTableId]
 	@maBan INT
@@ -318,10 +324,10 @@ END
 GO
 
 CREATE PROC CheckOut
-@maHoaDon INT, @giamGia INT, @thue INT
+@maHoaDon INT, @giamGia INT, @thue INT, @tongTien INT
 AS
 BEGIN
-	UPDATE HoaDon SET TrangThaiHD = 1, GiamGia = @giamGia, Thue = @thue WHERE MaHoaDon = @maHoaDon
+	UPDATE HoaDon SET TrangThaiHD = 1, GiamGia = @giamGia, Thue = @thue, NgayThanhToan = GETDATE(), TongTien = @tongTien WHERE MaHoaDon = @maHoaDon
 END
 GO
 
@@ -421,8 +427,7 @@ BEGIN
 END
 GO
 
-DELETE ChiTietHoaDon
-DELETE HoaDon
+
 
 CREATE PROC MergeTable
 @idTable1 INT, @idTable2 INT
@@ -473,9 +478,34 @@ BEGIN
 END
 GO
 
+CREATE PROC ShowBillInTheDay
+AS
+BEGIN
+SELECT HD.MaHoaDon AS [Mã hóa đơn], B.TenBan as [Tên bàn], NgayTao AS [Ngày tạo], NgayThanhToan AS [Ngày thanh toán], GiamGia AS [Giảm giá], Thue AS [Thuế], HD.TongTien AS [Tổng tiền]
+FROM HoaDon AS HD, Ban as B
+WHERE NgayTao >= GETDATE()-1 AND NgayThanhToan <= GETDATE() AND HD.TrangThaiHD = 1 AND HD.MaBan = B.MaBan 
+END
+GO
+
+CREATE PROC GetListBillByDate
+@ngayVao DATE, @ngayThanhToan DATE
+AS
+BEGIN
+SELECT HD.MaHoaDon AS [Mã hóa đơn], B.TenBan as [Tên bàn], NgayTao AS [Ngày tạo], NgayThanhToan AS [Ngày thanh toán], GiamGia AS [Giảm giá], Thue AS [Thuế], HD.TongTien AS [Tổng tiền]
+FROM HoaDon AS HD, Ban as B
+WHERE NgayTao >= @ngayVao AND NgayThanhToan <= @ngayThanhToan AND HD.TrangThaiHD = 1 AND HD.MaBan = B.MaBan 
+END
+GO
+
+SELECT * FROM HoaDon
+
+DELETE ChiTietHoaDon
+DELETE HoaDon
+
+
 -----------------------------------------------------------
 -- thêm - xoá - sửa bản ăn cho admin
-alter proc [dbo].[Table_InsertUpdateDelete]
+create proc [dbo].[Table_InsertUpdateDelete]
 	@MaBan int output,
 	@TenBan nvarchar(100),
 	@TrangThai int,
@@ -498,7 +528,7 @@ else if @Action = 2
 	begin
 		delete from [Ban] where [MaBan] = @MaBan
 	end
-
+go
 
 ------------------------------------------------
 -- nhân viên
@@ -507,7 +537,7 @@ AS
 begin
 	select * from NhanVien
 end
-
+go
 ------------------------------------------------
 -- tài khoản
 Create proc [dbo].[TaiKhoan_GetAll]
@@ -515,7 +545,7 @@ As
 Begin
 	select * from TaiKhoan
 End
-
+go
 ------------------------------------------------
 -- chức vụ
 create proc [dbo].[ChucVu_GetAll]
@@ -523,3 +553,4 @@ as
 begin
 	select * from ChucVu
 end
+go

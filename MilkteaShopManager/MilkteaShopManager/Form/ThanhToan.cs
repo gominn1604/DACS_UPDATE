@@ -91,7 +91,7 @@ namespace MilkteaShopManager
             {
                 if (MessageBox.Show("Bạn có muốn thanh toán hóa đơn cho " + _table.Name.ToLower(), "Thông báo", MessageBoxButtons.OKCancel) == DialogResult.OK)
                 {
-                    billDA.CheckOut(billId, discount, tax);
+                    billDA.CheckOut(billId, discount, tax, _tongTien);
                     this.Close();
                 }
             }
