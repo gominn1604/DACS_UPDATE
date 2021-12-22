@@ -34,8 +34,11 @@ namespace MilkteaShopManager
 
         LoaiNuocBL loaiNuocBL = new LoaiNuocBL();
 
+        Table tableCurrent = new Table();
+
         List<Table> listTable = new List<Table>();
         string statusTable;
+
         #endregion
         public MainForm()
         {
@@ -129,7 +132,7 @@ namespace MilkteaShopManager
             int totalAmount = 0;
             lvHoaDon.Items.Clear();
             List<DrinkDetails> listDrinkDetails = drinkDetailsBL.GetListDrinkDetailsByTableId(tableId);
-            
+
             foreach (DrinkDetails item in listDrinkDetails)
             {
                 ListViewItem lvitem = new ListViewItem(item.Name.ToString());
@@ -217,7 +220,7 @@ namespace MilkteaShopManager
                 }
                 ShowBill(table.ID);
                 LoadTable();
-            }    
+            }
         }
 
         private void btnThanhToan_Click(object sender, EventArgs e)
@@ -225,10 +228,10 @@ namespace MilkteaShopManager
             BillDA billDA = new BillDA();
             Table table = lvHoaDon.Tag as Table;
 
-            if(table is null)
+            if (table is null)
             {
                 MessageBox.Show("Bạn chưa chọn bàn để thanh toán!", "Thông báo");
-            }    
+            }
             else
             {
                 int billId = billDA.GetUncheckBillIdByTableId(table.ID);
@@ -242,10 +245,10 @@ namespace MilkteaShopManager
                 else if (billId == -1)
                 {
                     MessageBox.Show("Bàn này chưa có hóa đơn để thanh toán. Vui lòng kiểm tra lại!", "Thông báo");
-                } 
-                    
-            }    
-            
+                }
+
+            }
+
         }
 
         private void FrmThanhToan_FormClosed(object sender, FormClosedEventArgs e)
@@ -268,7 +271,7 @@ namespace MilkteaShopManager
                 tableDA.SwitchTable(idTable1, idTable2);
                 LoadTable();
                 ShowBill(table.ID);
-            }    
+            }
         }
 
         private void LoadComboBoxTable(ComboBox cbb)
@@ -523,18 +526,141 @@ namespace MilkteaShopManager
         {
             listTable = tableBL.GetAll();
             lvBan.Items.Clear();
-            int count = 0;
+            int count = 1;
             foreach (var table in listTable)
             {
                 ListViewItem item = lvBan.Items.Add(count.ToString());
                 item.SubItems.Add(table.ID.ToString());
                 item.SubItems.Add(table.Name);
-                if (table.Status == 0){ statusTable = "Bàn trống"; }
-                else if(table.Status == 1) { statusTable = "Có khách"; }
+                if (table.Status == 0) { statusTable = "Bàn trống"; }
+                else if (table.Status == 1) { statusTable = "Có khách"; }
                 item.SubItems.Add(statusTable);
                 count++;
             }
         }
+        private void lvBan_Click(object sender, EventArgs e)
+        {
+            for (int i = 0; i < lvBan.Items.Count; i++)
+            {
+                // nếu có thì lấy
+                if (lvBan.Items[i].Selected)
+                {
+                    tableCurrent = listTable[i];
+                    txtIDBan.Text = tableCurrent.ID.ToString();
+                    txtTenBan.Text = tableCurrent.Name;
+                }
+            }
+        }
+
+        public int InsertBan()
+        {
+            Table table = new Table();
+            table.ID = 0;
+
+            if (txtTenBan.Text == "")
+            {
+                lblThongBaoBan.Text = "Vui lòng kiểm tra đầy đủ dữ liệu trước khi thêm!";
+                lblThongBaoBan.ForeColor = Color.Red;
+            }
+            else
+            {
+                table.Name = txtTenBan.Text;
+                lblThongBaoBan.Text = "Bạn đã thêm " + table.Name + " thành công!";
+                lblThongBaoBan.ForeColor = Color.Green;
+                tableBL = new TableBL();
+                return tableBL.Insert(table);
+
+            }
+            return -1;
+        }
+        private void btnAddBan_Click(object sender, EventArgs e)
+        {
+            // gọi phương thức thêm dữ liệu
+            int result = InsertBan();
+            if (result > 0)
+            {
+                MessageBox.Show("Đã thêm dữ liệu!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                LoadTableToLV();
+                txtTenBan.Text = "";
+                txtIDBan.Text = "";
+            }
+            else
+            {
+                lblThongBaoBan.Text = "Bàn đã tồn tại!";
+                lblThongBaoBan.ForeColor = Color.Red;
+            }
+        }
+
+        private int UpdateTable()
+        {
+            Table table = tableCurrent;
+            if (txtTenBan.Text == "")
+            {
+                lblThongBaoBan.Text = "Vui lòng điền đầy đủ thông tin để cập nhật!";
+                lblThongBaoBan.ForeColor = Color.Red;
+            }
+            else
+            {
+                table.Name = txtTenBan.Text;
+                lblThongBaoBan.Text = "Bạn đã sửa " + table.Name + " thành công!";
+                lblThongBaoBan.ForeColor = Color.Green;
+                tableBL = new TableBL();
+                return tableBL.Update(table);
+            }
+            return -1;
+        }
+
+        private void btnUpdateBan_Click(object sender, EventArgs e)
+        {
+            int result = UpdateTable();
+            if (lvBan.SelectedItems.Count == 0)
+            {
+                lblThongBaoBan.Text = "Vui lòng chọn bàn để sửa!";
+                lblThongBaoBan.ForeColor = Color.Red;
+            }
+            else
+            {
+                if (result > 0)
+                {
+                    MessageBox.Show("Bạn đã sửa thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    LoadTableToLV();
+                }
+                else
+                {
+                    MessageBox.Show("Sửa thất bại!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+            }
+        }
+
+        private void btnDeleteBan_Click(object sender, EventArgs e)
+        {
+            if (lvBan.SelectedItems.Count > 0)
+            {
+                if (MessageBox.Show("Bạn có muốn xoá " + tableCurrent.Name + " không?", "Cảnh báo", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                {
+                    tableBL = new TableBL();
+                    if (tableBL.Delete(tableCurrent) > 0)
+                    {
+                        lblThongBaoBan.Text = "Đã xoá bàn " + tableCurrent.Name + " thành công!";
+                        lblThongBaoBan.ForeColor = Color.Green;
+                        LoadTableToLV();
+                        txtTenBan.Text = "";
+                        txtIDBan.Text = "";
+                    }
+                    else
+                    {
+                        lblThongBaoBan.Text = "Xoá bàn " + tableCurrent.Name + " thất bại, vui lòng kiểm tra lại!";
+                        lblThongBaoBan.ForeColor = Color.Red;
+                    }
+                }
+            }
+            else
+            {
+                lblThongBaoBan.Text = "Vui lòng chọn bàn để xoá!";
+                lblThongBaoBan.ForeColor = Color.Red;
+            }
+        }
+
         #endregion
 
         #region Quản lý hoá đơn
@@ -571,9 +697,9 @@ namespace MilkteaShopManager
         #region Đăng xuất
         private void btnDangXuat_Click(object sender, EventArgs e)
         {
-            LoginForm frm = new LoginForm();
+            //LoginForm frm = new LoginForm();
             this.Close();
-            frm.Show();
+            //frm.Show();
         }
         private void MainForm_FormClosing(object sender, FormClosingEventArgs e)
         {
@@ -585,8 +711,9 @@ namespace MilkteaShopManager
         }
 
 
-        #endregion
 
-        
+
+
+        #endregion
     }
 }

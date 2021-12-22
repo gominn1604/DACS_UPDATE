@@ -325,7 +325,7 @@ BEGIN
 END
 GO
 
-ALTER TRIGGER UpdateBillInfo
+CREATE TRIGGER UpdateBillInfo
 ON [ChiTietHoaDon] FOR INSERT, UPDATE
 AS
 BEGIN
@@ -473,6 +473,53 @@ BEGIN
 END
 GO
 
+-----------------------------------------------------------
+-- thêm - xoá - sửa bản ăn cho admin
+alter proc [dbo].[Table_InsertUpdateDelete]
+	@MaBan int output,
+	@TenBan nvarchar(100),
+	@TrangThai int,
+	@Action int
+as
+if @Action = 0
+begin
+	If not exists (select * from ban where TenBan = @TenBan)
+	begin
+		insert into [Ban]([TenBan]) values (@TenBan)
+		set @MaBan = @@IDENTITY
+	end
+end
+else if @Action = 1
+begin
+	update [Ban] set [TenBan] = @TenBan
+	where [MaBan] = @MaBan
+end
+else if @Action = 2
+	begin
+		delete from [Ban] where [MaBan] = @MaBan
+	end
 
 
+------------------------------------------------
+-- nhân viên
+create proc [dbo].[NhanVien_GetAll]
+AS
+begin
+	select * from NhanVien
+end
 
+------------------------------------------------
+-- tài khoản
+Create proc [dbo].[TaiKhoan_GetAll]
+As
+Begin
+	select * from TaiKhoan
+End
+
+------------------------------------------------
+-- chức vụ
+create proc [dbo].[ChucVu_GetAll]
+as
+begin
+	select * from ChucVu
+end
