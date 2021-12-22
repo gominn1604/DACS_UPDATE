@@ -41,13 +41,16 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AccountBL.cs" />
     <Compile Include="BillBL.cs" />
     <Compile Include="CategoryBL.cs" />
     <Compile Include="DrinkBL.cs" />
     <Compile Include="DrinkDetailsBL.cs" />
     <Compile Include="LoaiNuocBL.cs" />
     <Compile Include="NuocUongBL.cs" />
+    <Compile Include="PositionBL.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="StaffBL.cs" />
     <Compile Include="TableBL.cs" />
   </ItemGroup>
   <ItemGroup>
