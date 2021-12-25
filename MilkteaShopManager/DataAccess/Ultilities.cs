@@ -41,5 +41,6 @@ namespace DataAccess
         public static string TaiKhoan_GetAll = "TaiKhoan_GetAll";
 
         public static string ChucVu_GetAll = "ChucVu_GetAll";
+
     }
 }

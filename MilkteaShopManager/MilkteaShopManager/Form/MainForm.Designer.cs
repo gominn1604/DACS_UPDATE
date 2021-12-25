@@ -91,9 +91,7 @@ namespace MilkteaShopManager
             this.columnHeader4 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader5 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.panel5 = new System.Windows.Forms.Panel();
-            this.btnDongYLoai = new Guna.UI2.WinForms.Guna2Button();
             this.cbbLoaiNuoc = new Guna.UI2.WinForms.Guna2ComboBox();
-            this.txtThemLoai = new Guna.UI2.WinForms.Guna2TextBox();
             this.btnThemLoai = new Guna.UI2.WinForms.Guna2Button();
             this.txtTenNuocUong = new Guna.UI2.WinForms.Guna2TextBox();
             this.txtDVT = new Guna.UI2.WinForms.Guna2TextBox();
@@ -1022,9 +1020,7 @@ namespace MilkteaShopManager
             // panel5
             // 
             this.panel5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(210)))), ((int)(((byte)(225)))));
-            this.panel5.Controls.Add(this.btnDongYLoai);
             this.panel5.Controls.Add(this.cbbLoaiNuoc);
-            this.panel5.Controls.Add(this.txtThemLoai);
             this.panel5.Controls.Add(this.btnThemLoai);
             this.panel5.Controls.Add(this.txtTenNuocUong);
             this.panel5.Controls.Add(this.txtDVT);
@@ -1041,30 +1037,6 @@ namespace MilkteaShopManager
             this.panel5.Name = "panel5";
             this.panel5.Size = new System.Drawing.Size(1183, 225);
             this.panel5.TabIndex = 0;
-            // 
-            // btnDongYLoai
-            // 
-            this.btnDongYLoai.BorderRadius = 10;
-            this.btnDongYLoai.CheckedState.Parent = this.btnDongYLoai;
-            this.btnDongYLoai.CustomImages.Parent = this.btnDongYLoai;
-            this.btnDongYLoai.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btnDongYLoai.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btnDongYLoai.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnDongYLoai.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnDongYLoai.DisabledState.Parent = this.btnDongYLoai;
-            this.btnDongYLoai.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
-            this.btnDongYLoai.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.btnDongYLoai.ForeColor = System.Drawing.Color.Black;
-            this.btnDongYLoai.HoverState.Parent = this.btnDongYLoai;
-            this.btnDongYLoai.ImageSize = new System.Drawing.Size(30, 30);
-            this.btnDongYLoai.Location = new System.Drawing.Point(993, 148);
-            this.btnDongYLoai.Name = "btnDongYLoai";
-            this.btnDongYLoai.ShadowDecoration.Parent = this.btnDongYLoai;
-            this.btnDongYLoai.Size = new System.Drawing.Size(99, 32);
-            this.btnDongYLoai.TabIndex = 19;
-            this.btnDongYLoai.Text = "Đồng ý";
-            this.btnDongYLoai.Visible = false;
-            this.btnDongYLoai.Click += new System.EventHandler(this.btnDongYLoai_Click);
             // 
             // cbbLoaiNuoc
             // 
@@ -1087,36 +1059,6 @@ namespace MilkteaShopManager
             this.cbbLoaiNuoc.ShadowDecoration.Parent = this.cbbLoaiNuoc;
             this.cbbLoaiNuoc.Size = new System.Drawing.Size(306, 36);
             this.cbbLoaiNuoc.TabIndex = 18;
-            // 
-            // txtThemLoai
-            // 
-            this.txtThemLoai.Animated = true;
-            this.txtThemLoai.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(234)))), ((int)(((byte)(153)))), ((int)(((byte)(149)))));
-            this.txtThemLoai.BorderRadius = 6;
-            this.txtThemLoai.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtThemLoai.DefaultText = "";
-            this.txtThemLoai.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.txtThemLoai.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.txtThemLoai.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtThemLoai.DisabledState.Parent = this.txtThemLoai;
-            this.txtThemLoai.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtThemLoai.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
-            this.txtThemLoai.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtThemLoai.FocusedState.Parent = this.txtThemLoai;
-            this.txtThemLoai.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.txtThemLoai.ForeColor = System.Drawing.Color.White;
-            this.txtThemLoai.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtThemLoai.HoverState.Parent = this.txtThemLoai;
-            this.txtThemLoai.Location = new System.Drawing.Point(681, 144);
-            this.txtThemLoai.Name = "txtThemLoai";
-            this.txtThemLoai.PasswordChar = '\0';
-            this.txtThemLoai.PlaceholderForeColor = System.Drawing.Color.Gray;
-            this.txtThemLoai.PlaceholderText = "Nhập loại nước mới";
-            this.txtThemLoai.SelectedText = "";
-            this.txtThemLoai.ShadowDecoration.Parent = this.txtThemLoai;
-            this.txtThemLoai.Size = new System.Drawing.Size(306, 36);
-            this.txtThemLoai.TabIndex = 14;
-            this.txtThemLoai.Visible = false;
             // 
             // btnThemLoai
             // 
@@ -2326,6 +2268,7 @@ namespace MilkteaShopManager
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Trang chủ";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.MainForm_FormClosing);
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.MainForm_FormClosed);
             this.panel1.ResumeLayout(false);
             this.panel3.ResumeLayout(false);
             this.pnlQuanLy.ResumeLayout(false);
@@ -2404,9 +2347,7 @@ namespace MilkteaShopManager
         private System.Windows.Forms.Panel panel7;
         private System.Windows.Forms.Panel panel6;
         private System.Windows.Forms.Panel panel5;
-        private Guna.UI2.WinForms.Guna2Button btnDongYLoai;
         private Guna.UI2.WinForms.Guna2ComboBox cbbLoaiNuoc;
-        private Guna.UI2.WinForms.Guna2TextBox txtThemLoai;
         private Guna.UI2.WinForms.Guna2Button btnThemLoai;
         private Guna.UI2.WinForms.Guna2TextBox txtTenNuocUong;
         private Guna.UI2.WinForms.Guna2TextBox txtDVT;
