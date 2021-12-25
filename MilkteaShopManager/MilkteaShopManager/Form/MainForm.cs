@@ -522,41 +522,18 @@ namespace MilkteaShopManager
                 txtTenNuocUong.Focus();
             }
         }
-        public int InsertLoaiNuoc()
+        private void MainForm_FormClosed(object sender, FormClosedEventArgs e)
         {
-            LoaiNuoc loaiNuoc = new LoaiNuoc();
-            loaiNuoc.MaLoai = 0;
-            if (txtThemLoai.Text == "")
-            {
-                MessageBox.Show("Lỗi khi thêm!", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-            }
-            else
-            {
-                loaiNuoc.TenLoai = txtThemLoai.Text;
-                LoaiNuocBL loaiNuocBL = new LoaiNuocBL();
-                return loaiNuocBL.Insert(loaiNuoc);
-            }
-            return -1;
+            int index = cbbLoaiNuoc.SelectedIndex;
+            cbbLoaiNuoc.SelectedIndex = -1;
+            cbbLoaiNuoc.SelectedIndex = index;
+            LoadLoaiNuoc();
         }
         private void btnThemLoai_Click(object sender, EventArgs e)
         {
-            txtThemLoai.Visible = true;
-            btnDongYLoai.Visible = true;
-        }
-        private void btnDongYLoai_Click(object sender, EventArgs e)
-        {
-            int result = InsertLoaiNuoc();
-            if (result > 0)
-            {
-                MessageBox.Show("Đã thêm dữ liệu!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                LoadLoaiNuoc();
-                txtThemLoai.Visible = false;
-                btnDongYLoai.Visible = false;
-            }
-            else
-            {
-                MessageBox.Show("Thêm dữ liệu không thành công. Vui lòng kiểm tra lại dữ liệu nhập", "Cảnh báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
+            frmAddCategory frm = new frmAddCategory();
+            frm.FormClosed += new FormClosedEventHandler(MainForm_FormClosed);
+            frm.Show(this);
         }
         #endregion
 
@@ -804,14 +781,6 @@ namespace MilkteaShopManager
             }
         }
 
-
-
-
-
-
-
         #endregion
-
-
     }
 }

@@ -137,3 +137,4 @@ C:\Users\Kin\Desktop\New folder\MilkteaShopManager\MilkteaShopManager\obj\Debug\
 C:\Users\Kin\Desktop\New folder\MilkteaShopManager\MilkteaShopManager\obj\Debug\MilkteaShopManager.csproj.CopyComplete
 C:\Users\Kin\Desktop\New folder\MilkteaShopManager\MilkteaShopManager\obj\Debug\MilkteaShopManager.exe
 C:\Users\Kin\Desktop\New folder\MilkteaShopManager\MilkteaShopManager\obj\Debug\MilkteaShopManager.pdb
+C:\Users\Kin\Documents\GitHub\DACS_UPDATE\MilkteaShopManager\MilkteaShopManager\obj\Debug\MilkteaShopManager.frmAddCategory.resources
