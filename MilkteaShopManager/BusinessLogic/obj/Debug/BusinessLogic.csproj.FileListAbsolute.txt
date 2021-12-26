@@ -16,35 +16,24 @@ D:\DACS_UPDATE\MilkteaShopManager\BusinessLogic\obj\Debug\BusinessLogic.csproj.C
 D:\DACS_UPDATE\MilkteaShopManager\BusinessLogic\obj\Debug\BusinessLogic.csproj.CopyComplete
 D:\DACS_UPDATE\MilkteaShopManager\BusinessLogic\obj\Debug\BusinessLogic.dll
 D:\DACS_UPDATE\MilkteaShopManager\BusinessLogic\obj\Debug\BusinessLogic.pdb
-D:\Học tập\DACS_Back-up\MilkteaShopManager\BusinessLogic\bin\Debug\BusinessLogic.dll
-D:\Học tập\DACS_Back-up\MilkteaShopManager\BusinessLogic\bin\Debug\BusinessLogic.pdb
-D:\Học tập\DACS_Back-up\MilkteaShopManager\BusinessLogic\bin\Debug\DataAccess.dll
-D:\Học tập\DACS_Back-up\MilkteaShopManager\BusinessLogic\bin\Debug\DataAccess.pdb
-D:\Học tập\DACS_Back-up\MilkteaShopManager\BusinessLogic\obj\Debug\BusinessLogic.csproj.AssemblyReference.cache
-D:\Học tập\DACS_Back-up\MilkteaShopManager\BusinessLogic\obj\Debug\BusinessLogic.csproj.CoreCompileInputs.cache
-D:\Học tập\DACS_Back-up\MilkteaShopManager\BusinessLogic\obj\Debug\BusinessLogic.csproj.CopyComplete
-D:\Học tập\DACS_Back-up\MilkteaShopManager\BusinessLogic\obj\Debug\BusinessLogic.dll
-D:\Học tập\DACS_Back-up\MilkteaShopManager\BusinessLogic\obj\Debug\BusinessLogic.pdb
-C:\Users\Kin\Documents\GitHub\DACS_UPDATE\MilkteaShopManager\BusinessLogic\bin\Debug\BusinessLogic.dll
-C:\Users\Kin\Documents\GitHub\DACS_UPDATE\MilkteaShopManager\BusinessLogic\bin\Debug\BusinessLogic.pdb
-C:\Users\Kin\Documents\GitHub\DACS_UPDATE\MilkteaShopManager\BusinessLogic\bin\Debug\DataAccess.dll
-C:\Users\Kin\Documents\GitHub\DACS_UPDATE\MilkteaShopManager\BusinessLogic\bin\Debug\DataAccess.pdb
-C:\Users\Kin\Documents\GitHub\DACS_UPDATE\MilkteaShopManager\BusinessLogic\obj\Debug\BusinessLogic.csproj.AssemblyReference.cache
-C:\Users\Kin\Documents\GitHub\DACS_UPDATE\MilkteaShopManager\BusinessLogic\obj\Debug\BusinessLogic.csproj.CoreCompileInputs.cache
-C:\Users\Kin\Documents\GitHub\DACS_UPDATE\MilkteaShopManager\BusinessLogic\obj\Debug\BusinessLogic.csproj.CopyComplete
-C:\Users\Kin\Documents\GitHub\DACS_UPDATE\MilkteaShopManager\BusinessLogic\obj\Debug\BusinessLogic.dll
-C:\Users\Kin\Documents\GitHub\DACS_UPDATE\MilkteaShopManager\BusinessLogic\obj\Debug\BusinessLogic.pdb
-C:\Users\Kin\Desktop\New folder\MilkteaShopManager\BusinessLogic\bin\Debug\BusinessLogic.dll
-C:\Users\Kin\Desktop\New folder\MilkteaShopManager\BusinessLogic\bin\Debug\BusinessLogic.pdb
-C:\Users\Kin\Desktop\New folder\MilkteaShopManager\BusinessLogic\bin\Debug\DataAccess.dll
-C:\Users\Kin\Desktop\New folder\MilkteaShopManager\BusinessLogic\bin\Debug\DataAccess.pdb
-C:\Users\Kin\Desktop\New folder\MilkteaShopManager\BusinessLogic\obj\Debug\BusinessLogic.csproj.AssemblyReference.cache
-C:\Users\Kin\Desktop\New folder\MilkteaShopManager\BusinessLogic\obj\Debug\BusinessLogic.csproj.CoreCompileInputs.cache
-C:\Users\Kin\Desktop\New folder\MilkteaShopManager\BusinessLogic\obj\Debug\BusinessLogic.csproj.CopyComplete
-C:\Users\Kin\Desktop\New folder\MilkteaShopManager\BusinessLogic\obj\Debug\BusinessLogic.dll
-C:\Users\Kin\Desktop\New folder\MilkteaShopManager\BusinessLogic\obj\Debug\BusinessLogic.pdb
-C:\Users\Kin\Documents\GitHub\DACS_UPDATE\MilkteaShopManager\BusinessLogic\bin\Debug\EPPlus.dll
-C:\Users\Kin\Documents\GitHub\DACS_UPDATE\MilkteaShopManager\BusinessLogic\bin\Debug\Microsoft.IO.RecyclableMemoryStream.dll
-C:\Users\Kin\Documents\GitHub\DACS_UPDATE\MilkteaShopManager\BusinessLogic\bin\Debug\System.ComponentModel.Annotations.dll
-C:\Users\Kin\Documents\GitHub\DACS_UPDATE\MilkteaShopManager\BusinessLogic\bin\Debug\EPPlus.xml
-C:\Users\Kin\Documents\GitHub\DACS_UPDATE\MilkteaShopManager\BusinessLogic\bin\Debug\Microsoft.IO.RecyclableMemoryStream.xml
+D:\IT-STUDY\DACS_UPDATE\MilkteaShopManager\BusinessLogic\bin\Debug\BusinessLogic.dll
+D:\IT-STUDY\DACS_UPDATE\MilkteaShopManager\BusinessLogic\bin\Debug\BusinessLogic.pdb
+D:\IT-STUDY\DACS_UPDATE\MilkteaShopManager\BusinessLogic\bin\Debug\DataAccess.dll
+D:\IT-STUDY\DACS_UPDATE\MilkteaShopManager\BusinessLogic\bin\Debug\DataAccess.pdb
+D:\IT-STUDY\DACS_UPDATE\MilkteaShopManager\BusinessLogic\obj\Debug\BusinessLogic.csproj.AssemblyReference.cache
+D:\IT-STUDY\DACS_UPDATE\MilkteaShopManager\BusinessLogic\obj\Debug\BusinessLogic.csproj.CoreCompileInputs.cache
+D:\IT-STUDY\DACS_UPDATE\MilkteaShopManager\BusinessLogic\obj\Debug\BusinessLogic.dll
+D:\IT-STUDY\DACS_UPDATE\MilkteaShopManager\BusinessLogic\obj\Debug\BusinessLogic.pdb
+D:\IT-STUDY\DACS_UPDATE\MilkteaShopManager\BusinessLogic\bin\Debug\BusinessLogic.dll.config
+D:\IT-STUDY\DACS_UPDATE\MilkteaShopManager\BusinessLogic\bin\Debug\DataAccess.dll.config
+D:\IT-STUDY\DACS_UPDATE\MilkteaShopManager\BusinessLogic\obj\Debug\BusinessLogic.csproj.CopyComplete
+D:\IT-STUDY\LT-CSDL\DACS_UPDATE\MilkteaShopManager\BusinessLogic\bin\Debug\BusinessLogic.dll.config
+D:\IT-STUDY\LT-CSDL\DACS_UPDATE\MilkteaShopManager\BusinessLogic\bin\Debug\BusinessLogic.dll
+D:\IT-STUDY\LT-CSDL\DACS_UPDATE\MilkteaShopManager\BusinessLogic\bin\Debug\BusinessLogic.pdb
+D:\IT-STUDY\LT-CSDL\DACS_UPDATE\MilkteaShopManager\BusinessLogic\bin\Debug\DataAccess.dll
+D:\IT-STUDY\LT-CSDL\DACS_UPDATE\MilkteaShopManager\BusinessLogic\bin\Debug\DataAccess.pdb
+D:\IT-STUDY\LT-CSDL\DACS_UPDATE\MilkteaShopManager\BusinessLogic\bin\Debug\DataAccess.dll.config
+D:\IT-STUDY\LT-CSDL\DACS_UPDATE\MilkteaShopManager\BusinessLogic\obj\Debug\BusinessLogic.csproj.AssemblyReference.cache
+D:\IT-STUDY\LT-CSDL\DACS_UPDATE\MilkteaShopManager\BusinessLogic\obj\Debug\BusinessLogic.csproj.CoreCompileInputs.cache
+D:\IT-STUDY\LT-CSDL\DACS_UPDATE\MilkteaShopManager\BusinessLogic\obj\Debug\BusinessLogic.dll
+D:\IT-STUDY\LT-CSDL\DACS_UPDATE\MilkteaShopManager\BusinessLogic\obj\Debug\BusinessLogic.pdb

@@ -57,7 +57,7 @@ namespace MilkteaShopManager
             this.guna2Panel1.Name = "guna2Panel1";
             this.guna2Panel1.ShadowDecoration.Parent = this.guna2Panel1;
             this.guna2Panel1.Size = new System.Drawing.Size(474, 700);
-            this.guna2Panel1.TabIndex = 1;
+            this.guna2Panel1.TabIndex = 0;
             // 
             // lblThongBao
             // 
@@ -141,6 +141,7 @@ namespace MilkteaShopManager
             this.txtMatKhau.ShadowDecoration.Parent = this.txtMatKhau;
             this.txtMatKhau.Size = new System.Drawing.Size(275, 40);
             this.txtMatKhau.TabIndex = 2;
+            this.txtMatKhau.Click += new System.EventHandler(this.txtMatKhau_Click);
             // 
             // txtTenDangNhap
             // 
@@ -170,6 +171,7 @@ namespace MilkteaShopManager
             this.txtTenDangNhap.ShadowDecoration.Parent = this.txtTenDangNhap;
             this.txtTenDangNhap.Size = new System.Drawing.Size(275, 40);
             this.txtTenDangNhap.TabIndex = 1;
+            this.txtTenDangNhap.Click += new System.EventHandler(this.txtTenDangNhap_Click);
             // 
             // guna2PictureBox1
             // 
@@ -198,7 +200,7 @@ namespace MilkteaShopManager
             // 
             // LoginForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 22F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1000, 700);
             this.Controls.Add(this.guna2Panel1);

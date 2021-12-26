@@ -18,29 +18,17 @@ namespace DataAccess
         public static string NuocUong_GetAll = "NuocUong_GetAll";
         public static string NuocUong_InsertUpdateDelete = "NuocUong_InsertUpdateDelete";
 
-        public static string Table_InsertUpdateDelete = "Table_InsertUpdateDelete";
         public static string Table_GetAll = "Table_GetAll";
 
         public static string GetUncheckBillIdByTableId = "GetUncheckBillIdByTableId";
 
         public static string GetListDrinkDetailsByTableId = "GetListDrinkDetailsByTableId";
-        public static string GetListDrinkByCategoryId = "GetListDrinkByCategoryId";
-        public static string GetListCategory = "GetListCategory";
 
-        public static string Insert_Bill = "Insert_Bill";
-        public static string InsertBillInfoForTable = "InsertBillInfoForTable";
-        public static string GetMaxBillId = "GetMaxBillId";
-        public static string CheckOut = "CheckOut";
-        public static string SwitchTable = "SwitchTable";
-        public static string MergeTable = "MergeTable";
-        public static string ShowBillInTheDay = "ShowBillInTheDay";
-        public static string GetListBillByDate = "GetListBillByDate";
-
-        public static string NhanVien_GetAll = "NhanVien_GetAll";
 
         public static string TaiKhoan_GetAll = "TaiKhoan_GetAll";
+        public static string TaiKhoan_InsertUpdateDelete = "TaiKhoan_InsertDeleteUpdate";
 
-        public static string ChucVu_GetAll = "ChucVu_GetAll";
-
+        public static string ChucVu_GetAll = "ChucVu_GetALl";
+        public static string PhanQuyen_GetAll = "PhanQuyen_GetAll";
     }
 }

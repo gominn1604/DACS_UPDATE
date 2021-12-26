@@ -5,22 +5,27 @@ GO
 
 
 --TẠO CÁC BẢNG
-CREATE TABLE TaiKhoan
-(
-	TenTaiKhoan		NVARCHAR(100) PRIMARY KEY,
-	MatKhau			NVARCHAR(100) NOT NULL,
-	HoTen			NVARCHAR (1000) NOT NULL,
-	Email			NVARCHAR (100),
-	SoDienThoai		NVARCHAR (100) NOT NULL,
-	NgayTao			SMALLDATETIME NOT NULL
-)
-
 CREATE TABLE ChucVu
 (
 	MaCV			INT IDENTITY (1,1) PRIMARY KEY,
 	TenChucVu		NVARCHAR(200) NOT NULL,
 	GhiChu			NVARCHAR(1000)
 )
+
+CREATE TABLE TaiKhoan
+(
+	MaTK			INT IDENTITY PRIMARY KEY,
+	TenTaiKhoan		NVARCHAR(100),
+	MatKhau			NVARCHAR(100) NOT NULL,
+	HoTen			NVARCHAR (1000) NOT NULL,
+	Email			NVARCHAR (100),
+	SoDienThoai		NVARCHAR (100) NOT NULL,
+	NgayTao			SMALLDATETIME NOT NULL,
+	MaCV			INT REFERENCES ChucVu(MaCV)
+)
+
+select MaCV from Dbo.TaiKhoan
+
 
 CREATE TABLE NhanVien
 (
@@ -30,9 +35,8 @@ CREATE TABLE NhanVien
 	GioiTinh		NVARCHAR(10) CHECK(GioiTinh = N'Nam' OR GioiTinh = N'Nữ'),
 	NgaySinh		DATETIME NOT NULL,
 	SoDienThoai		NVARCHAR(100) NOT NULL,
-	TenTaiKhoan		NVARCHAR(100) REFERENCES TaiKhoan(TenTaiKhoan),
-	TrangThai		BIT NOT NULL,
-	MaCV			INT REFERENCES ChucVu(MaCV)
+	MaTK		int references TaiKhoan(MaTK),
+	TrangThai		BIT NOT NULL
 )
 
 CREATE TABLE Ban
@@ -45,14 +49,13 @@ CREATE TABLE Ban
 CREATE TABLE HoaDon
 (
 	MaHoaDon		INT IDENTITY (1,1) PRIMARY KEY,
-	GiamGia			INT DEFAULT 0,
-	Thue			INT DEFAULT 0,
-	TrangThaiHD		INT DEFAULT 0,
-	NgayTao			DATE NOT NULL DEFAULT GETDATE(),
-	NgayThanhToan	DATE,
-	TongTien		INT,
+	GiamGia			FLOAT NOT NULL,
+	Thue			FLOAT NOT NULL,
+	TrangThaiHD		INT NOT NULL,
+	NgayTao			DATETIME,
+	NgayThanhToan	DATETIME,
 	MaBan			INT REFERENCES Ban(MaBan),
-	TaiKhoanTao		NVARCHAR(100) REFERENCES TaiKhoan(TenTaiKhoan)
+	TaiKhoanTao		INT REFERENCES TaiKhoan(MaTK)
 )
 
 CREATE TABLE LoaiNuoc
@@ -80,25 +83,34 @@ CREATE TABLE ChiTietHoaDon
 
 
 
-
+--MaTK			INT IDENTITY PRIMARY KEY,
+--	TenTaiKhoan		NVARCHAR(100),
+--	MatKhau			NVARCHAR(100) NOT NULL,
+--	HoTen			NVARCHAR (1000) NOT NULL,
+--	Email			NVARCHAR (100),
+--	SoDienThoai		NVARCHAR (100) NOT NULL,
+--	NgayTao			SMALLDATETIME NOT NULL
 --Thêm dữ liệu
-SET DATEFORMAT dmy
-INSERT [TaiKhoan] ([TenTaiKhoan], [MatKhau], [HoTen], [Email], [SoDienThoai], [NgayTao]) VALUES (N'gominn',		N'gominn',		N'Nguyễn Việt Duy Danh',	N'duydanh16042019@gmail.com',	'0917291154', '20/11/2021')
-INSERT [TaiKhoan] ([TenTaiKhoan], [MatKhau], [HoTen], [Email], [SoDienThoai], [NgayTao]) VALUES (N'qngtuann',	N'qngtuann',	N'Trương Quang Tuấn',		N'quangtuan2402@gmail.com',		'0334502288', '20/11/2021')
-INSERT [TaiKhoan] ([TenTaiKhoan], [MatKhau], [HoTen], [Email], [SoDienThoai], [NgayTao]) VALUES (N'qngbao',		N'qngbao',		N'Nguyễn Trần Quang Bảo',	N'quangbao@gmail.com',			'0987654321', '20/11/2021')
-
-SET IDENTITY_INSERT [ChucVu] ON 
+SET IDENTITY_INSERT [ChucVu] on 
+--SET IDENTITY_INSERT [TaiKhoan] off
 INSERT [ChucVu]	([MaCV], [TenChucVu], [GhiChu])	VALUES	(1, N'Quản lý',				NULL)
 INSERT [ChucVu]	([MaCV], [TenChucVu], [GhiChu])	VALUES	(2, N'Nhân viên phục vụ',	NULL)
 INSERT [ChucVu]	([MaCV], [TenChucVu], [GhiChu])	VALUES	(3, N'Nhân viên pha chế',	NULL)
 SET IDENTITY_INSERT [ChucVu] OFF
 
-INSERT [NhanVien] ([MaNV], [HoTen], [GioiTinh], [DiaChi], [NgaySinh], [SoDienThoai], [TenTaiKhoan], [TrangThai], [MaCV]) VALUES (1,	N'Nguyễn Việt Duy Danh',	'Nam',	N'Đà Lạt',	'21/12/2001', '0917291154',	'gominn',	1,	2)
-INSERT [NhanVien] ([MaNV], [HoTen], [GioiTinh], [DiaChi], [NgaySinh], [SoDienThoai], [TenTaiKhoan], [TrangThai], [MaCV]) VALUES (2,	N'Nguyễn Trần Quang Bảo',	'Nam',	N'Đà Lạt',	'03/10/2001', '0987654321',	'qngbao',	1,	3)
-INSERT [NhanVien] ([MaNV], [HoTen], [GioiTinh], [DiaChi], [NgaySinh], [SoDienThoai], [TenTaiKhoan], [TrangThai], [MaCV]) VALUES (3,	N'Nguyễn Việt Duy Danh',	'Nam',	N'Đà Lạt',	'21/12/2001', '0917291154',	'gominn',	0,	2)
-INSERT [NhanVien] ([MaNV], [HoTen], [GioiTinh], [DiaChi], [NgaySinh], [SoDienThoai], [TenTaiKhoan], [TrangThai], [MaCV]) VALUES (4,	N'Trương Quang Tuấn',		'Nam',	N'Đà Lạt',	'24/02/2001', '0334502288',	'qngtuann',	1,	1)
-INSERT [NhanVien] ([MaNV], [HoTen], [GioiTinh], [DiaChi], [NgaySinh], [SoDienThoai], [TenTaiKhoan], [TrangThai], [MaCV]) VALUES (5,	N'Nguyễn Trần Quang Bảo',	'Nam',	N'Đà Lạt',	'03/10/2001', '0987654321',	'qngbao',	0,	3)
+SET IDENTITY_INSERT [TaiKhoan] ON 
+SET DATEFORMAT dmy
+INSERT [TaiKhoan] ([MaTK],[TenTaiKhoan], [MatKhau], [HoTen], [Email], [SoDienThoai], [NgayTao], [MaCV]) VALUES (1,N'gominn',N'gominn',N'Nguyễn Việt Duy Danh',	N'duydanh16042019@gmail.com',	'0917291154', '20/11/2021',2)
+INSERT [TaiKhoan] ([MaTK],[TenTaiKhoan], [MatKhau], [HoTen], [Email], [SoDienThoai], [NgayTao], [MaCV]) VALUES (2,N'qngtuann',	N'qngtuann',	N'Trương Quang Tuấn',		N'quangtuan2402@gmail.com',		'0334502288', '20/11/2021',1)
+INSERT [TaiKhoan] ([MaTK],[TenTaiKhoan], [MatKhau], [HoTen], [Email], [SoDienThoai], [NgayTao], [MaCV]) VALUES (3,N'qngbao',		N'qngbao',		N'Nguyễn Trần Quang Bảo',	N'quangbao@gmail.com',			'0987654321', '20/11/2021',3)
 
+
+INSERT [NhanVien] ([MaNV], [HoTen], [GioiTinh], [DiaChi], [NgaySinh], [SoDienThoai], [MaTK], [TrangThai]) VALUES (1,	N'Nguyễn Việt Duy Danh',	'Nam',	N'Đà Lạt',	'21/12/2001', '0917291154',	1,	1)
+INSERT [NhanVien] ([MaNV], [HoTen], [GioiTinh], [DiaChi], [NgaySinh], [SoDienThoai], [MaTK], [TrangThai]) VALUES (2,	N'Nguyễn Trần Quang Bảo',	'Nam',	N'Đà Lạt',	'03/10/2001', '0987654321',	3,	1)
+INSERT [NhanVien] ([MaNV], [HoTen], [GioiTinh], [DiaChi], [NgaySinh], [SoDienThoai], [MaTK], [TrangThai]) VALUES (3,	N'Nguyễn Việt Duy Danh',	'Nam',	N'Đà Lạt',	'21/12/2001', '0917291154',	1,	0)
+INSERT [NhanVien] ([MaNV], [HoTen], [GioiTinh], [DiaChi], [NgaySinh], [SoDienThoai], [MaTK], [TrangThai]) VALUES (4,	N'Trương Quang Tuấn',		'Nam',	N'Đà Lạt',	'24/02/2001', '0334502288',	2,	1)
+INSERT [NhanVien] ([MaNV], [HoTen], [GioiTinh], [DiaChi], [NgaySinh], [SoDienThoai], [MaTK], [TrangThai]) VALUES (5,	N'Nguyễn Trần Quang Bảo',	'Nam',	N'Đà Lạt',	'03/10/2001', '0987654321',	3,	0)
+SET IDENTITY_INSERT [TaiKhoan] OFF 
 SET IDENTITY_INSERT [Ban] ON 
 INSERT [Ban] ([MaBan], [TenBan], [TrangThaiBan]) VALUES (1, N'Bàn 1', 0)
 INSERT [Ban] ([MaBan], [TenBan], [TrangThaiBan]) VALUES (2, N'Bàn 2', 0)
@@ -117,14 +129,12 @@ SELECT * FROM Ban
 
 SET DATEFORMAT dmy
 SET IDENTITY_INSERT [HoaDon] ON 
-INSERT [HoaDon] ([MaHoaDon], [GiamGia], [Thue], [TrangThaiHD], [NgayTao], [NgayThanhToan], [MaBan], [TaiKhoanTao]) VALUES (1, 5, 10, 0, '20/11/2021', NULL,			1, 'gominn')
-INSERT [HoaDon] ([MaHoaDon], [GiamGia], [Thue], [TrangThaiHD], [NgayTao], [NgayThanhToan], [MaBan], [TaiKhoanTao]) VALUES (2, 5, 10, 0, '20/11/2021', NULL,			2, 'gominn')
-INSERT [HoaDon] ([MaHoaDon], [GiamGia], [Thue], [TrangThaiHD], [NgayTao], [NgayThanhToan], [MaBan], [TaiKhoanTao]) VALUES (3, 5, 10, 1, '20/11/2021', '20/11/2021', 2, 'gominn')
-INSERT [HoaDon] ([MaHoaDon], [GiamGia], [Thue], [TrangThaiHD], [NgayTao], [NgayThanhToan], [MaBan], [TaiKhoanTao]) VALUES (4, 5, 10, 1, '20/11/2021', '20/11/2021',	5, 'gominn')
-INSERT [HoaDon] ([MaHoaDon], [GiamGia], [Thue], [TrangThaiHD], [NgayTao], [NgayThanhToan], [MaBan], [TaiKhoanTao]) VALUES (5, 5, 10, 0,	'20/11/2021', NULL,			3, 'gominn')
-INSERT [HoaDon] ([MaHoaDon], [GiamGia], [Thue], [TrangThaiHD], [NgayTao], [NgayThanhToan], [MaBan], [TaiKhoanTao]) VALUES (6, 5, 10, 0, '20/11/2021', NULL,			4, 'gominn')
-INSERT [HoaDon] ([GiamGia], [Thue], [TrangThaiHD], [NgayTao], [NgayThanhToan], [MaBan], [TaiKhoanTao]) VALUES (15000, 15000, 1, '21/12/2021', '22/12/2021', 5, 'gominn')
-
+INSERT [HoaDon] ([MaHoaDon], [GiamGia], [Thue], [TrangThaiHD], [NgayTao], [NgayThanhToan], [MaBan], [TaiKhoanTao]) VALUES (1, 5, 10, 0, '20/11/2021', NULL,			1, 1)
+INSERT [HoaDon] ([MaHoaDon], [GiamGia], [Thue], [TrangThaiHD], [NgayTao], [NgayThanhToan], [MaBan], [TaiKhoanTao]) VALUES (2, 5, 10, 0, '20/11/2021', NULL,			2, 1)
+INSERT [HoaDon] ([MaHoaDon], [GiamGia], [Thue], [TrangThaiHD], [NgayTao], [NgayThanhToan], [MaBan], [TaiKhoanTao]) VALUES (3, 5, 10, 1, '20/11/2021', '20/11/2021', 2, 1)
+INSERT [HoaDon] ([MaHoaDon], [GiamGia], [Thue], [TrangThaiHD], [NgayTao], [NgayThanhToan], [MaBan], [TaiKhoanTao]) VALUES (4, 5, 10, 1, '20/11/2021', '20/11/2021',	5, 1)
+INSERT [HoaDon] ([MaHoaDon], [GiamGia], [Thue], [TrangThaiHD], [NgayTao], [NgayThanhToan], [MaBan], [TaiKhoanTao]) VALUES (5, 5, 10, 0,	'20/11/2021', NULL,			3, 1)
+INSERT [HoaDon] ([MaHoaDon], [GiamGia], [Thue], [TrangThaiHD], [NgayTao], [NgayThanhToan], [MaBan], [TaiKhoanTao]) VALUES (6, 5, 10, 0, '20/11/2021', NULL,			4, 1)
 SET IDENTITY_INSERT [HoaDon] OFF
 
 SET IDENTITY_INSERT [LoaiNuoc] ON 
@@ -168,13 +178,11 @@ GO
 Create procedure [dbo].[NuocUong_GetAll]
 as
 	select * from NuocUong
-GO
 -----------------------------------------
 -- thủ tục lấy bảng LoaiNuoc
 Create procedure [LoaiNuoc_GetAll]
 as
 	select * from LoaiNuoc
-GO
 -----------------------------------------
 -- thủ tục thêm, xoá, sửa bảng LoaiNuoc
 create PROCEDURE [dbo].[LoaiNuoc_InsertUpdateDelete]
@@ -203,7 +211,6 @@ ELSE IF @Action = 2
 	BEGIN
 		DELETE FROM [LoaiNuoc] WHERE [MaLoai] = @MaLoai
 	END
-GO
 -----------------------------------------
 -- thủ tục thêm, xoá, sửa bảng NuocUong
 CREATE PROCEDURE [dbo].[NuocUong_InsertUpdateDelete]
@@ -237,7 +244,7 @@ ELSE IF @Action = 2 -- Nếu Action = 2, xóa dữ liệu
 	BEGIN
 		DELETE FROM [NuocUong] WHERE [MaNuocUong] = @MaNuocUong
 	END
-GO
+
 -----------------------------------------
 -- tìm kiếm theo tên bảng NuocUong
 create procedure [dbo].[NuocUong_TimTheoTen]
@@ -246,7 +253,7 @@ As
 	Begin
 		select * from NuocUong where TenNuocUong = '%' + @TenNuocUong + '%'
 	End
-GO
+
 -------------------------
 CREATE PROCEDURE [GetUncheckBillIdByTableId]
 	@maBan INT
@@ -266,291 +273,52 @@ BEGIN
 END
 GO
 
-CREATE PROCEDURE GetListCategory
-AS
-BEGIN
-	SELECT * FROM LoaiNuoc
-END
-GO
+--lấy bảng tài khoản
 
-CREATE PROCEDURE GetListDrinkByCategoryId
-	@maLoai INT
-AS
-BEGIN
-	SELECT * FROM NuocUong
-	WHERE MaLoai = @maLoai
-END
-GO
-
-CREATE PROC [Insert_Bill]
-@maBan INT
-AS
-BEGIN
-	INSERT HoaDon ([GiamGia], [Thue], [MaBan], [NgayTao], [NgayThanhToan], [TrangThaiHD], [TaiKhoanTao]) VALUES (0, 0, @maBan, GETDATE(), NULL, 0, 'gominn')
-END
-GO
-
-CREATE PROC InsertBillInfoForTable
-@maHoaDon INT, @maNuocUong INT, @soLuong INT
-AS
-BEGIN
-	DECLARE @isExistsBillInfo INT;
-	DECLARE @drinkCount INT = 0;
-
-	SELECT @isExistsBillInfo = MaChiTietHoaDon, @drinkCount = SoLuong
-	FROM ChiTietHoaDon 
-	WHERE MaHoaDon = @maHoaDon AND MaNuocUong = @maNuocUong
-
-	IF(@isExistsBillInfo > 0)
-	BEGIN
-		DECLARE @newCount INT = @drinkCount + @soLuong;
-		IF (@newCount > 0)
-			UPDATE ChiTietHoaDon SET SoLuong = @drinkCount + @soLuong WHERE MaHoaDon = @maHoaDon AND MaNuocUong = @maNuocUong;
-		ELSE
-			DELETE ChiTietHoaDon WHERE MaHoaDon = @maHoaDon AND MaNuocUong = @maNuocUong
-	END
-	ELSE
-	BEGIN
-		INSERT ChiTietHoaDon (MaHoaDon, MaNuocUong, SoLuong) VALUES (@maHoaDon, @maNuocUong, @soLuong)
-	END
-END
-GO
-
-CREATE PROC GetMaxBillId
-AS
-BEGIN
-	SELECT MAX(MaHoaDon) FROM HoaDon
-END
-GO
-
-CREATE PROC CheckOut
-@maHoaDon INT, @giamGia INT, @thue INT, @tongTien INT
-AS
-BEGIN
-	UPDATE HoaDon SET TrangThaiHD = 1, GiamGia = @giamGia, Thue = @thue, NgayThanhToan = GETDATE(), TongTien = @tongTien WHERE MaHoaDon = @maHoaDon
-END
-GO
-
-CREATE TRIGGER UpdateBillInfo
-ON [ChiTietHoaDon] FOR INSERT, UPDATE
-AS
-BEGIN
-	DECLARE @maHoaDon INT
-
-	SELECT @maHoaDon = MaHoaDon FROM INSERTED
-
-	DECLARE @maBan INT
-
-	SELECT @maBan = MaBan FROM HoaDon WHERE MaHoaDon = @maHoaDon AND TrangThaiHD = 0
-
-	DECLARE @countBillInfo INT
-
-	UPDATE Ban SET TrangThaiBan = 1 WHERE MaBan = @maBan
-END
-GO
-
-CREATE TRIGGER UpdateBill
-ON HoaDon FOR UPDATE 
-AS
-BEGIN
-	DECLARE @maHoaDon INT
-
-	SELECT @maHoaDon = MaHoaDon FROM INSERTED
-
-	DECLARE @maBan INT
-
-	SELECT @maBan = MaBan FROM HoaDon WHERE MaHoaDon = @maHoaDon
-
-	DECLARE @count INT = 0
-
-	SELECT @count = COUNT(*) FROM HoaDon WHERE MaBan = @maBan AND TrangThaiHD = 0
-
-	IF (@count = 0)
-		UPDATE Ban SET TrangThaiBan = 0 WHERE MaBan = @maBan
-END
-GO
-
-
-
-CREATE PROCEDURE SwitchTable
-@idTable1 INT, @idTable2 INT
-AS
-BEGIN
-	DECLARE @idFirstBill INT
-	DECLARE @idSecondBill INT
-
-	SELECT @idSecondBill = MaHoaDon FROM HoaDon WHERE MaBan = @idTable2 AND TrangThaiHD = 0
-	SELECT @idFirstBill = MaHoaDon FROM HoaDon WHERE MaBan = @idTable1 AND TrangThaiHD = 0
-
-	IF (@idFirstBill IS NULL)
-	BEGIN
-		INSERT [HoaDon] ([GiamGia], [Thue], [NgayTao], [NgayThanhToan], [MaBan], [TrangThaiHD], [TaiKhoanTao]) VALUES (0, 0, GETDATE(), NULL, @idTable1, 0, 'gominn')
-		
-		SELECT @idFirstBill = MAX(MaHoaDon) FROM HoaDon WHERE MaBan = @idTable1 AND TrangThaiHD = 0
-	END
-
-	IF (@idSecondBill IS NULL)
-	BEGIN
-		INSERT [HoaDon] ([GiamGia], [Thue], [NgayTao], [NgayThanhToan], [MaBan], [TrangThaiHD], [TaiKhoanTao]) VALUES (0, 0, GETDATE(), NULL, @idTable2, 0, 'gominn')
-		
-		SELECT @idSecondBill = MAX(MaHoaDon) FROM HoaDon WHERE MaBan = @idTable2 AND TrangThaiHD = 0
-	END
-
-	SELECT MaChiTietHoaDon INTO IdBillInfoTable FROM ChiTietHoaDon WHERE MaHoaDon = @idSecondBill
-
-	UPDATE ChiTietHoaDon SET MaHoaDon = @idSecondBill WHERE MaHoaDon = @idFirstBill
-
-	UPDATE ChiTietHoaDon SET MaHoaDon = @idFirstBill WHERE MaChiTietHoaDon IN (SELECT * FROM IdBillInfoTable)
-
-	DROP TABLE IdBillInfoTable
-
-	DECLARE @countBillInfoByBill1 INT
-	DECLARE @countBillInfoByBill2 INT
-
-	SELECT @countBillInfoByBill1 = COUNT(*) FROM ChiTietHoaDon WHERE MaHoaDon = @idFirstBill
-	SELECT @countBillInfoByBill2 = COUNT(*) FROM ChiTietHoaDon WHERE MaHoaDon = @idSecondBill
-
-	IF (@countBillInfoByBill1 <= 0)
-		BEGIN
-			DECLARE @maBan1 INT
-			SELECT @maBan1 = MaBan FROM HoaDon WHERE MaHoaDon = @idFirstBill
-			UPDATE Ban SET TrangThaiBan = 0 WHERE MaBan = @maBan1
-			DELETE HoaDon WHERE MaHoaDon = @idFirstBill
-		END
-	IF (@countBillInfoByBill2 <= 0)
-		BEGIN
-			DECLARE @maBan2 INT
-			SELECT @maBan2 = MaBan FROM HoaDon WHERE MaHoaDon = @idSecondBill
-			UPDATE Ban SET TrangThaiBan = 0 WHERE MaBan = @maBan2
-			DELETE HoaDon WHERE MaHoaDon = @idSecondBill
-		END
-END
-GO
-
-
-
-CREATE PROC MergeTable
-@idTable1 INT, @idTable2 INT
-AS
-BEGIN
-	DECLARE @idFirstBill INT
-	DECLARE @idSecondBill INT
-
-	SELECT @idSecondBill = MaHoaDon FROM HoaDon WHERE MaBan = @idTable2 AND TrangThaiHD = 0
-	SELECT @idFirstBill = MaHoaDon FROM HoaDon WHERE MaBan = @idTable1 AND TrangThaiHD = 0
-
-	IF (@idFirstBill IS NULL)
-	BEGIN
-		INSERT [HoaDon] ([GiamGia], [Thue], [NgayTao], [NgayThanhToan], [MaBan], [TrangThaiHD], [TaiKhoanTao]) VALUES (0, 0, GETDATE(), NULL, @idTable1, 0, 'gominn')
-		
-		SELECT @idFirstBill = MAX(MaHoaDon) FROM HoaDon WHERE MaBan = @idTable1 AND TrangThaiHD = 0
-	END
-
-	IF (@idSecondBill IS NULL)
-	BEGIN
-		INSERT [HoaDon] ([GiamGia], [Thue], [NgayTao], [NgayThanhToan], [MaBan], [TrangThaiHD], [TaiKhoanTao]) VALUES (0, 0, GETDATE(), NULL, @idTable2, 0, 'gominn')
-		
-		SELECT @idSecondBill = MAX(MaHoaDon) FROM HoaDon WHERE MaBan = @idTable2 AND TrangThaiHD = 0
-	END
-
-	UPDATE ChiTietHoaDon SET MaHoaDon = @idSecondBill WHERE MaHoaDon = @idFirstBill
-
-	DECLARE @countBillInfoByBill1 INT
-	DECLARE @countBillInfoByBill2 INT
-
-	SELECT @countBillInfoByBill1 = COUNT(*) FROM ChiTietHoaDon WHERE MaHoaDon = @idFirstBill
-	SELECT @countBillInfoByBill2 = COUNT(*) FROM ChiTietHoaDon WHERE MaHoaDon = @idSecondBill
-
-	IF (@countBillInfoByBill1 <= 0)
-		BEGIN
-			DECLARE @maBan1 INT
-			SELECT @maBan1 = MaBan FROM HoaDon WHERE MaHoaDon = @idFirstBill
-			UPDATE Ban SET TrangThaiBan = 0 WHERE MaBan = @maBan1
-			DELETE HoaDon WHERE MaHoaDon = @idFirstBill
-		END
-	IF (@countBillInfoByBill2 <= 0)
-		BEGIN
-			DECLARE @maBan2 INT
-			SELECT @maBan2 = MaBan FROM HoaDon WHERE MaHoaDon = @idSecondBill
-			UPDATE Ban SET TrangThaiBan = 0 WHERE MaBan = @maBan2
-			DELETE HoaDon WHERE MaHoaDon = @idSecondBill
-		END
-END
-GO
-
-CREATE PROC ShowBillInTheDay
-AS
-BEGIN
-SELECT HD.MaHoaDon AS [Mã hóa đơn], B.TenBan as [Tên bàn], NgayTao AS [Ngày tạo], NgayThanhToan AS [Ngày thanh toán], GiamGia AS [Giảm giá], Thue AS [Thuế], HD.TongTien AS [Tổng tiền]
-FROM HoaDon AS HD, Ban as B
-WHERE NgayTao >= GETDATE()-1 AND NgayThanhToan <= GETDATE() AND HD.TrangThaiHD = 1 AND HD.MaBan = B.MaBan 
-END
-GO
-
-CREATE PROC GetListBillByDate
-@ngayVao DATE, @ngayThanhToan DATE
-AS
-BEGIN
-SELECT HD.MaHoaDon AS [Mã hóa đơn], B.TenBan as [Tên bàn], NgayTao AS [Ngày tạo], NgayThanhToan AS [Ngày thanh toán], GiamGia AS [Giảm giá], Thue AS [Thuế], HD.TongTien AS [Tổng tiền]
-FROM HoaDon AS HD, Ban as B
-WHERE NgayTao >= @ngayVao AND NgayThanhToan <= @ngayThanhToan AND HD.TrangThaiHD = 1 AND HD.MaBan = B.MaBan 
-END
-GO
-
-SELECT * FROM HoaDon
-
-DELETE ChiTietHoaDon
-DELETE HoaDon
-
-
------------------------------------------------------------
--- thêm - xoá - sửa bản ăn cho admin
-create proc [dbo].[Table_InsertUpdateDelete]
-	@MaBan int output,
-	@TenBan nvarchar(100),
-	@TrangThai int,
-	@Action int
+----
+create procedure [dbo].[TaiKhoan_GetAll]
 as
-if @Action = 0
+SELECT * from [dbo].[TaiKhoan]
+
+------------------------------------------
+--thêm xoá sửa bảng tài khoản
+Create procedure [dbo].[TaiKhoan_InsertDeleteUpdate]
+@tenTaiKhoan nvarchar(100) output,
+@matKhau nvarchar(100),
+@hoTen nvarchar(1000),
+@email	nvarchar(100),
+@soDienThoai nvarchar(100),
+@ngayTao SMALLDATETIME,
+@Action int
+as
+if @Action=0
 begin
-	If not exists (select * from ban where TenBan = @TenBan)
-	begin
-		insert into [Ban]([TenBan]) values (@TenBan)
-		set @MaBan = @@IDENTITY
+	INSERT into [TaiKhoan]([TenTaiKhoan],[MatKhau],[HoTen],[Email],[SoDienThoai],[NgayTao])
+	VALUES (@tenTaiKhoan,@matKhau,@hoTen,@email,@soDienThoai,@ngayTao)
 	end
-end
-else if @Action = 1
-begin
-	update [Ban] set [TenBan] = @TenBan
-	where [MaBan] = @MaBan
-end
-else if @Action = 2
-	begin
-		delete from [Ban] where [MaBan] = @MaBan
+ELSE if @Action=1
+begin 
+	UPDATE [TaiKhoan]
+	SET [TenTaiKhoan]=@tenTaiKhoan,[MatKhau]=@matKhau,[HoTen]=@hoTen,[Email]=email,[SoDienThoai]=@soDienThoai,[NgayTao]=@ngayTao
+	WHERE [TenTaiKhoan]=@tenTaiKhoan
 	end
+ELSE if @Action=2
+begin 
+	DELETE from [TaiKhoan] WHERE [TenTaiKhoan]=@tenTaiKhoan
+end
+-------------------------phan quyen-----------------
+
+create procedure [dbo].[ChucVu_GetALl]
+as
+select * from dbo.ChucVu
 go
 
-------------------------------------------------
--- nhân viên
-create proc [dbo].[NhanVien_GetAll]
-AS
-begin
-	select * from NhanVien
-end
-go
-------------------------------------------------
--- tài khoản
-Create proc [dbo].[TaiKhoan_GetAll]
-As
-Begin
-	select * from TaiKhoan
-End
-go
-------------------------------------------------
--- chức vụ
-create proc [dbo].[ChucVu_GetAll]
-as
-begin
-	select * from ChucVu
-end
-go
+--select TaiKhoan.TenTaiKhoan as TenDN, TaiKhoan.MatKhau as mk, NhanVien.HoTen , ChucVu.MaCV from TaiKhoan
+--inner join 
+
+--create procedure [dbo].[PhanQuyen_GetAll]
+--@maTK
+--as
+--select a.TenTaiKhoan, a.MatKhau , b.HoTen , c.TenChucVu from TaiKhoan a,NhanVien b,ChucVu c
+--where a.MaTK=b.MaTK and c.MaCV=b.MaCV
+--go
