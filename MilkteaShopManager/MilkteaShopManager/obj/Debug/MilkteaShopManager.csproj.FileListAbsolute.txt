@@ -1,0 +1,118 @@
+D:\Học tập\DACS_UPDATE\MilkteaShopManager\MilkteaShopManager\bin\Debug\MilkteaShopManager.exe.config
+D:\Học tập\DACS_UPDATE\MilkteaShopManager\MilkteaShopManager\bin\Debug\MilkteaShopManager.exe
+D:\Học tập\DACS_UPDATE\MilkteaShopManager\MilkteaShopManager\bin\Debug\MilkteaShopManager.pdb
+D:\Học tập\DACS_UPDATE\MilkteaShopManager\MilkteaShopManager\bin\Debug\Guna.UI2.dll
+D:\Học tập\DACS_UPDATE\MilkteaShopManager\MilkteaShopManager\obj\Debug\MilkteaShopManager.csproj.AssemblyReference.cache
+D:\Học tập\DACS_UPDATE\MilkteaShopManager\MilkteaShopManager\obj\Debug\MilkteaShopManager.LoginForm.resources
+D:\Học tập\DACS_UPDATE\MilkteaShopManager\MilkteaShopManager\obj\Debug\MilkteaShopManager.Properties.Resources.resources
+D:\Học tập\DACS_UPDATE\MilkteaShopManager\MilkteaShopManager\obj\Debug\MilkteaShopManager.csproj.GenerateResource.cache
+D:\Học tập\DACS_UPDATE\MilkteaShopManager\MilkteaShopManager\obj\Debug\MilkteaShopManager.csproj.CoreCompileInputs.cache
+D:\Học tập\DACS_UPDATE\MilkteaShopManager\MilkteaShopManager\obj\Debug\MilkteaShopManager.csproj.CopyComplete
+D:\Học tập\DACS_UPDATE\MilkteaShopManager\MilkteaShopManager\obj\Debug\MilkteaShopManager.exe
+D:\Học tập\DACS_UPDATE\MilkteaShopManager\MilkteaShopManager\obj\Debug\MilkteaShopManager.pdb
+D:\Học tập\DACS_UPDATE\MilkteaShopManager\MilkteaShopManager\obj\Debug\MilkteaShopManager.MainForm.resources
+C:\Users\Kin\Downloads\DACS_UPDATE\DACS_UPDATE\MilkteaShopManager\MilkteaShopManager\bin\Debug\MilkteaShopManager.exe.config
+C:\Users\Kin\Downloads\DACS_UPDATE\DACS_UPDATE\MilkteaShopManager\MilkteaShopManager\bin\Debug\MilkteaShopManager.exe
+C:\Users\Kin\Downloads\DACS_UPDATE\DACS_UPDATE\MilkteaShopManager\MilkteaShopManager\bin\Debug\MilkteaShopManager.pdb
+C:\Users\Kin\Downloads\DACS_UPDATE\DACS_UPDATE\MilkteaShopManager\MilkteaShopManager\bin\Debug\Guna.UI2.dll
+C:\Users\Kin\Downloads\DACS_UPDATE\DACS_UPDATE\MilkteaShopManager\MilkteaShopManager\obj\Debug\MilkteaShopManager.csproj.AssemblyReference.cache
+C:\Users\Kin\Downloads\DACS_UPDATE\DACS_UPDATE\MilkteaShopManager\MilkteaShopManager\obj\Debug\MilkteaShopManager.csproj.SuggestedBindingRedirects.cache
+C:\Users\Kin\Downloads\DACS_UPDATE\DACS_UPDATE\MilkteaShopManager\MilkteaShopManager\obj\Debug\MilkteaShopManager.LoginForm.resources
+C:\Users\Kin\Downloads\DACS_UPDATE\DACS_UPDATE\MilkteaShopManager\MilkteaShopManager\obj\Debug\MilkteaShopManager.MainForm.resources
+C:\Users\Kin\Downloads\DACS_UPDATE\DACS_UPDATE\MilkteaShopManager\MilkteaShopManager\obj\Debug\MilkteaShopManager.Properties.Resources.resources
+C:\Users\Kin\Downloads\DACS_UPDATE\DACS_UPDATE\MilkteaShopManager\MilkteaShopManager\obj\Debug\MilkteaShopManager.csproj.GenerateResource.cache
+C:\Users\Kin\Downloads\DACS_UPDATE\DACS_UPDATE\MilkteaShopManager\MilkteaShopManager\obj\Debug\MilkteaShopManager.csproj.CoreCompileInputs.cache
+C:\Users\Kin\Downloads\DACS_UPDATE\DACS_UPDATE\MilkteaShopManager\MilkteaShopManager\obj\Debug\MilkteaShopManager.csproj.CopyComplete
+C:\Users\Kin\Downloads\DACS_UPDATE\DACS_UPDATE\MilkteaShopManager\MilkteaShopManager\obj\Debug\MilkteaShopManager.exe
+C:\Users\Kin\Downloads\DACS_UPDATE\DACS_UPDATE\MilkteaShopManager\MilkteaShopManager\obj\Debug\MilkteaShopManager.pdb
+C:\Users\Kin\Downloads\DACS_UPDATE\DACS_UPDATE\MilkteaShopManager\MilkteaShopManager\obj\Debug\MilkteaShopManager.frmThemNhanVien.resources
+D:\Học tập\DACS_UPDATE1\DACS_UPDATE\DACS_UPDATE\MilkteaShopManager\MilkteaShopManager\bin\Debug\MilkteaShopManager.exe.config
+D:\Học tập\DACS_UPDATE1\DACS_UPDATE\DACS_UPDATE\MilkteaShopManager\MilkteaShopManager\bin\Debug\MilkteaShopManager.exe
+D:\Học tập\DACS_UPDATE1\DACS_UPDATE\DACS_UPDATE\MilkteaShopManager\MilkteaShopManager\bin\Debug\MilkteaShopManager.pdb
+D:\Học tập\DACS_UPDATE1\DACS_UPDATE\DACS_UPDATE\MilkteaShopManager\MilkteaShopManager\bin\Debug\Guna.UI2.dll
+D:\Học tập\DACS_UPDATE1\DACS_UPDATE\DACS_UPDATE\MilkteaShopManager\MilkteaShopManager\obj\Debug\MilkteaShopManager.csproj.AssemblyReference.cache
+D:\Học tập\DACS_UPDATE1\DACS_UPDATE\DACS_UPDATE\MilkteaShopManager\MilkteaShopManager\obj\Debug\MilkteaShopManager.LoginForm.resources
+D:\Học tập\DACS_UPDATE1\DACS_UPDATE\DACS_UPDATE\MilkteaShopManager\MilkteaShopManager\obj\Debug\MilkteaShopManager.MainForm.resources
+D:\Học tập\DACS_UPDATE1\DACS_UPDATE\DACS_UPDATE\MilkteaShopManager\MilkteaShopManager\obj\Debug\MilkteaShopManager.frmThemNhanVien.resources
+D:\Học tập\DACS_UPDATE1\DACS_UPDATE\DACS_UPDATE\MilkteaShopManager\MilkteaShopManager\obj\Debug\MilkteaShopManager.Properties.Resources.resources
+D:\Học tập\DACS_UPDATE1\DACS_UPDATE\DACS_UPDATE\MilkteaShopManager\MilkteaShopManager\obj\Debug\MilkteaShopManager.csproj.GenerateResource.cache
+D:\Học tập\DACS_UPDATE1\DACS_UPDATE\DACS_UPDATE\MilkteaShopManager\MilkteaShopManager\obj\Debug\MilkteaShopManager.csproj.CoreCompileInputs.cache
+D:\Học tập\DACS_UPDATE1\DACS_UPDATE\DACS_UPDATE\MilkteaShopManager\MilkteaShopManager\obj\Debug\MilkteaShopManager.csproj.CopyComplete
+D:\Học tập\DACS_UPDATE1\DACS_UPDATE\DACS_UPDATE\MilkteaShopManager\MilkteaShopManager\obj\Debug\MilkteaShopManager.exe
+D:\Học tập\DACS_UPDATE1\DACS_UPDATE\DACS_UPDATE\MilkteaShopManager\MilkteaShopManager\obj\Debug\MilkteaShopManager.pdb
+C:\Users\Kin\Downloads\dacs\DACS_UPDATE\MilkteaShopManager\MilkteaShopManager\bin\Debug\MilkteaShopManager.exe.config
+C:\Users\Kin\Downloads\dacs\DACS_UPDATE\MilkteaShopManager\MilkteaShopManager\bin\Debug\MilkteaShopManager.exe
+C:\Users\Kin\Downloads\dacs\DACS_UPDATE\MilkteaShopManager\MilkteaShopManager\bin\Debug\MilkteaShopManager.pdb
+C:\Users\Kin\Downloads\dacs\DACS_UPDATE\MilkteaShopManager\MilkteaShopManager\bin\Debug\Guna.UI2.dll
+C:\Users\Kin\Downloads\dacs\DACS_UPDATE\MilkteaShopManager\MilkteaShopManager\obj\Debug\MilkteaShopManager.csproj.AssemblyReference.cache
+C:\Users\Kin\Downloads\dacs\DACS_UPDATE\MilkteaShopManager\MilkteaShopManager\obj\Debug\MilkteaShopManager.csproj.SuggestedBindingRedirects.cache
+C:\Users\Kin\Downloads\dacs\DACS_UPDATE\MilkteaShopManager\MilkteaShopManager\obj\Debug\MilkteaShopManager.LoginForm.resources
+C:\Users\Kin\Downloads\dacs\DACS_UPDATE\MilkteaShopManager\MilkteaShopManager\obj\Debug\MilkteaShopManager.MainForm.resources
+C:\Users\Kin\Downloads\dacs\DACS_UPDATE\MilkteaShopManager\MilkteaShopManager\obj\Debug\MilkteaShopManager.frmThemNhanVien.resources
+C:\Users\Kin\Downloads\dacs\DACS_UPDATE\MilkteaShopManager\MilkteaShopManager\obj\Debug\MilkteaShopManager.Properties.Resources.resources
+C:\Users\Kin\Downloads\dacs\DACS_UPDATE\MilkteaShopManager\MilkteaShopManager\obj\Debug\MilkteaShopManager.csproj.GenerateResource.cache
+C:\Users\Kin\Downloads\dacs\DACS_UPDATE\MilkteaShopManager\MilkteaShopManager\obj\Debug\MilkteaShopManager.csproj.CoreCompileInputs.cache
+C:\Users\Kin\Downloads\dacs\DACS_UPDATE\MilkteaShopManager\MilkteaShopManager\obj\Debug\MilkteaShopManager.csproj.CopyComplete
+C:\Users\Kin\Downloads\dacs\DACS_UPDATE\MilkteaShopManager\MilkteaShopManager\obj\Debug\MilkteaShopManager.exe
+C:\Users\Kin\Downloads\dacs\DACS_UPDATE\MilkteaShopManager\MilkteaShopManager\obj\Debug\MilkteaShopManager.pdb
+C:\Users\Kin\Downloads\dacs\DACS_UPDATE\MilkteaShopManager\MilkteaShopManager\bin\Debug\BusinessLogic.dll
+C:\Users\Kin\Downloads\dacs\DACS_UPDATE\MilkteaShopManager\MilkteaShopManager\bin\Debug\DataAccess.dll
+C:\Users\Kin\Downloads\dacs\DACS_UPDATE\MilkteaShopManager\MilkteaShopManager\bin\Debug\BusinessLogic.pdb
+C:\Users\Kin\Downloads\dacs\DACS_UPDATE\MilkteaShopManager\MilkteaShopManager\bin\Debug\DataAccess.pdb
+D:\DACS_UPDATE\MilkteaShopManager\MilkteaShopManager\bin\Debug\MilkteaShopManager.exe.config
+D:\DACS_UPDATE\MilkteaShopManager\MilkteaShopManager\bin\Debug\MilkteaShopManager.exe
+D:\DACS_UPDATE\MilkteaShopManager\MilkteaShopManager\bin\Debug\MilkteaShopManager.pdb
+D:\DACS_UPDATE\MilkteaShopManager\MilkteaShopManager\bin\Debug\BusinessLogic.dll
+D:\DACS_UPDATE\MilkteaShopManager\MilkteaShopManager\bin\Debug\DataAccess.dll
+D:\DACS_UPDATE\MilkteaShopManager\MilkteaShopManager\bin\Debug\Guna.UI2.dll
+D:\DACS_UPDATE\MilkteaShopManager\MilkteaShopManager\bin\Debug\BusinessLogic.pdb
+D:\DACS_UPDATE\MilkteaShopManager\MilkteaShopManager\bin\Debug\DataAccess.pdb
+D:\DACS_UPDATE\MilkteaShopManager\MilkteaShopManager\obj\Debug\MilkteaShopManager.csproj.AssemblyReference.cache
+D:\DACS_UPDATE\MilkteaShopManager\MilkteaShopManager\obj\Debug\MilkteaShopManager.LoginForm.resources
+D:\DACS_UPDATE\MilkteaShopManager\MilkteaShopManager\obj\Debug\MilkteaShopManager.MainForm.resources
+D:\DACS_UPDATE\MilkteaShopManager\MilkteaShopManager\obj\Debug\MilkteaShopManager.frmThemNhanVien.resources
+D:\DACS_UPDATE\MilkteaShopManager\MilkteaShopManager\obj\Debug\MilkteaShopManager.Properties.Resources.resources
+D:\DACS_UPDATE\MilkteaShopManager\MilkteaShopManager\obj\Debug\MilkteaShopManager.csproj.GenerateResource.cache
+D:\DACS_UPDATE\MilkteaShopManager\MilkteaShopManager\obj\Debug\MilkteaShopManager.csproj.CoreCompileInputs.cache
+D:\DACS_UPDATE\MilkteaShopManager\MilkteaShopManager\obj\Debug\MilkteaShopManager.csproj.CopyComplete
+D:\DACS_UPDATE\MilkteaShopManager\MilkteaShopManager\obj\Debug\MilkteaShopManager.exe
+D:\DACS_UPDATE\MilkteaShopManager\MilkteaShopManager\obj\Debug\MilkteaShopManager.pdb
+D:\IT-STUDY\DACS_UPDATE\MilkteaShopManager\MilkteaShopManager\bin\Debug\MilkteaShopManager.exe.config
+D:\IT-STUDY\DACS_UPDATE\MilkteaShopManager\MilkteaShopManager\bin\Debug\MilkteaShopManager.exe
+D:\IT-STUDY\DACS_UPDATE\MilkteaShopManager\MilkteaShopManager\bin\Debug\MilkteaShopManager.pdb
+D:\IT-STUDY\DACS_UPDATE\MilkteaShopManager\MilkteaShopManager\bin\Debug\BusinessLogic.dll
+D:\IT-STUDY\DACS_UPDATE\MilkteaShopManager\MilkteaShopManager\bin\Debug\DataAccess.dll
+D:\IT-STUDY\DACS_UPDATE\MilkteaShopManager\MilkteaShopManager\bin\Debug\Guna.UI2.dll
+D:\IT-STUDY\DACS_UPDATE\MilkteaShopManager\MilkteaShopManager\bin\Debug\BusinessLogic.pdb
+D:\IT-STUDY\DACS_UPDATE\MilkteaShopManager\MilkteaShopManager\bin\Debug\DataAccess.pdb
+D:\IT-STUDY\DACS_UPDATE\MilkteaShopManager\MilkteaShopManager\obj\Debug\MilkteaShopManager.csproj.AssemblyReference.cache
+D:\IT-STUDY\DACS_UPDATE\MilkteaShopManager\MilkteaShopManager\obj\Debug\MilkteaShopManager.LoginForm.resources
+D:\IT-STUDY\DACS_UPDATE\MilkteaShopManager\MilkteaShopManager\obj\Debug\MilkteaShopManager.MainForm.resources
+D:\IT-STUDY\DACS_UPDATE\MilkteaShopManager\MilkteaShopManager\obj\Debug\MilkteaShopManager.frmThemNhanVien.resources
+D:\IT-STUDY\DACS_UPDATE\MilkteaShopManager\MilkteaShopManager\obj\Debug\MilkteaShopManager.Properties.Resources.resources
+D:\IT-STUDY\DACS_UPDATE\MilkteaShopManager\MilkteaShopManager\obj\Debug\MilkteaShopManager.csproj.GenerateResource.cache
+D:\IT-STUDY\DACS_UPDATE\MilkteaShopManager\MilkteaShopManager\obj\Debug\MilkteaShopManager.csproj.CoreCompileInputs.cache
+D:\IT-STUDY\DACS_UPDATE\MilkteaShopManager\MilkteaShopManager\obj\Debug\MilkteaShopManager.exe
+D:\IT-STUDY\DACS_UPDATE\MilkteaShopManager\MilkteaShopManager\obj\Debug\MilkteaShopManager.pdb
+D:\IT-STUDY\DACS_UPDATE\MilkteaShopManager\MilkteaShopManager\bin\Debug\BusinessLogic.dll.config
+D:\IT-STUDY\DACS_UPDATE\MilkteaShopManager\MilkteaShopManager\bin\Debug\DataAccess.dll.config
+D:\IT-STUDY\DACS_UPDATE\MilkteaShopManager\MilkteaShopManager\obj\Debug\MilkteaShopManager.csproj.CopyComplete
+D:\IT-STUDY\LT-CSDL\DACS_UPDATE\MilkteaShopManager\MilkteaShopManager\bin\Debug\MilkteaShopManager.exe.config
+D:\IT-STUDY\LT-CSDL\DACS_UPDATE\MilkteaShopManager\MilkteaShopManager\bin\Debug\MilkteaShopManager.exe
+D:\IT-STUDY\LT-CSDL\DACS_UPDATE\MilkteaShopManager\MilkteaShopManager\bin\Debug\MilkteaShopManager.pdb
+D:\IT-STUDY\LT-CSDL\DACS_UPDATE\MilkteaShopManager\MilkteaShopManager\bin\Debug\BusinessLogic.dll
+D:\IT-STUDY\LT-CSDL\DACS_UPDATE\MilkteaShopManager\MilkteaShopManager\bin\Debug\DataAccess.dll
+D:\IT-STUDY\LT-CSDL\DACS_UPDATE\MilkteaShopManager\MilkteaShopManager\bin\Debug\Guna.UI2.dll
+D:\IT-STUDY\LT-CSDL\DACS_UPDATE\MilkteaShopManager\MilkteaShopManager\bin\Debug\BusinessLogic.pdb
+D:\IT-STUDY\LT-CSDL\DACS_UPDATE\MilkteaShopManager\MilkteaShopManager\bin\Debug\BusinessLogic.dll.config
+D:\IT-STUDY\LT-CSDL\DACS_UPDATE\MilkteaShopManager\MilkteaShopManager\bin\Debug\DataAccess.pdb
+D:\IT-STUDY\LT-CSDL\DACS_UPDATE\MilkteaShopManager\MilkteaShopManager\bin\Debug\DataAccess.dll.config
+D:\IT-STUDY\LT-CSDL\DACS_UPDATE\MilkteaShopManager\MilkteaShopManager\obj\Debug\MilkteaShopManager.csproj.AssemblyReference.cache
+D:\IT-STUDY\LT-CSDL\DACS_UPDATE\MilkteaShopManager\MilkteaShopManager\obj\Debug\MilkteaShopManager.LoginForm.resources
+D:\IT-STUDY\LT-CSDL\DACS_UPDATE\MilkteaShopManager\MilkteaShopManager\obj\Debug\MilkteaShopManager.MainForm.resources
+D:\IT-STUDY\LT-CSDL\DACS_UPDATE\MilkteaShopManager\MilkteaShopManager\obj\Debug\MilkteaShopManager.frmThemNhanVien.resources
+D:\IT-STUDY\LT-CSDL\DACS_UPDATE\MilkteaShopManager\MilkteaShopManager\obj\Debug\MilkteaShopManager.Properties.Resources.resources
+D:\IT-STUDY\LT-CSDL\DACS_UPDATE\MilkteaShopManager\MilkteaShopManager\obj\Debug\MilkteaShopManager.csproj.GenerateResource.cache
+D:\IT-STUDY\LT-CSDL\DACS_UPDATE\MilkteaShopManager\MilkteaShopManager\obj\Debug\MilkteaShopManager.csproj.CoreCompileInputs.cache
+D:\IT-STUDY\LT-CSDL\DACS_UPDATE\MilkteaShopManager\MilkteaShopManager\obj\Debug\MilkteaShopManager.exe
+D:\IT-STUDY\LT-CSDL\DACS_UPDATE\MilkteaShopManager\MilkteaShopManager\obj\Debug\MilkteaShopManager.pdb
