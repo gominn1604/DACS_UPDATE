@@ -53,6 +53,7 @@ namespace MilkteaShopManager
             LoadCategory();
             LoadComboBoxTable(cbbDSBan);
             LoadTableToLV();
+            LoadDateTimePickerBill();
         }
 
         #region Hàm đóng mở form con
@@ -859,6 +860,14 @@ namespace MilkteaShopManager
             LoadListBillByDate(dtpStartDay.Value, dtpEndDay.Value);
 
         }
+
+        private void LoadDateTimePickerBill()
+        {
+            DateTime today = DateTime.Now;
+            dtpStartDay.Value = new DateTime(today.Year, today.Month, 1);
+            dtpEndDay.Value = dtpStartDay.Value.AddMonths(1).AddDays(-1);
+        }
+
         #endregion
 
         #region Thống kê nhân viên
