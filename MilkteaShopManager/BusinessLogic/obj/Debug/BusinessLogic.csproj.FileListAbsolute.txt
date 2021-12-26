@@ -43,3 +43,8 @@ C:\Users\Kin\Desktop\New folder\MilkteaShopManager\BusinessLogic\obj\Debug\Busin
 C:\Users\Kin\Desktop\New folder\MilkteaShopManager\BusinessLogic\obj\Debug\BusinessLogic.csproj.CopyComplete
 C:\Users\Kin\Desktop\New folder\MilkteaShopManager\BusinessLogic\obj\Debug\BusinessLogic.dll
 C:\Users\Kin\Desktop\New folder\MilkteaShopManager\BusinessLogic\obj\Debug\BusinessLogic.pdb
+C:\Users\Kin\Documents\GitHub\DACS_UPDATE\MilkteaShopManager\BusinessLogic\bin\Debug\EPPlus.dll
+C:\Users\Kin\Documents\GitHub\DACS_UPDATE\MilkteaShopManager\BusinessLogic\bin\Debug\Microsoft.IO.RecyclableMemoryStream.dll
+C:\Users\Kin\Documents\GitHub\DACS_UPDATE\MilkteaShopManager\BusinessLogic\bin\Debug\System.ComponentModel.Annotations.dll
+C:\Users\Kin\Documents\GitHub\DACS_UPDATE\MilkteaShopManager\BusinessLogic\bin\Debug\EPPlus.xml
+C:\Users\Kin\Documents\GitHub\DACS_UPDATE\MilkteaShopManager\BusinessLogic\bin\Debug\Microsoft.IO.RecyclableMemoryStream.xml

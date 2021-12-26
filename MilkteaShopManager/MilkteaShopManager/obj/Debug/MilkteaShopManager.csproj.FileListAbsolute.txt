@@ -138,3 +138,8 @@ C:\Users\Kin\Desktop\New folder\MilkteaShopManager\MilkteaShopManager\obj\Debug\
 C:\Users\Kin\Desktop\New folder\MilkteaShopManager\MilkteaShopManager\obj\Debug\MilkteaShopManager.exe
 C:\Users\Kin\Desktop\New folder\MilkteaShopManager\MilkteaShopManager\obj\Debug\MilkteaShopManager.pdb
 C:\Users\Kin\Documents\GitHub\DACS_UPDATE\MilkteaShopManager\MilkteaShopManager\obj\Debug\MilkteaShopManager.frmAddCategory.resources
+C:\Users\Kin\Documents\GitHub\DACS_UPDATE\MilkteaShopManager\MilkteaShopManager\bin\Debug\EPPlus.dll
+C:\Users\Kin\Documents\GitHub\DACS_UPDATE\MilkteaShopManager\MilkteaShopManager\bin\Debug\Microsoft.IO.RecyclableMemoryStream.dll
+C:\Users\Kin\Documents\GitHub\DACS_UPDATE\MilkteaShopManager\MilkteaShopManager\bin\Debug\System.ComponentModel.Annotations.dll
+C:\Users\Kin\Documents\GitHub\DACS_UPDATE\MilkteaShopManager\MilkteaShopManager\bin\Debug\EPPlus.xml
+C:\Users\Kin\Documents\GitHub\DACS_UPDATE\MilkteaShopManager\MilkteaShopManager\bin\Debug\Microsoft.IO.RecyclableMemoryStream.xml

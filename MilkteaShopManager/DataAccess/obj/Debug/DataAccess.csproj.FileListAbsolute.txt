@@ -28,3 +28,9 @@ C:\Users\Kin\Desktop\New folder\MilkteaShopManager\DataAccess\obj\Debug\DataAcce
 C:\Users\Kin\Desktop\New folder\MilkteaShopManager\DataAccess\obj\Debug\DataAccess.csproj.CoreCompileInputs.cache
 C:\Users\Kin\Desktop\New folder\MilkteaShopManager\DataAccess\obj\Debug\DataAccess.dll
 C:\Users\Kin\Desktop\New folder\MilkteaShopManager\DataAccess\obj\Debug\DataAccess.pdb
+C:\Users\Kin\Documents\GitHub\DACS_UPDATE\MilkteaShopManager\DataAccess\bin\Debug\EPPlus.dll
+C:\Users\Kin\Documents\GitHub\DACS_UPDATE\MilkteaShopManager\DataAccess\bin\Debug\Microsoft.IO.RecyclableMemoryStream.dll
+C:\Users\Kin\Documents\GitHub\DACS_UPDATE\MilkteaShopManager\DataAccess\bin\Debug\System.ComponentModel.Annotations.dll
+C:\Users\Kin\Documents\GitHub\DACS_UPDATE\MilkteaShopManager\DataAccess\bin\Debug\EPPlus.xml
+C:\Users\Kin\Documents\GitHub\DACS_UPDATE\MilkteaShopManager\DataAccess\bin\Debug\Microsoft.IO.RecyclableMemoryStream.xml
+C:\Users\Kin\Documents\GitHub\DACS_UPDATE\MilkteaShopManager\DataAccess\obj\Debug\DataAccess.csproj.CopyComplete

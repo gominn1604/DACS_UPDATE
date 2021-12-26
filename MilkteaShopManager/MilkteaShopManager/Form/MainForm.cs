@@ -1,11 +1,13 @@
 ﻿using BusinessLogic;
 using DataAccess;
+using OfficeOpenXml;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Globalization;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -39,6 +41,7 @@ namespace MilkteaShopManager
         List<Table> listTable = new List<Table>();
         string statusTable;
 
+        LoaiNuoc loaiNuocCurrent = new LoaiNuoc();
         #endregion
         public MainForm()
         {
@@ -492,8 +495,9 @@ namespace MilkteaShopManager
             }
             else MessageBox.Show("Cập nhật dữ liệu không thành công. Vui lòng kiểm lại dữ liệu nhập");
         }
-        private void btnXoaMonAn_Click(object sender, EventArgs e)
+        private void XoaMonToolStripMenuItem_Click(object sender, EventArgs e)
         {
+
             if (lvNuocUong.SelectedItems.Count > 0)
             {
                 if (MessageBox.Show("Bạn có chắc chắn muốn xoá món ăn không?", "Cảnh báo", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes)
@@ -509,6 +513,67 @@ namespace MilkteaShopManager
             }
             else MessageBox.Show("Bạn phải chọn đối tượng để xoá!", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
         }
+        private void WriteToExcelNuocUong(ListView lv, List<NuocUong> dsNuocUong, List<LoaiNuoc> dsLoaiNuoc, string path)
+        {
+            ExcelPackage.LicenseContext = OfficeOpenXml.LicenseContext.NonCommercial;
+            using (ExcelPackage p = new ExcelPackage())
+            {
+                p.Workbook.Worksheets.Add("sheet 1");
+                ExcelWorksheet ws = p.Workbook.Worksheets[0];
+                ws.Name = "sheet 1";
+                ws.Cells.Style.Font.Size = 11;
+                ws.Cells.Style.Font.Name = "Calibri";
+
+                List<string> arrCollumHeader = new List<string>();
+                foreach (ColumnHeader item in lv.Columns)
+                {
+                    arrCollumHeader.Add(item.Text);
+                }
+                var countColHeader = arrCollumHeader.Count();
+
+                int colIndex = 1;
+                int rowIndex = 1;
+                foreach (var item in arrCollumHeader)
+                {
+                    var cell = ws.Cells[rowIndex, colIndex];
+                    var style = cell.Style.Font;
+                    style.Bold = true;
+
+                    cell.Value = item;
+                    colIndex++;
+                }
+
+                foreach (var item in dsNuocUong)
+                {
+                    colIndex = 1;
+                    rowIndex++;
+                    ws.Cells[rowIndex, colIndex++].Value = item.MaNuocUong;
+                    ws.Cells[rowIndex, colIndex++].Value = item.TenNuocUong;
+                    string tenLoai = listLoaiNuoc.Find(x => x.MaLoai == item.MaLoai).TenLoai;
+                    ws.Cells[rowIndex, colIndex++].Value = tenLoai;
+                    ws.Cells[rowIndex, colIndex++].Value = item.DonGia;
+                    ws.Cells[rowIndex, colIndex++].Value = item.DVT;
+                }
+                Byte[] bin = p.GetAsByteArray();
+                File.WriteAllBytes(path, bin);
+            }
+        }
+        private void btnXuatFile_Click(object sender, EventArgs e)
+        {
+            saveFileDialog1.FileName = string.Format("Danh sách món của quán");
+            saveFileDialog1.InitialDirectory = @"E:\";
+            saveFileDialog1.DefaultExt = "xlsx";
+            saveFileDialog1.Filter = "Excel 2007 files(xlsx) (*.xlsx)|*.xlsx";
+
+            DialogResult dlg = saveFileDialog1.ShowDialog();
+            if (dlg == DialogResult.OK)
+            {
+                string path = string.Format(@"{0}", saveFileDialog1.FileName);
+                WriteToExcelNuocUong(lvNuocUong, listNuocUong, listLoaiNuoc, path);
+                MessageBox.Show("Xuất danh sách món thành công!");
+            }
+        }
+
         private void btnHuyNhap_Click(object sender, EventArgs e)
         {
             if (MessageBox.Show("Bạn có muón thực hiện thao tác này?", "Cảnh báo", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes)
@@ -652,8 +717,7 @@ namespace MilkteaShopManager
                 }
             }
         }
-
-        private void btnDeleteBan_Click(object sender, EventArgs e)
+        private void xoáBànToolStripMenuItem_Click(object sender, EventArgs e)
         {
             if (lvBan.SelectedItems.Count > 0)
             {
@@ -681,7 +745,71 @@ namespace MilkteaShopManager
                 lblThongBaoBan.ForeColor = Color.Red;
             }
         }
+        private void WriteToExcelTable(ListView lv, List<Table> dsTable, string path)
+        {
+            ExcelPackage.LicenseContext = OfficeOpenXml.LicenseContext.NonCommercial;
+            using (ExcelPackage p = new ExcelPackage())
+            {
+                p.Workbook.Worksheets.Add("sheet 1");
+                ExcelWorksheet ws = p.Workbook.Worksheets[0];
+                ws.Name = "sheet 1";
+                ws.Cells.Style.Font.Size = 11;
+                ws.Cells.Style.Font.Name = "Calibri";
 
+                List<string> arrCollumHeader = new List<string>();
+                foreach (ColumnHeader item in lv.Columns)
+                {
+                    arrCollumHeader.Add(item.Text);
+                }
+                var countColHeader = arrCollumHeader.Count();
+
+                int colIndex = 1;
+                int rowIndex = 1;
+                foreach (var item in arrCollumHeader)
+                {
+                    var cell = ws.Cells[rowIndex, colIndex];
+                    var style = cell.Style.Font;
+                    style.Bold = true;
+
+                    cell.Value = item;
+                    colIndex++;
+                }
+                int count = 1;
+                foreach (var item in dsTable)
+                {
+                    colIndex = 1;
+                    rowIndex++;
+                    ws.Cells[rowIndex,colIndex++].Value= count;
+
+                    ws.Cells[rowIndex, colIndex++].Value = item.ID;
+                    ws.Cells[rowIndex, colIndex++].Value = item.Name;
+
+                    if (item.Status == 0) { statusTable = "Bàn trống"; }
+                    else if (item.Status == 1) { statusTable = "Có khách"; }
+
+                    ws.Cells[rowIndex, colIndex++].Value = statusTable;
+                    count++;
+                }
+                Byte[] bin = p.GetAsByteArray();
+                File.WriteAllBytes(path, bin);
+            }
+        }
+
+        private void btnXuatExcelBan_Click(object sender, EventArgs e)
+        {
+            saveFileDialog1.FileName = string.Format("Danh sách bàn ăn của quán");
+            saveFileDialog1.InitialDirectory = @"E:\";
+            saveFileDialog1.DefaultExt = "xlsx";
+            saveFileDialog1.Filter = "Excel 2007 files(xlsx) (*.xlsx)|*.xlsx";
+
+            DialogResult dlg = saveFileDialog1.ShowDialog();
+            if (dlg == DialogResult.OK)
+            {
+                string path = string.Format(@"{0}", saveFileDialog1.FileName);
+                WriteToExcelTable(lvBan, listTable, path);
+                MessageBox.Show("Xuất danh sách bàn thành công!");
+            }
+        }
         #endregion
 
         #region Quản lý hoá đơn
@@ -772,6 +900,8 @@ namespace MilkteaShopManager
             }
         }
 
+
         #endregion
+
     }
 }
