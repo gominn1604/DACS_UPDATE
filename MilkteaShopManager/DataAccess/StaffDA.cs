@@ -24,14 +24,14 @@ namespace DataAccess
             while (reader.Read())
             {
                 Staff staff = new Staff();
-                staff.MaNV = reader["MaNV"].ToString();
+                staff.MaNV = int.Parse(reader["MaNV"].ToString());
                 staff.HoTen = reader["HoTen"].ToString();
                 staff.DiaChi = reader["DiaChi"].ToString();
+                staff.GioiTinh=reader["GioiTinh"].ToString();
                 staff.NgaySinh = DateTime.Parse(reader["NgaySinh"].ToString());
                 staff.SDT = reader["SoDienThoai"].ToString();
-                staff.TenTaiKhoan = reader["TenTaiKhoan"].ToString();
+                staff.MaTK = int.Parse(reader["MaTK"].ToString());
                 staff.TrangThai = bool.Parse(reader["TrangThai"].ToString());
-                staff.MaCV = int.Parse(reader["MaCV"].ToString());
                 list.Add(staff);
             }
             conn.Close();

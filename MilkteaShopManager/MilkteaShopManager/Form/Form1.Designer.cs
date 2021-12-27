@@ -57,7 +57,7 @@ namespace MilkteaShopManager
             this.guna2Panel1.Name = "guna2Panel1";
             this.guna2Panel1.ShadowDecoration.Parent = this.guna2Panel1;
             this.guna2Panel1.Size = new System.Drawing.Size(474, 700);
-            this.guna2Panel1.TabIndex = 0;
+            this.guna2Panel1.TabIndex = 1;
             // 
             // lblThongBao
             // 
@@ -146,7 +146,7 @@ namespace MilkteaShopManager
             // txtTenDangNhap
             // 
             this.txtTenDangNhap.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtTenDangNhap.DefaultText = "danh";
+            this.txtTenDangNhap.DefaultText = "Tên đăng nhập";
             this.txtTenDangNhap.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
             this.txtTenDangNhap.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
             this.txtTenDangNhap.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
@@ -167,7 +167,6 @@ namespace MilkteaShopManager
             this.txtTenDangNhap.PlaceholderForeColor = System.Drawing.Color.Gray;
             this.txtTenDangNhap.PlaceholderText = "Tên đăng nhập";
             this.txtTenDangNhap.SelectedText = "";
-            this.txtTenDangNhap.SelectionStart = 4;
             this.txtTenDangNhap.ShadowDecoration.Parent = this.txtTenDangNhap;
             this.txtTenDangNhap.Size = new System.Drawing.Size(275, 40);
             this.txtTenDangNhap.TabIndex = 1;

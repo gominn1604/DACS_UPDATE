@@ -8,11 +8,12 @@ namespace DataAccess
 {
     public class Account
     {
-        public string TenTK { get; set; }
+        public int MaTK { get; set; }
+        public string TenTaiKhoan { get; set; }
         public string MatKhau { get; set; }
         public string HoTen { get; set; }
         public string Email { get; set; }
-        public string SDT { get; set; }
+        public string SoDienThoai { get; set; }
         public DateTime NgayTao { get; set; }
     }
 }
